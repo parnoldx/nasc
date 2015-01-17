@@ -479,7 +479,7 @@ header h2 {
 
 .inner {
   position: relative;
-  width: 940px;
+  width: 960px;
   margin: 0 auto;
 }
 
@@ -488,9 +488,24 @@ header h2 {
   border-top: solid 1px #fff;
 }
 
+#pictures {
+width: 960px;
+height: 680px;
+text-align: center;
+}
+#mainpic {
+padding-top: 5px;
+width: 620px;
+float: left;
+}
+#subpic {
+width: 320px;
+float: right;
+}
+
 #main-content {
   float: left;
-  width: 690px;
+  width: 960px;
 }
 
 #main-content img {
@@ -534,7 +549,7 @@ header a.button {
   position: absolute;
   top: 0;
   right: 0;
-  background: transparent url(../images/github-button.png) 0 0 no-repeat;
+  background: transparent url(../images/launchpad-button.png) 0 0 no-repeat;
 }
 aside a.button {
   display: block;

@@ -21,34 +21,41 @@
       <div class="inner">
         <h1>NaSC</h1>
         <h2>Do maths like a normal person</h2>
-        <a href="https://github.com/parnold-x/nasc" class="button"><small>View project on</small> GitHub</a>
+        <a href="https://www.launchpad.net/nasc" class="button"><small>View project on</small> Launchpad</a>
       </div>
     </header>
 
     <div id="content-wrapper">
       <div class="inner clearfix">
         <section id="main-content">
-          <h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+       
+          <!-- <h3> -->
+<!-- <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3> -->
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-<p>To build from source:</p>
-<pre><code>
-mkdir build && cd build 
-cmake -DCMAKE_INSTALL_PREFIX=/usr ../
-make
+<p>Its an app where you do maths like a normal person. It lets you type whatever you want and smartly figures out what is math and spits out an answer on the right pane. Then you can plug those answers in to future equations and if that answer changes, so does the equations its used in.</p>
+<div id = "pictures">
+<div id ="mainpic">
+<img src="images/nasc.png" alt="Screenshot">
+</div>
+<div id = "subpic">
+<img src="images/nasc_assist.png" width="296" height="330" alt="Content-Assist">
+<img src="images/nasc_share.png" width="296" height="330" alt="Share">
+</div>
+</div>
+<h3><span class="octicon octicon-link"></span>Installation:</h3>
+<pre><code>sudo apt-add-repository ppa:nasc-team/daily
+sudo apt-get update
+sudo apt-get install nasc
 </code></pre>
 
-<img src="images/nasc.png" alt="Screenshot">
-
         </section>
-
+<!-- 
         <aside id="sidebar">
           <a href="https://github.com/parnold-x/nasc/zipball/master" class="button">
             <small>Download source</small>
             .zip file
           </a>
-        </aside>
+        </aside> -->
       </div>
     </div>
 
