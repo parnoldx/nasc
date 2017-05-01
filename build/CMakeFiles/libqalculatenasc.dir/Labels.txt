@@ -1,0 +1,13 @@
+# Target labels
+ libqalculatenasc
+# Source files and their labels
+/home/pa/Projekte/nascOrg/build/CMakeFiles/libqalculatenasc
+/home/pa/Projekte/nascOrg/build/CMakeFiles/libqalculatenasc.rule
+/home/pa/Projekte/nascOrg/build/CMakeFiles/libqalculatenasc-complete.rule
+/home/pa/Projekte/nascOrg/libqalculatenasc/src/libqalculatenasc-stamp/libqalculatenasc-install.rule
+/home/pa/Projekte/nascOrg/libqalculatenasc/src/libqalculatenasc-stamp/libqalculatenasc-mkdir.rule
+/home/pa/Projekte/nascOrg/libqalculatenasc/src/libqalculatenasc-stamp/libqalculatenasc-download.rule
+/home/pa/Projekte/nascOrg/libqalculatenasc/src/libqalculatenasc-stamp/libqalculatenasc-update.rule
+/home/pa/Projekte/nascOrg/libqalculatenasc/src/libqalculatenasc-stamp/libqalculatenasc-patch.rule
+/home/pa/Projekte/nascOrg/libqalculatenasc/src/libqalculatenasc-stamp/libqalculatenasc-configure.rule
+/home/pa/Projekte/nascOrg/libqalculatenasc/src/libqalculatenasc-stamp/libqalculatenasc-build.rule

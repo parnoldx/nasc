@@ -1,0 +1,30 @@
+s;@CPP@;/lib/cpp;g
+s;@CPPFLAGS@;;g
+s;@INSTALL@;/usr/bin/install;g
+s;@INSTALL_PROGRAM@;/usr/bin/install -s -m 755;g
+s;@INSTALL_DATA@;/usr/bin/install -m 444;g
+s;@INSTALL_DIR@;/home/pa/Projekte/nascOrg/libqalculatenasc/config.md;g
+s:@DWORD@:unsigned int:g
+s:@WORD@:unsigned short:g
+s:@BYTE@:unsigned char:g
+s;@TABSTOP@;;g
+s;@LIBS@;;g
+s;@CONFIGURE_FILES@;config.cmd config.sub config.h config.mak config.log config.md;g
+s;@GENERATED_FILES@;Makefile;g
+s;@CC@;cc -Wno-return-type -Wno-implicit-int;g
+s;@CFLAGS@;-g;g
+s;@LDFLAGS@;-g;g
+s;@srcdir@;/home/pa/Projekte/nascOrg/libqalculatenasc;g
+s;@prefix@;/home/pa/Projekte/nascOrg/build;g
+s;@exedir@;/home/pa/Projekte/nascOrg/build/bin;g
+s;@sbindir@;/home/pa/Projekte/nascOrg/build/sbin;g
+s;@libdir@;/home/pa/Projekte/nascOrg/build;g
+s;@libexec@;/home/pa/Projekte/nascOrg/build/lib;g
+s;@confdir@;/etc;g
+s;@mandir@;/home/pa/Projekte/nascOrg/build/man;g
+s;@FIND@;/usr/bin/find;g
+s;@LN_S@;/bin/ln -s;g
+s;@AR@;/usr/bin/ar;g
+s;@RANLIB@;/usr/bin/ranlib;g
+s;@LD_LIBRARY_PATH@;HERE;g
+s;@SED@;/bin/sed;g

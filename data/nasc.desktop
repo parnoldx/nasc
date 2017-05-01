@@ -1,0 +1,15 @@
+[Desktop Entry]
+Type=Application
+Name=NaSC
+Comment=Do maths like a normal person
+GenericName=NaSC
+TryExec=nasc
+Exec=nasc
+Icon=nasc
+Terminal=false
+Categories=Utility;Calculator;
+Actions=AboutDialog;
+
+[Desktop Action AboutDialog]
+Name=About NaSC
+Exec=nasc --about
