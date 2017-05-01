@@ -1,0 +1,1753 @@
+<?xml version="1.0"?>
+<QALCULATE version="0.9.7">
+		<object code="AD" name="Andorra">
+	<currency>EUR</currency>
+	<population>84000</population>
+	<capital>Andorra la Vella</capital>
+	<continent>Europe</continent>
+	<area>468.0</area>
+	</object>
+		<object code="AE" name="United Arab Emirates">
+	<currency>AED</currency>
+	<population>4975593</population>
+	<capital>Abu Dhabi</capital>
+	<continent>Asia</continent>
+	<area>82880.0</area>
+	</object>
+		<object code="AF" name="Afghanistan">
+	<currency>AFN</currency>
+	<population>29121286</population>
+	<capital>Kabul</capital>
+	<continent>Asia</continent>
+	<area>647500.0</area>
+	</object>
+		<object code="AG" name="Antigua and Barbuda">
+	<currency>XCD</currency>
+	<population>86754</population>
+	<capital>St. John's</capital>
+	<continent>North America</continent>
+	<area>443.0</area>
+	</object>
+		<object code="AI" name="Anguilla">
+	<currency>XCD</currency>
+	<population>13254</population>
+	<capital>The Valley</capital>
+	<continent>North America</continent>
+	<area>102.0</area>
+	</object>
+		<object code="AL" name="Albania">
+	<currency>ALL</currency>
+	<population>2986952</population>
+	<capital>Tirana</capital>
+	<continent>Europe</continent>
+	<area>28748.0</area>
+	</object>
+		<object code="AM" name="Armenia">
+	<currency>AMD</currency>
+	<population>2968000</population>
+	<capital>Yerevan</capital>
+	<continent>Asia</continent>
+	<area>29800.0</area>
+	</object>
+		<object code="AO" name="Angola">
+	<currency>AOA</currency>
+	<population>13068161</population>
+	<capital>Luanda</capital>
+	<continent>Africa</continent>
+	<area>1246700.0</area>
+	</object>
+		<object code="AQ" name="Antarctica">
+	<currency></currency>
+	<population>0</population>
+	<capital></capital>
+	<continent>Antarctica</continent>
+	<area>1.4E7</area>
+	</object>
+		<object code="AR" name="Argentina">
+	<currency>ARS</currency>
+	<population>41343201</population>
+	<capital>Buenos Aires</capital>
+	<continent>South America</continent>
+	<area>2766890.0</area>
+	</object>
+		<object code="AS" name="American Samoa">
+	<currency>USD</currency>
+	<population>57881</population>
+	<capital>Pago Pago</capital>
+	<continent>Oceania</continent>
+	<area>199.0</area>
+	</object>
+		<object code="AT" name="Austria">
+	<currency>EUR</currency>
+	<population>8205000</population>
+	<capital>Vienna</capital>
+	<continent>Europe</continent>
+	<area>83858.0</area>
+	</object>
+		<object code="AU" name="Australia">
+	<currency>AUD</currency>
+	<population>21515754</population>
+	<capital>Canberra</capital>
+	<continent>Oceania</continent>
+	<area>7686850.0</area>
+	</object>
+		<object code="AW" name="Aruba">
+	<currency>AWG</currency>
+	<population>71566</population>
+	<capital>Oranjestad</capital>
+	<continent>North America</continent>
+	<area>193.0</area>
+	</object>
+		<object code="AX" name="Åland">
+	<currency>EUR</currency>
+	<population>26711</population>
+	<capital>Mariehamn</capital>
+	<continent>Europe</continent>
+	<area>1580.0</area>
+	</object>
+		<object code="AZ" name="Azerbaijan">
+	<currency>AZN</currency>
+	<population>8303512</population>
+	<capital>Baku</capital>
+	<continent>Asia</continent>
+	<area>86600.0</area>
+	</object>
+		<object code="BA" name="Bosnia and Herzegovina">
+	<currency>BAM</currency>
+	<population>4590000</population>
+	<capital>Sarajevo</capital>
+	<continent>Europe</continent>
+	<area>51129.0</area>
+	</object>
+		<object code="BB" name="Barbados">
+	<currency>BBD</currency>
+	<population>285653</population>
+	<capital>Bridgetown</capital>
+	<continent>North America</continent>
+	<area>431.0</area>
+	</object>
+		<object code="BD" name="Bangladesh">
+	<currency>BDT</currency>
+	<population>156118464</population>
+	<capital>Dhaka</capital>
+	<continent>Asia</continent>
+	<area>144000.0</area>
+	</object>
+		<object code="BE" name="Belgium">
+	<currency>EUR</currency>
+	<population>10403000</population>
+	<capital>Brussels</capital>
+	<continent>Europe</continent>
+	<area>30510.0</area>
+	</object>
+		<object code="BF" name="Burkina Faso">
+	<currency>XOF</currency>
+	<population>16241811</population>
+	<capital>Ouagadougou</capital>
+	<continent>Africa</continent>
+	<area>274200.0</area>
+	</object>
+		<object code="BG" name="Bulgaria">
+	<currency>BGN</currency>
+	<population>7148785</population>
+	<capital>Sofia</capital>
+	<continent>Europe</continent>
+	<area>110910.0</area>
+	</object>
+		<object code="BH" name="Bahrain">
+	<currency>BHD</currency>
+	<population>738004</population>
+	<capital>Manama</capital>
+	<continent>Asia</continent>
+	<area>665.0</area>
+	</object>
+		<object code="BI" name="Burundi">
+	<currency>BIF</currency>
+	<population>9863117</population>
+	<capital>Bujumbura</capital>
+	<continent>Africa</continent>
+	<area>27830.0</area>
+	</object>
+		<object code="BJ" name="Benin">
+	<currency>XOF</currency>
+	<population>9056010</population>
+	<capital>Porto-Novo</capital>
+	<continent>Africa</continent>
+	<area>112620.0</area>
+	</object>
+		<object code="BL" name="Saint Barthélemy">
+	<currency>EUR</currency>
+	<population>8450</population>
+	<capital>Gustavia</capital>
+	<continent>North America</continent>
+	<area>21.0</area>
+	</object>
+		<object code="BM" name="Bermuda">
+	<currency>BMD</currency>
+	<population>65365</population>
+	<capital>Hamilton</capital>
+	<continent>North America</continent>
+	<area>53.0</area>
+	</object>
+		<object code="BN" name="Brunei">
+	<currency>BND</currency>
+	<population>395027</population>
+	<capital>Bandar Seri Begawan</capital>
+	<continent>Asia</continent>
+	<area>5770.0</area>
+	</object>
+		<object code="BO" name="Bolivia">
+	<currency>BOB</currency>
+	<population>9947418</population>
+	<capital>Sucre</capital>
+	<continent>South America</continent>
+	<area>1098580.0</area>
+	</object>
+		<object code="BQ" name="Bonaire">
+	<currency>USD</currency>
+	<population>18012</population>
+	<capital></capital>
+	<continent>North America</continent>
+	<area>328.0</area>
+	</object>
+		<object code="BR" name="Brazil">
+	<currency>BRL</currency>
+	<population>201103330</population>
+	<capital>Brasília</capital>
+	<continent>South America</continent>
+	<area>8511965.0</area>
+	</object>
+		<object code="BS" name="Bahamas">
+	<currency>BSD</currency>
+	<population>301790</population>
+	<capital>Nassau</capital>
+	<continent>North America</continent>
+	<area>13940.0</area>
+	</object>
+		<object code="BT" name="Bhutan">
+	<currency>BTN</currency>
+	<population>699847</population>
+	<capital>Thimphu</capital>
+	<continent>Asia</continent>
+	<area>47000.0</area>
+	</object>
+		<object code="BV" name="Bouvet Island">
+	<currency>NOK</currency>
+	<population>0</population>
+	<capital></capital>
+	<continent>Antarctica</continent>
+	<area>49.0</area>
+	</object>
+		<object code="BW" name="Botswana">
+	<currency>BWP</currency>
+	<population>2029307</population>
+	<capital>Gaborone</capital>
+	<continent>Africa</continent>
+	<area>600370.0</area>
+	</object>
+		<object code="BY" name="Belarus">
+	<currency>BYR</currency>
+	<population>9685000</population>
+	<capital>Minsk</capital>
+	<continent>Europe</continent>
+	<area>207600.0</area>
+	</object>
+		<object code="BZ" name="Belize">
+	<currency>BZD</currency>
+	<population>314522</population>
+	<capital>Belmopan</capital>
+	<continent>North America</continent>
+	<area>22966.0</area>
+	</object>
+		<object code="CA" name="Canada">
+	<currency>CAD</currency>
+	<population>33679000</population>
+	<capital>Ottawa</capital>
+	<continent>North America</continent>
+	<area>9984670.0</area>
+	</object>
+		<object code="CC" name="Cocos [Keeling] Islands">
+	<currency>AUD</currency>
+	<population>628</population>
+	<capital>West Island</capital>
+	<continent>Asia</continent>
+	<area>14.0</area>
+	</object>
+		<object code="CD" name="Democratic Republic of the Congo">
+	<currency>CDF</currency>
+	<population>70916439</population>
+	<capital>Kinshasa</capital>
+	<continent>Africa</continent>
+	<area>2345410.0</area>
+	</object>
+		<object code="CF" name="Central African Republic">
+	<currency>XAF</currency>
+	<population>4844927</population>
+	<capital>Bangui</capital>
+	<continent>Africa</continent>
+	<area>622984.0</area>
+	</object>
+		<object code="CG" name="Republic of the Congo">
+	<currency>XAF</currency>
+	<population>3039126</population>
+	<capital>Brazzaville</capital>
+	<continent>Africa</continent>
+	<area>342000.0</area>
+	</object>
+		<object code="CH" name="Switzerland">
+	<currency>CHF</currency>
+	<population>7581000</population>
+	<capital>Berne</capital>
+	<continent>Europe</continent>
+	<area>41290.0</area>
+	</object>
+		<object code="CI" name="Ivory Coast">
+	<currency>XOF</currency>
+	<population>21058798</population>
+	<capital>Yamoussoukro</capital>
+	<continent>Africa</continent>
+	<area>322460.0</area>
+	</object>
+		<object code="CK" name="Cook Islands">
+	<currency>NZD</currency>
+	<population>21388</population>
+	<capital>Avarua</capital>
+	<continent>Oceania</continent>
+	<area>240.0</area>
+	</object>
+		<object code="CL" name="Chile">
+	<currency>CLP</currency>
+	<population>16746491</population>
+	<capital>Santiago</capital>
+	<continent>South America</continent>
+	<area>756950.0</area>
+	</object>
+		<object code="CM" name="Cameroon">
+	<currency>XAF</currency>
+	<population>19294149</population>
+	<capital>Yaoundé</capital>
+	<continent>Africa</continent>
+	<area>475440.0</area>
+	</object>
+		<object code="CN" name="China">
+	<currency>CNY</currency>
+	<population>1330044000</population>
+	<capital>Beijing</capital>
+	<continent>Asia</continent>
+	<area>9596960.0</area>
+	</object>
+		<object code="CO" name="Colombia">
+	<currency>COP</currency>
+	<population>47790000</population>
+	<capital>Bogotá</capital>
+	<continent>South America</continent>
+	<area>1138910.0</area>
+	</object>
+		<object code="CR" name="Costa Rica">
+	<currency>CRC</currency>
+	<population>4516220</population>
+	<capital>San José</capital>
+	<continent>North America</continent>
+	<area>51100.0</area>
+	</object>
+		<object code="CU" name="Cuba">
+	<currency>CUP</currency>
+	<population>11423000</population>
+	<capital>Havana</capital>
+	<continent>North America</continent>
+	<area>110860.0</area>
+	</object>
+		<object code="CV" name="Cape Verde">
+	<currency>CVE</currency>
+	<population>508659</population>
+	<capital>Praia</capital>
+	<continent>Africa</continent>
+	<area>4033.0</area>
+	</object>
+		<object code="CW" name="Curacao">
+	<currency>ANG</currency>
+	<population>141766</population>
+	<capital>Willemstad</capital>
+	<continent>North America</continent>
+	<area>444.0</area>
+	</object>
+		<object code="CX" name="Christmas Island">
+	<currency>AUD</currency>
+	<population>1500</population>
+	<capital>The Settlement</capital>
+	<continent>Asia</continent>
+	<area>135.0</area>
+	</object>
+		<object code="CY" name="Cyprus">
+	<currency>EUR</currency>
+	<population>1102677</population>
+	<capital>Nicosia</capital>
+	<continent>Europe</continent>
+	<area>9250.0</area>
+	</object>
+		<object code="CZ" name="Czech Republic">
+	<currency>CZK</currency>
+	<population>10476000</population>
+	<capital>Prague</capital>
+	<continent>Europe</continent>
+	<area>78866.0</area>
+	</object>
+		<object code="DE" name="Germany">
+	<currency>EUR</currency>
+	<population>81802257</population>
+	<capital>Berlin</capital>
+	<continent>Europe</continent>
+	<area>357021.0</area>
+	</object>
+		<object code="DJ" name="Djibouti">
+	<currency>DJF</currency>
+	<population>740528</population>
+	<capital>Djibouti</capital>
+	<continent>Africa</continent>
+	<area>23000.0</area>
+	</object>
+		<object code="DK" name="Denmark">
+	<currency>DKK</currency>
+	<population>5484000</population>
+	<capital>Copenhagen</capital>
+	<continent>Europe</continent>
+	<area>43094.0</area>
+	</object>
+		<object code="DM" name="Dominica">
+	<currency>XCD</currency>
+	<population>72813</population>
+	<capital>Roseau</capital>
+	<continent>North America</continent>
+	<area>754.0</area>
+	</object>
+		<object code="DO" name="Dominican Republic">
+	<currency>DOP</currency>
+	<population>9823821</population>
+	<capital>Santo Domingo</capital>
+	<continent>North America</continent>
+	<area>48730.0</area>
+	</object>
+		<object code="DZ" name="Algeria">
+	<currency>DZD</currency>
+	<population>34586184</population>
+	<capital>Algiers</capital>
+	<continent>Africa</continent>
+	<area>2381740.0</area>
+	</object>
+		<object code="EC" name="Ecuador">
+	<currency>USD</currency>
+	<population>14790608</population>
+	<capital>Quito</capital>
+	<continent>South America</continent>
+	<area>283560.0</area>
+	</object>
+		<object code="EE" name="Estonia">
+	<currency>EUR</currency>
+	<population>1291170</population>
+	<capital>Tallinn</capital>
+	<continent>Europe</continent>
+	<area>45226.0</area>
+	</object>
+		<object code="EG" name="Egypt">
+	<currency>EGP</currency>
+	<population>80471869</population>
+	<capital>Cairo</capital>
+	<continent>Africa</continent>
+	<area>1001450.0</area>
+	</object>
+		<object code="EH" name="Western Sahara">
+	<currency>MAD</currency>
+	<population>273008</population>
+	<capital>El Aaiún</capital>
+	<continent>Africa</continent>
+	<area>266000.0</area>
+	</object>
+		<object code="ER" name="Eritrea">
+	<currency>ERN</currency>
+	<population>5792984</population>
+	<capital>Asmara</capital>
+	<continent>Africa</continent>
+	<area>121320.0</area>
+	</object>
+		<object code="ES" name="Spain">
+	<currency>EUR</currency>
+	<population>46505963</population>
+	<capital>Madrid</capital>
+	<continent>Europe</continent>
+	<area>504782.0</area>
+	</object>
+		<object code="ET" name="Ethiopia">
+	<currency>ETB</currency>
+	<population>88013491</population>
+	<capital>Addis Ababa</capital>
+	<continent>Africa</continent>
+	<area>1127127.0</area>
+	</object>
+		<object code="FI" name="Finland">
+	<currency>EUR</currency>
+	<population>5244000</population>
+	<capital>Helsinki</capital>
+	<continent>Europe</continent>
+	<area>337030.0</area>
+	</object>
+		<object code="FJ" name="Fiji">
+	<currency>FJD</currency>
+	<population>875983</population>
+	<capital>Suva</capital>
+	<continent>Oceania</continent>
+	<area>18270.0</area>
+	</object>
+		<object code="FK" name="Falkland Islands">
+	<currency>FKP</currency>
+	<population>2638</population>
+	<capital>Stanley</capital>
+	<continent>South America</continent>
+	<area>12173.0</area>
+	</object>
+		<object code="FM" name="Micronesia">
+	<currency>USD</currency>
+	<population>107708</population>
+	<capital>Palikir</capital>
+	<continent>Oceania</continent>
+	<area>702.0</area>
+	</object>
+		<object code="FO" name="Faroe Islands">
+	<currency>DKK</currency>
+	<population>48228</population>
+	<capital>Tórshavn</capital>
+	<continent>Europe</continent>
+	<area>1399.0</area>
+	</object>
+		<object code="FR" name="France">
+	<currency>EUR</currency>
+	<population>64768389</population>
+	<capital>Paris</capital>
+	<continent>Europe</continent>
+	<area>547030.0</area>
+	</object>
+		<object code="GA" name="Gabon">
+	<currency>XAF</currency>
+	<population>1545255</population>
+	<capital>Libreville</capital>
+	<continent>Africa</continent>
+	<area>267667.0</area>
+	</object>
+		<object code="GB" name="United Kingdom">
+	<currency>GBP</currency>
+	<population>62348447</population>
+	<capital>London</capital>
+	<continent>Europe</continent>
+	<area>244820.0</area>
+	</object>
+		<object code="GD" name="Grenada">
+	<currency>XCD</currency>
+	<population>107818</population>
+	<capital>St. George's</capital>
+	<continent>North America</continent>
+	<area>344.0</area>
+	</object>
+		<object code="GE" name="Georgia">
+	<currency>GEL</currency>
+	<population>4630000</population>
+	<capital>Tbilisi</capital>
+	<continent>Asia</continent>
+	<area>69700.0</area>
+	</object>
+		<object code="GF" name="French Guiana">
+	<currency>EUR</currency>
+	<population>195506</population>
+	<capital>Cayenne</capital>
+	<continent>South America</continent>
+	<area>91000.0</area>
+	</object>
+		<object code="GG" name="Guernsey">
+	<currency>GBP</currency>
+	<population>65228</population>
+	<capital>St Peter Port</capital>
+	<continent>Europe</continent>
+	<area>78.0</area>
+	</object>
+		<object code="GH" name="Ghana">
+	<currency>GHS</currency>
+	<population>24339838</population>
+	<capital>Accra</capital>
+	<continent>Africa</continent>
+	<area>239460.0</area>
+	</object>
+		<object code="GI" name="Gibraltar">
+	<currency>GIP</currency>
+	<population>27884</population>
+	<capital>Gibraltar</capital>
+	<continent>Europe</continent>
+	<area>6.5</area>
+	</object>
+		<object code="GL" name="Greenland">
+	<currency>DKK</currency>
+	<population>56375</population>
+	<capital>Nuuk</capital>
+	<continent>North America</continent>
+	<area>2166086.0</area>
+	</object>
+		<object code="GM" name="Gambia">
+	<currency>GMD</currency>
+	<population>1593256</population>
+	<capital>Banjul</capital>
+	<continent>Africa</continent>
+	<area>11300.0</area>
+	</object>
+		<object code="GN" name="Guinea">
+	<currency>GNF</currency>
+	<population>10324025</population>
+	<capital>Conakry</capital>
+	<continent>Africa</continent>
+	<area>245857.0</area>
+	</object>
+		<object code="GP" name="Guadeloupe">
+	<currency>EUR</currency>
+	<population>443000</population>
+	<capital>Basse-Terre</capital>
+	<continent>North America</continent>
+	<area>1780.0</area>
+	</object>
+		<object code="GQ" name="Equatorial Guinea">
+	<currency>XAF</currency>
+	<population>1014999</population>
+	<capital>Malabo</capital>
+	<continent>Africa</continent>
+	<area>28051.0</area>
+	</object>
+		<object code="GR" name="Greece">
+	<currency>EUR</currency>
+	<population>11000000</population>
+	<capital>Athens</capital>
+	<continent>Europe</continent>
+	<area>131940.0</area>
+	</object>
+		<object code="GS" name="South Georgia and the South Sandwich Islands">
+	<currency>GBP</currency>
+	<population>30</population>
+	<capital>Grytviken</capital>
+	<continent>Antarctica</continent>
+	<area>3903.0</area>
+	</object>
+		<object code="GT" name="Guatemala">
+	<currency>GTQ</currency>
+	<population>13550440</population>
+	<capital>Guatemala City</capital>
+	<continent>North America</continent>
+	<area>108890.0</area>
+	</object>
+		<object code="GU" name="Guam">
+	<currency>USD</currency>
+	<population>159358</population>
+	<capital>Hagåtña</capital>
+	<continent>Oceania</continent>
+	<area>549.0</area>
+	</object>
+		<object code="GW" name="Guinea-Bissau">
+	<currency>XOF</currency>
+	<population>1565126</population>
+	<capital>Bissau</capital>
+	<continent>Africa</continent>
+	<area>36120.0</area>
+	</object>
+		<object code="GY" name="Guyana">
+	<currency>GYD</currency>
+	<population>748486</population>
+	<capital>Georgetown</capital>
+	<continent>South America</continent>
+	<area>214970.0</area>
+	</object>
+		<object code="HK" name="Hong Kong">
+	<currency>HKD</currency>
+	<population>6898686</population>
+	<capital>Hong Kong</capital>
+	<continent>Asia</continent>
+	<area>1092.0</area>
+	</object>
+		<object code="HM" name="Heard Island and McDonald Islands">
+	<currency>AUD</currency>
+	<population>0</population>
+	<capital></capital>
+	<continent>Antarctica</continent>
+	<area>412.0</area>
+	</object>
+		<object code="HN" name="Honduras">
+	<currency>HNL</currency>
+	<population>7989415</population>
+	<capital>Tegucigalpa</capital>
+	<continent>North America</continent>
+	<area>112090.0</area>
+	</object>
+		<object code="HR" name="Croatia">
+	<currency>HRK</currency>
+	<population>4491000</population>
+	<capital>Zagreb</capital>
+	<continent>Europe</continent>
+	<area>56542.0</area>
+	</object>
+		<object code="HT" name="Haiti">
+	<currency>HTG</currency>
+	<population>9648924</population>
+	<capital>Port-au-Prince</capital>
+	<continent>North America</continent>
+	<area>27750.0</area>
+	</object>
+		<object code="HU" name="Hungary">
+	<currency>HUF</currency>
+	<population>9982000</population>
+	<capital>Budapest</capital>
+	<continent>Europe</continent>
+	<area>93030.0</area>
+	</object>
+		<object code="ID" name="Indonesia">
+	<currency>IDR</currency>
+	<population>242968342</population>
+	<capital>Jakarta</capital>
+	<continent>Asia</continent>
+	<area>1919440.0</area>
+	</object>
+		<object code="IE" name="Ireland">
+	<currency>EUR</currency>
+	<population>4622917</population>
+	<capital>Dublin</capital>
+	<continent>Europe</continent>
+	<area>70280.0</area>
+	</object>
+		<object code="IL" name="Israel">
+	<currency>ILS</currency>
+	<population>7353985</population>
+	<capital></capital>
+	<continent>Asia</continent>
+	<area>20770.0</area>
+	</object>
+		<object code="IM" name="Isle of Man">
+	<currency>GBP</currency>
+	<population>75049</population>
+	<capital>Douglas</capital>
+	<continent>Europe</continent>
+	<area>572.0</area>
+	</object>
+		<object code="IN" name="India">
+	<currency>INR</currency>
+	<population>1173108018</population>
+	<capital>New Delhi</capital>
+	<continent>Asia</continent>
+	<area>3287590.0</area>
+	</object>
+		<object code="IO" name="British Indian Ocean Territory">
+	<currency>USD</currency>
+	<population>4000</population>
+	<capital></capital>
+	<continent>Asia</continent>
+	<area>60.0</area>
+	</object>
+		<object code="IQ" name="Iraq">
+	<currency>IQD</currency>
+	<population>29671605</population>
+	<capital>Baghdad</capital>
+	<continent>Asia</continent>
+	<area>437072.0</area>
+	</object>
+		<object code="IR" name="Iran">
+	<currency>IRR</currency>
+	<population>76923300</population>
+	<capital>Tehran</capital>
+	<continent>Asia</continent>
+	<area>1648000.0</area>
+	</object>
+		<object code="IS" name="Iceland">
+	<currency>ISK</currency>
+	<population>308910</population>
+	<capital>Reykjavik</capital>
+	<continent>Europe</continent>
+	<area>103000.0</area>
+	</object>
+		<object code="IT" name="Italy">
+	<currency>EUR</currency>
+	<population>60340328</population>
+	<capital>Rome</capital>
+	<continent>Europe</continent>
+	<area>301230.0</area>
+	</object>
+		<object code="JE" name="Jersey">
+	<currency>GBP</currency>
+	<population>90812</population>
+	<capital>Saint Helier</capital>
+	<continent>Europe</continent>
+	<area>116.0</area>
+	</object>
+		<object code="JM" name="Jamaica">
+	<currency>JMD</currency>
+	<population>2847232</population>
+	<capital>Kingston</capital>
+	<continent>North America</continent>
+	<area>10991.0</area>
+	</object>
+		<object code="JO" name="Jordan">
+	<currency>JOD</currency>
+	<population>6407085</population>
+	<capital>Amman</capital>
+	<continent>Asia</continent>
+	<area>92300.0</area>
+	</object>
+		<object code="JP" name="Japan">
+	<currency>JPY</currency>
+	<population>127288000</population>
+	<capital>Tokyo</capital>
+	<continent>Asia</continent>
+	<area>377835.0</area>
+	</object>
+		<object code="KE" name="Kenya">
+	<currency>KES</currency>
+	<population>40046566</population>
+	<capital>Nairobi</capital>
+	<continent>Africa</continent>
+	<area>582650.0</area>
+	</object>
+		<object code="KG" name="Kyrgyzstan">
+	<currency>KGS</currency>
+	<population>5508626</population>
+	<capital>Bishkek</capital>
+	<continent>Asia</continent>
+	<area>198500.0</area>
+	</object>
+		<object code="KH" name="Cambodia">
+	<currency>KHR</currency>
+	<population>14453680</population>
+	<capital>Phnom Penh</capital>
+	<continent>Asia</continent>
+	<area>181040.0</area>
+	</object>
+		<object code="KI" name="Kiribati">
+	<currency>AUD</currency>
+	<population>92533</population>
+	<capital>Tarawa</capital>
+	<continent>Oceania</continent>
+	<area>811.0</area>
+	</object>
+		<object code="KM" name="Comoros">
+	<currency>KMF</currency>
+	<population>773407</population>
+	<capital>Moroni</capital>
+	<continent>Africa</continent>
+	<area>2170.0</area>
+	</object>
+		<object code="KN" name="Saint Kitts and Nevis">
+	<currency>XCD</currency>
+	<population>51134</population>
+	<capital>Basseterre</capital>
+	<continent>North America</continent>
+	<area>261.0</area>
+	</object>
+		<object code="KP" name="North Korea">
+	<currency>KPW</currency>
+	<population>22912177</population>
+	<capital>Pyongyang</capital>
+	<continent>Asia</continent>
+	<area>120540.0</area>
+	</object>
+		<object code="KR" name="South Korea">
+	<currency>KRW</currency>
+	<population>48422644</population>
+	<capital>Seoul</capital>
+	<continent>Asia</continent>
+	<area>98480.0</area>
+	</object>
+		<object code="KW" name="Kuwait">
+	<currency>KWD</currency>
+	<population>2789132</population>
+	<capital>Kuwait City</capital>
+	<continent>Asia</continent>
+	<area>17820.0</area>
+	</object>
+		<object code="KY" name="Cayman Islands">
+	<currency>KYD</currency>
+	<population>44270</population>
+	<capital>George Town</capital>
+	<continent>North America</continent>
+	<area>262.0</area>
+	</object>
+		<object code="KZ" name="Kazakhstan">
+	<currency>KZT</currency>
+	<population>15340000</population>
+	<capital>Astana</capital>
+	<continent>Asia</continent>
+	<area>2717300.0</area>
+	</object>
+		<object code="LA" name="Laos">
+	<currency>LAK</currency>
+	<population>6368162</population>
+	<capital>Vientiane</capital>
+	<continent>Asia</continent>
+	<area>236800.0</area>
+	</object>
+		<object code="LB" name="Lebanon">
+	<currency>LBP</currency>
+	<population>4125247</population>
+	<capital>Beirut</capital>
+	<continent>Asia</continent>
+	<area>10400.0</area>
+	</object>
+		<object code="LC" name="Saint Lucia">
+	<currency>XCD</currency>
+	<population>160922</population>
+	<capital>Castries</capital>
+	<continent>North America</continent>
+	<area>616.0</area>
+	</object>
+		<object code="LI" name="Liechtenstein">
+	<currency>CHF</currency>
+	<population>35000</population>
+	<capital>Vaduz</capital>
+	<continent>Europe</continent>
+	<area>160.0</area>
+	</object>
+		<object code="LK" name="Sri Lanka">
+	<currency>LKR</currency>
+	<population>21513990</population>
+	<capital>Colombo</capital>
+	<continent>Asia</continent>
+	<area>65610.0</area>
+	</object>
+		<object code="LR" name="Liberia">
+	<currency>LRD</currency>
+	<population>3685076</population>
+	<capital>Monrovia</capital>
+	<continent>Africa</continent>
+	<area>111370.0</area>
+	</object>
+		<object code="LS" name="Lesotho">
+	<currency>LSL</currency>
+	<population>1919552</population>
+	<capital>Maseru</capital>
+	<continent>Africa</continent>
+	<area>30355.0</area>
+	</object>
+		<object code="LT" name="Lithuania">
+	<currency>LTL</currency>
+	<population>2944459</population>
+	<capital>Vilnius</capital>
+	<continent>Europe</continent>
+	<area>65200.0</area>
+	</object>
+		<object code="LU" name="Luxembourg">
+	<currency>EUR</currency>
+	<population>497538</population>
+	<capital>Luxembourg</capital>
+	<continent>Europe</continent>
+	<area>2586.0</area>
+	</object>
+		<object code="LV" name="Latvia">
+	<currency>EUR</currency>
+	<population>2217969</population>
+	<capital>Riga</capital>
+	<continent>Europe</continent>
+	<area>64589.0</area>
+	</object>
+		<object code="LY" name="Libya">
+	<currency>LYD</currency>
+	<population>6461454</population>
+	<capital>Tripoli</capital>
+	<continent>Africa</continent>
+	<area>1759540.0</area>
+	</object>
+		<object code="MA" name="Morocco">
+	<currency>MAD</currency>
+	<population>31627428</population>
+	<capital>Rabat</capital>
+	<continent>Africa</continent>
+	<area>446550.0</area>
+	</object>
+		<object code="MC" name="Monaco">
+	<currency>EUR</currency>
+	<population>32965</population>
+	<capital>Monaco</capital>
+	<continent>Europe</continent>
+	<area>1.95</area>
+	</object>
+		<object code="MD" name="Moldova">
+	<currency>MDL</currency>
+	<population>4324000</population>
+	<capital>Chişinău</capital>
+	<continent>Europe</continent>
+	<area>33843.0</area>
+	</object>
+		<object code="ME" name="Montenegro">
+	<currency>EUR</currency>
+	<population>666730</population>
+	<capital>Podgorica</capital>
+	<continent>Europe</continent>
+	<area>14026.0</area>
+	</object>
+		<object code="MF" name="Saint Martin">
+	<currency>EUR</currency>
+	<population>35925</population>
+	<capital>Marigot</capital>
+	<continent>North America</continent>
+	<area>53.0</area>
+	</object>
+		<object code="MG" name="Madagascar">
+	<currency>MGA</currency>
+	<population>21281844</population>
+	<capital>Antananarivo</capital>
+	<continent>Africa</continent>
+	<area>587040.0</area>
+	</object>
+		<object code="MH" name="Marshall Islands">
+	<currency>USD</currency>
+	<population>65859</population>
+	<capital>Majuro</capital>
+	<continent>Oceania</continent>
+	<area>181.3</area>
+	</object>
+		<object code="MK" name="Macedonia">
+	<currency>MKD</currency>
+	<population>2062294</population>
+	<capital>Skopje</capital>
+	<continent>Europe</continent>
+	<area>25333.0</area>
+	</object>
+		<object code="ML" name="Mali">
+	<currency>XOF</currency>
+	<population>13796354</population>
+	<capital>Bamako</capital>
+	<continent>Africa</continent>
+	<area>1240000.0</area>
+	</object>
+		<object code="MM" name="Myanmar [Burma]">
+	<currency>MMK</currency>
+	<population>53414374</population>
+	<capital>Nay Pyi Taw</capital>
+	<continent>Asia</continent>
+	<area>678500.0</area>
+	</object>
+		<object code="MN" name="Mongolia">
+	<currency>MNT</currency>
+	<population>3086918</population>
+	<capital>Ulan Bator</capital>
+	<continent>Asia</continent>
+	<area>1565000.0</area>
+	</object>
+		<object code="MO" name="Macao">
+	<currency>MOP</currency>
+	<population>449198</population>
+	<capital>Macao</capital>
+	<continent>Asia</continent>
+	<area>254.0</area>
+	</object>
+		<object code="MP" name="Northern Mariana Islands">
+	<currency>USD</currency>
+	<population>53883</population>
+	<capital>Saipan</capital>
+	<continent>Oceania</continent>
+	<area>477.0</area>
+	</object>
+		<object code="MQ" name="Martinique">
+	<currency>EUR</currency>
+	<population>432900</population>
+	<capital>Fort-de-France</capital>
+	<continent>North America</continent>
+	<area>1100.0</area>
+	</object>
+		<object code="MR" name="Mauritania">
+	<currency>MRO</currency>
+	<population>3205060</population>
+	<capital>Nouakchott</capital>
+	<continent>Africa</continent>
+	<area>1030700.0</area>
+	</object>
+		<object code="MS" name="Montserrat">
+	<currency>XCD</currency>
+	<population>9341</population>
+	<capital>Plymouth</capital>
+	<continent>North America</continent>
+	<area>102.0</area>
+	</object>
+		<object code="MT" name="Malta">
+	<currency>EUR</currency>
+	<population>403000</population>
+	<capital>Valletta</capital>
+	<continent>Europe</continent>
+	<area>316.0</area>
+	</object>
+		<object code="MU" name="Mauritius">
+	<currency>MUR</currency>
+	<population>1294104</population>
+	<capital>Port Louis</capital>
+	<continent>Africa</continent>
+	<area>2040.0</area>
+	</object>
+		<object code="MV" name="Maldives">
+	<currency>MVR</currency>
+	<population>395650</population>
+	<capital>Malé</capital>
+	<continent>Asia</continent>
+	<area>300.0</area>
+	</object>
+		<object code="MW" name="Malawi">
+	<currency>MWK</currency>
+	<population>15447500</population>
+	<capital>Lilongwe</capital>
+	<continent>Africa</continent>
+	<area>118480.0</area>
+	</object>
+		<object code="MX" name="Mexico">
+	<currency>MXN</currency>
+	<population>112468855</population>
+	<capital>Mexico City</capital>
+	<continent>North America</continent>
+	<area>1972550.0</area>
+	</object>
+		<object code="MY" name="Malaysia">
+	<currency>MYR</currency>
+	<population>28274729</population>
+	<capital>Kuala Lumpur</capital>
+	<continent>Asia</continent>
+	<area>329750.0</area>
+	</object>
+		<object code="MZ" name="Mozambique">
+	<currency>MZN</currency>
+	<population>22061451</population>
+	<capital>Maputo</capital>
+	<continent>Africa</continent>
+	<area>801590.0</area>
+	</object>
+		<object code="NA" name="Namibia">
+	<currency>NAD</currency>
+	<population>2128471</population>
+	<capital>Windhoek</capital>
+	<continent>Africa</continent>
+	<area>825418.0</area>
+	</object>
+		<object code="NC" name="New Caledonia">
+	<currency>XPF</currency>
+	<population>216494</population>
+	<capital>Noumea</capital>
+	<continent>Oceania</continent>
+	<area>19060.0</area>
+	</object>
+		<object code="NE" name="Niger">
+	<currency>XOF</currency>
+	<population>15878271</population>
+	<capital>Niamey</capital>
+	<continent>Africa</continent>
+	<area>1267000.0</area>
+	</object>
+		<object code="NF" name="Norfolk Island">
+	<currency>AUD</currency>
+	<population>1828</population>
+	<capital>Kingston</capital>
+	<continent>Oceania</continent>
+	<area>34.6</area>
+	</object>
+		<object code="NG" name="Nigeria">
+	<currency>NGN</currency>
+	<population>154000000</population>
+	<capital>Abuja</capital>
+	<continent>Africa</continent>
+	<area>923768.0</area>
+	</object>
+		<object code="NI" name="Nicaragua">
+	<currency>NIO</currency>
+	<population>5995928</population>
+	<capital>Managua</capital>
+	<continent>North America</continent>
+	<area>129494.0</area>
+	</object>
+		<object code="NL" name="Netherlands">
+	<currency>EUR</currency>
+	<population>16645000</population>
+	<capital>Amsterdam</capital>
+	<continent>Europe</continent>
+	<area>41526.0</area>
+	</object>
+		<object code="NO" name="Norway">
+	<currency>NOK</currency>
+	<population>5009150</population>
+	<capital>Oslo</capital>
+	<continent>Europe</continent>
+	<area>324220.0</area>
+	</object>
+		<object code="NP" name="Nepal">
+	<currency>NPR</currency>
+	<population>28951852</population>
+	<capital>Kathmandu</capital>
+	<continent>Asia</continent>
+	<area>140800.0</area>
+	</object>
+		<object code="NR" name="Nauru">
+	<currency>AUD</currency>
+	<population>10065</population>
+	<capital></capital>
+	<continent>Oceania</continent>
+	<area>21.0</area>
+	</object>
+		<object code="NU" name="Niue">
+	<currency>NZD</currency>
+	<population>2166</population>
+	<capital>Alofi</capital>
+	<continent>Oceania</continent>
+	<area>260.0</area>
+	</object>
+		<object code="NZ" name="New Zealand">
+	<currency>NZD</currency>
+	<population>4252277</population>
+	<capital>Wellington</capital>
+	<continent>Oceania</continent>
+	<area>268680.0</area>
+	</object>
+		<object code="OM" name="Oman">
+	<currency>OMR</currency>
+	<population>2967717</population>
+	<capital>Muscat</capital>
+	<continent>Asia</continent>
+	<area>212460.0</area>
+	</object>
+		<object code="PA" name="Panama">
+	<currency>PAB</currency>
+	<population>3410676</population>
+	<capital>Panama City</capital>
+	<continent>North America</continent>
+	<area>78200.0</area>
+	</object>
+		<object code="PE" name="Peru">
+	<currency>PEN</currency>
+	<population>29907003</population>
+	<capital>Lima</capital>
+	<continent>South America</continent>
+	<area>1285220.0</area>
+	</object>
+		<object code="PF" name="French Polynesia">
+	<currency>XPF</currency>
+	<population>270485</population>
+	<capital>Papeete</capital>
+	<continent>Oceania</continent>
+	<area>4167.0</area>
+	</object>
+		<object code="PG" name="Papua New Guinea">
+	<currency>PGK</currency>
+	<population>6064515</population>
+	<capital>Port Moresby</capital>
+	<continent>Oceania</continent>
+	<area>462840.0</area>
+	</object>
+		<object code="PH" name="Philippines">
+	<currency>PHP</currency>
+	<population>99900177</population>
+	<capital>Manila</capital>
+	<continent>Asia</continent>
+	<area>300000.0</area>
+	</object>
+		<object code="PK" name="Pakistan">
+	<currency>PKR</currency>
+	<population>184404791</population>
+	<capital>Islamabad</capital>
+	<continent>Asia</continent>
+	<area>803940.0</area>
+	</object>
+		<object code="PL" name="Poland">
+	<currency>PLN</currency>
+	<population>38500000</population>
+	<capital>Warsaw</capital>
+	<continent>Europe</continent>
+	<area>312685.0</area>
+	</object>
+		<object code="PM" name="Saint Pierre and Miquelon">
+	<currency>EUR</currency>
+	<population>7012</population>
+	<capital>Saint-Pierre</capital>
+	<continent>North America</continent>
+	<area>242.0</area>
+	</object>
+		<object code="PN" name="Pitcairn Islands">
+	<currency>NZD</currency>
+	<population>46</population>
+	<capital>Adamstown</capital>
+	<continent>Oceania</continent>
+	<area>47.0</area>
+	</object>
+		<object code="PR" name="Puerto Rico">
+	<currency>USD</currency>
+	<population>3916632</population>
+	<capital>San Juan</capital>
+	<continent>North America</continent>
+	<area>9104.0</area>
+	</object>
+		<object code="PS" name="Palestine">
+	<currency>ILS</currency>
+	<population>3800000</population>
+	<capital></capital>
+	<continent>Asia</continent>
+	<area>5970.0</area>
+	</object>
+		<object code="PT" name="Portugal">
+	<currency>EUR</currency>
+	<population>10676000</population>
+	<capital>Lisbon</capital>
+	<continent>Europe</continent>
+	<area>92391.0</area>
+	</object>
+		<object code="PW" name="Palau">
+	<currency>USD</currency>
+	<population>19907</population>
+	<capital>Melekeok - Palau State Capital</capital>
+	<continent>Oceania</continent>
+	<area>458.0</area>
+	</object>
+		<object code="PY" name="Paraguay">
+	<currency>PYG</currency>
+	<population>6375830</population>
+	<capital>Asunción</capital>
+	<continent>South America</continent>
+	<area>406750.0</area>
+	</object>
+		<object code="QA" name="Qatar">
+	<currency>QAR</currency>
+	<population>840926</population>
+	<capital>Doha</capital>
+	<continent>Asia</continent>
+	<area>11437.0</area>
+	</object>
+		<object code="RE" name="Réunion">
+	<currency>EUR</currency>
+	<population>776948</population>
+	<capital>Saint-Denis</capital>
+	<continent>Africa</continent>
+	<area>2517.0</area>
+	</object>
+		<object code="RO" name="Romania">
+	<currency>RON</currency>
+	<population>21959278</population>
+	<capital>Bucharest</capital>
+	<continent>Europe</continent>
+	<area>237500.0</area>
+	</object>
+		<object code="RS" name="Serbia">
+	<currency>RSD</currency>
+	<population>7344847</population>
+	<capital>Belgrade</capital>
+	<continent>Europe</continent>
+	<area>88361.0</area>
+	</object>
+		<object code="RU" name="Russia">
+	<currency>RUB</currency>
+	<population>140702000</population>
+	<capital>Moscow</capital>
+	<continent>Europe</continent>
+	<area>1.71E7</area>
+	</object>
+		<object code="RW" name="Rwanda">
+	<currency>RWF</currency>
+	<population>11055976</population>
+	<capital>Kigali</capital>
+	<continent>Africa</continent>
+	<area>26338.0</area>
+	</object>
+		<object code="SA" name="Saudi Arabia">
+	<currency>SAR</currency>
+	<population>25731776</population>
+	<capital>Riyadh</capital>
+	<continent>Asia</continent>
+	<area>1960582.0</area>
+	</object>
+		<object code="SB" name="Solomon Islands">
+	<currency>SBD</currency>
+	<population>559198</population>
+	<capital>Honiara</capital>
+	<continent>Oceania</continent>
+	<area>28450.0</area>
+	</object>
+		<object code="SC" name="Seychelles">
+	<currency>SCR</currency>
+	<population>88340</population>
+	<capital>Victoria</capital>
+	<continent>Africa</continent>
+	<area>455.0</area>
+	</object>
+		<object code="SD" name="Sudan">
+	<currency>SDG</currency>
+	<population>35000000</population>
+	<capital>Khartoum</capital>
+	<continent>Africa</continent>
+	<area>1861484.0</area>
+	</object>
+		<object code="SE" name="Sweden">
+	<currency>SEK</currency>
+	<population>9555893</population>
+	<capital>Stockholm</capital>
+	<continent>Europe</continent>
+	<area>449964.0</area>
+	</object>
+		<object code="SG" name="Singapore">
+	<currency>SGD</currency>
+	<population>4701069</population>
+	<capital>Singapore</capital>
+	<continent>Asia</continent>
+	<area>692.7</area>
+	</object>
+		<object code="SH" name="Saint Helena">
+	<currency>SHP</currency>
+	<population>7460</population>
+	<capital>Jamestown</capital>
+	<continent>Africa</continent>
+	<area>410.0</area>
+	</object>
+		<object code="SI" name="Slovenia">
+	<currency>EUR</currency>
+	<population>2007000</population>
+	<capital>Ljubljana</capital>
+	<continent>Europe</continent>
+	<area>20273.0</area>
+	</object>
+		<object code="SJ" name="Svalbard and Jan Mayen">
+	<currency>NOK</currency>
+	<population>2550</population>
+	<capital>Longyearbyen</capital>
+	<continent>Europe</continent>
+	<area>62049.0</area>
+	</object>
+		<object code="SK" name="Slovakia">
+	<currency>EUR</currency>
+	<population>5455000</population>
+	<capital>Bratislava</capital>
+	<continent>Europe</continent>
+	<area>48845.0</area>
+	</object>
+		<object code="SL" name="Sierra Leone">
+	<currency>SLL</currency>
+	<population>5245695</population>
+	<capital>Freetown</capital>
+	<continent>Africa</continent>
+	<area>71740.0</area>
+	</object>
+		<object code="SM" name="San Marino">
+	<currency>EUR</currency>
+	<population>31477</population>
+	<capital>San Marino</capital>
+	<continent>Europe</continent>
+	<area>61.2</area>
+	</object>
+		<object code="SN" name="Senegal">
+	<currency>XOF</currency>
+	<population>12323252</population>
+	<capital>Dakar</capital>
+	<continent>Africa</continent>
+	<area>196190.0</area>
+	</object>
+		<object code="SO" name="Somalia">
+	<currency>SOS</currency>
+	<population>10112453</population>
+	<capital>Mogadishu</capital>
+	<continent>Africa</continent>
+	<area>637657.0</area>
+	</object>
+		<object code="SR" name="Suriname">
+	<currency>SRD</currency>
+	<population>492829</population>
+	<capital>Paramaribo</capital>
+	<continent>South America</continent>
+	<area>163270.0</area>
+	</object>
+		<object code="SS" name="South Sudan">
+	<currency>SSP</currency>
+	<population>8260490</population>
+	<capital>Juba</capital>
+	<continent>Africa</continent>
+	<area>644329.0</area>
+	</object>
+		<object code="ST" name="São Tomé and Príncipe">
+	<currency>STD</currency>
+	<population>175808</population>
+	<capital>São Tomé</capital>
+	<continent>Africa</continent>
+	<area>1001.0</area>
+	</object>
+		<object code="SV" name="El Salvador">
+	<currency>USD</currency>
+	<population>6052064</population>
+	<capital>San Salvador</capital>
+	<continent>North America</continent>
+	<area>21040.0</area>
+	</object>
+		<object code="SX" name="Sint Maarten">
+	<currency>ANG</currency>
+	<population>37429</population>
+	<capital>Philipsburg</capital>
+	<continent>North America</continent>
+	<area>21.0</area>
+	</object>
+		<object code="SY" name="Syria">
+	<currency>SYP</currency>
+	<population>22198110</population>
+	<capital>Damascus</capital>
+	<continent>Asia</continent>
+	<area>185180.0</area>
+	</object>
+		<object code="SZ" name="Swaziland">
+	<currency>SZL</currency>
+	<population>1354051</population>
+	<capital>Mbabane</capital>
+	<continent>Africa</continent>
+	<area>17363.0</area>
+	</object>
+		<object code="TC" name="Turks and Caicos Islands">
+	<currency>USD</currency>
+	<population>20556</population>
+	<capital>Cockburn Town</capital>
+	<continent>North America</continent>
+	<area>430.0</area>
+	</object>
+		<object code="TD" name="Chad">
+	<currency>XAF</currency>
+	<population>10543464</population>
+	<capital>N'Djamena</capital>
+	<continent>Africa</continent>
+	<area>1284000.0</area>
+	</object>
+		<object code="TF" name="French Southern Territories">
+	<currency>EUR</currency>
+	<population>140</population>
+	<capital>Port-aux-Français</capital>
+	<continent>Antarctica</continent>
+	<area>7829.0</area>
+	</object>
+		<object code="TG" name="Togo">
+	<currency>XOF</currency>
+	<population>6587239</population>
+	<capital>Lomé</capital>
+	<continent>Africa</continent>
+	<area>56785.0</area>
+	</object>
+		<object code="TH" name="Thailand">
+	<currency>THB</currency>
+	<population>67089500</population>
+	<capital>Bangkok</capital>
+	<continent>Asia</continent>
+	<area>514000.0</area>
+	</object>
+		<object code="TJ" name="Tajikistan">
+	<currency>TJS</currency>
+	<population>7487489</population>
+	<capital>Dushanbe</capital>
+	<continent>Asia</continent>
+	<area>143100.0</area>
+	</object>
+		<object code="TK" name="Tokelau">
+	<currency>NZD</currency>
+	<population>1466</population>
+	<capital></capital>
+	<continent>Oceania</continent>
+	<area>10.0</area>
+	</object>
+		<object code="TL" name="East Timor">
+	<currency>USD</currency>
+	<population>1154625</population>
+	<capital>Dili</capital>
+	<continent>Oceania</continent>
+	<area>15007.0</area>
+	</object>
+		<object code="TM" name="Turkmenistan">
+	<currency>TMT</currency>
+	<population>4940916</population>
+	<capital>Ashgabat</capital>
+	<continent>Asia</continent>
+	<area>488100.0</area>
+	</object>
+		<object code="TN" name="Tunisia">
+	<currency>TND</currency>
+	<population>10589025</population>
+	<capital>Tunis</capital>
+	<continent>Africa</continent>
+	<area>163610.0</area>
+	</object>
+		<object code="TO" name="Tonga">
+	<currency>TOP</currency>
+	<population>122580</population>
+	<capital>Nuku'alofa</capital>
+	<continent>Oceania</continent>
+	<area>748.0</area>
+	</object>
+		<object code="TR" name="Turkey">
+	<currency>TRY</currency>
+	<population>77804122</population>
+	<capital>Ankara</capital>
+	<continent>Asia</continent>
+	<area>780580.0</area>
+	</object>
+		<object code="TT" name="Trinidad and Tobago">
+	<currency>TTD</currency>
+	<population>1228691</population>
+	<capital>Port of Spain</capital>
+	<continent>North America</continent>
+	<area>5128.0</area>
+	</object>
+		<object code="TV" name="Tuvalu">
+	<currency>AUD</currency>
+	<population>10472</population>
+	<capital>Funafuti</capital>
+	<continent>Oceania</continent>
+	<area>26.0</area>
+	</object>
+		<object code="TW" name="Taiwan">
+	<currency>TWD</currency>
+	<population>22894384</population>
+	<capital>Taipei</capital>
+	<continent>Asia</continent>
+	<area>35980.0</area>
+	</object>
+		<object code="TZ" name="Tanzania">
+	<currency>TZS</currency>
+	<population>41892895</population>
+	<capital>Dodoma</capital>
+	<continent>Africa</continent>
+	<area>945087.0</area>
+	</object>
+		<object code="UA" name="Ukraine">
+	<currency>UAH</currency>
+	<population>45415596</population>
+	<capital>Kyiv</capital>
+	<continent>Europe</continent>
+	<area>603700.0</area>
+	</object>
+		<object code="UG" name="Uganda">
+	<currency>UGX</currency>
+	<population>33398682</population>
+	<capital>Kampala</capital>
+	<continent>Africa</continent>
+	<area>236040.0</area>
+	</object>
+		<object code="UM" name="U.S. Minor Outlying Islands">
+	<currency>USD</currency>
+	<population>0</population>
+	<capital></capital>
+	<continent>Oceania</continent>
+	<area>0.0</area>
+	</object>
+		<object code="US" name="United States">
+	<currency>USD</currency>
+	<population>310232863</population>
+	<capital>Washington</capital>
+	<continent>North America</continent>
+	<area>9629091.0</area>
+	</object>
+		<object code="UY" name="Uruguay">
+	<currency>UYU</currency>
+	<population>3477000</population>
+	<capital>Montevideo</capital>
+	<continent>South America</continent>
+	<area>176220.0</area>
+	</object>
+		<object code="UZ" name="Uzbekistan">
+	<currency>UZS</currency>
+	<population>27865738</population>
+	<capital>Tashkent</capital>
+	<continent>Asia</continent>
+	<area>447400.0</area>
+	</object>
+		<object code="VA" name="Vatican City">
+	<currency>EUR</currency>
+	<population>921</population>
+	<capital>Vatican</capital>
+	<continent>Europe</continent>
+	<area>0.44</area>
+	</object>
+		<object code="VC" name="Saint Vincent and the Grenadines">
+	<currency>XCD</currency>
+	<population>104217</population>
+	<capital>Kingstown</capital>
+	<continent>North America</continent>
+	<area>389.0</area>
+	</object>
+		<object code="VE" name="Venezuela">
+	<currency>VEF</currency>
+	<population>27223228</population>
+	<capital>Caracas</capital>
+	<continent>South America</continent>
+	<area>912050.0</area>
+	</object>
+		<object code="VG" name="British Virgin Islands">
+	<currency>USD</currency>
+	<population>21730</population>
+	<capital>Road Town</capital>
+	<continent>North America</continent>
+	<area>153.0</area>
+	</object>
+		<object code="VI" name="U.S. Virgin Islands">
+	<currency>USD</currency>
+	<population>108708</population>
+	<capital>Charlotte Amalie</capital>
+	<continent>North America</continent>
+	<area>352.0</area>
+	</object>
+		<object code="VN" name="Vietnam">
+	<currency>VND</currency>
+	<population>89571130</population>
+	<capital>Hanoi</capital>
+	<continent>Asia</continent>
+	<area>329560.0</area>
+	</object>
+		<object code="VU" name="Vanuatu">
+	<currency>VUV</currency>
+	<population>221552</population>
+	<capital>Port Vila</capital>
+	<continent>Oceania</continent>
+	<area>12200.0</area>
+	</object>
+		<object code="WF" name="Wallis and Futuna">
+	<currency>XPF</currency>
+	<population>16025</population>
+	<capital>Mata-Utu</capital>
+	<continent>Oceania</continent>
+	<area>274.0</area>
+	</object>
+		<object code="WS" name="Samoa">
+	<currency>WST</currency>
+	<population>192001</population>
+	<capital>Apia</capital>
+	<continent>Oceania</continent>
+	<area>2944.0</area>
+	</object>
+		<object code="XK" name="Kosovo">
+	<currency>EUR</currency>
+	<population>1800000</population>
+	<capital>Pristina</capital>
+	<continent>Europe</continent>
+	<area>10908.0</area>
+	</object>
+		<object code="YE" name="Yemen">
+	<currency>YER</currency>
+	<population>23495361</population>
+	<capital>Sanaa</capital>
+	<continent>Asia</continent>
+	<area>527970.0</area>
+	</object>
+		<object code="YT" name="Mayotte">
+	<currency>EUR</currency>
+	<population>159042</population>
+	<capital>Mamoutzou</capital>
+	<continent>Africa</continent>
+	<area>374.0</area>
+	</object>
+		<object code="ZA" name="South Africa">
+	<currency>ZAR</currency>
+	<population>49000000</population>
+	<capital>Pretoria</capital>
+	<continent>Africa</continent>
+	<area>1219912.0</area>
+	</object>
+		<object code="ZM" name="Zambia">
+	<currency>ZMW</currency>
+	<population>13460305</population>
+	<capital>Lusaka</capital>
+	<continent>Africa</continent>
+	<area>752614.0</area>
+	</object>
+		<object code="ZW" name="Zimbabwe">
+	<currency>ZWL</currency>
+	<population>11651858</population>
+	<capital>Harare</capital>
+	<continent>Africa</continent>
+	<area>390580.0</area>
+	</object>
+</QALCULATE>
