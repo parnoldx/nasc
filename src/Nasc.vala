@@ -35,14 +35,14 @@ namespace Nasc {
             app_years = "2015";
             app_icon = "nasc";
             app_launcher = "nasc.desktop";
-            application_id = "net.launchpad.nasc";
+            application_id = "com.github.parnold-x.nasc";
 
-            /* main_url = "https://code.launchpad.net/nasc"; */
-            bug_url = "https://bugs.launchpad.net/nasc";
-            help_url = "https://answers.launchpad.net/nasc";
+            main_url = "https://github.com/parnold-x/nasc/tree/master";
+            bug_url = "https://github.com/parnold-x/nasc/issues";
+            // help_url = "https://answers.launchpad.net/nasc";
             /* translate_url = "https://translations.launchpad.net/nasc"; */
 
-            /* about_authors = { "NaSC Authors" }; */
+            about_authors = { "Peter Arnold <parnold1@gmail.com>" };
             about_artists = { "Harvey Cabaguio <harvey@elementaryos.org>" };
             about_comments = "Do maths like a normal person";
             about_translators = null;
