@@ -1,5 +1,6 @@
-nasc (0.2) UNSTABLE; urgency=low
+nasc (0.3) UNSTABLE; urgency=low
 
+  * Move to github
   * Redesign
   * Initial release.
 
