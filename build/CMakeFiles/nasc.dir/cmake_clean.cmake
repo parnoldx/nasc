@@ -1,0 +1,41 @@
+file(REMOVE_RECURSE
+  "src/Nasc.c"
+  "src/MainWindow.c"
+  "src/config.c"
+  "src/Calculator.c"
+  "src/Controller.c"
+  "src/HelpBox.c"
+  "src/InputView.c"
+  "src/ListFooter.c"
+  "src/NascSettings.c"
+  "src/OpenBox.c"
+  "src/PasteBinDialog.c"
+  "src/PeriodicTable.c"
+  "src/ResultBoxWidget.c"
+  "src/ResultLine.c"
+  "src/ResultView.c"
+  "src/Tutorial.c"
+  "CMakeFiles/nasc.dir/src/Nasc.c.o"
+  "CMakeFiles/nasc.dir/src/MainWindow.c.o"
+  "CMakeFiles/nasc.dir/src/config.c.o"
+  "CMakeFiles/nasc.dir/src/Calculator.c.o"
+  "CMakeFiles/nasc.dir/src/Controller.c.o"
+  "CMakeFiles/nasc.dir/src/HelpBox.c.o"
+  "CMakeFiles/nasc.dir/src/InputView.c.o"
+  "CMakeFiles/nasc.dir/src/ListFooter.c.o"
+  "CMakeFiles/nasc.dir/src/NascSettings.c.o"
+  "CMakeFiles/nasc.dir/src/OpenBox.c.o"
+  "CMakeFiles/nasc.dir/src/PasteBinDialog.c.o"
+  "CMakeFiles/nasc.dir/src/PeriodicTable.c.o"
+  "CMakeFiles/nasc.dir/src/ResultBoxWidget.c.o"
+  "CMakeFiles/nasc.dir/src/ResultLine.c.o"
+  "CMakeFiles/nasc.dir/src/ResultView.c.o"
+  "CMakeFiles/nasc.dir/src/Tutorial.c.o"
+  "nasc.pdb"
+  "nasc"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang C)
+  include(CMakeFiles/nasc.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

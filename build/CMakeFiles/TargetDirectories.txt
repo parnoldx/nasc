@@ -1,0 +1,9 @@
+/home/pa/Projekte/nascOrg/build/CMakeFiles/install.dir
+/home/pa/Projekte/nascOrg/build/CMakeFiles/list_install_components.dir
+/home/pa/Projekte/nascOrg/build/CMakeFiles/rebuild_cache.dir
+/home/pa/Projekte/nascOrg/build/CMakeFiles/edit_cache.dir
+/home/pa/Projekte/nascOrg/build/CMakeFiles/libqalculatenasc.dir
+/home/pa/Projekte/nascOrg/build/CMakeFiles/nasc.dir
+/home/pa/Projekte/nascOrg/build/CMakeFiles/uninstall.dir
+/home/pa/Projekte/nascOrg/build/CMakeFiles/install/local.dir
+/home/pa/Projekte/nascOrg/build/CMakeFiles/install/strip.dir
