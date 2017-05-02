@@ -412,13 +412,13 @@ public class HelpBox : Gtk.Box {
         nasc.add (new NascFunction.nasc ("", "Referencing answers",
                                          "You can plug answers in to future equations and if that answer changes, so does the equations its used in.\n\nYou either can just click on a previous answer in the result pane, use the keyword <i>ans</i> for the last answer or the keyword <i>lineX</i> where X is the number of the line which you want to use."));
         nasc.add (new NascFunction.nasc ("", "Shortcuts",
-                                         "<i>Ctrl + O</i> = Open\n<i>Ctrl + H</i> = Help\n<i>Ctrl + L</i> = Last Answer\n<i>Ctrl + N</i> = New Sheet\n<i>Ctrl + P</i> = π\n<i>Ctrl + R</i> = √\n\n<i>Ctrl + 0</i> = °\n<i>Ctrl + 2</i> = ²\n<i>Ctrl + 3</i> = ³\n<i>Ctrl + 4</i> = ⁴"));
+                                         "<i>Ctrl + H</i> = Help\n<i>Ctrl + L</i> = Last Answer\n<i>Ctrl + N</i> = New Sheet\n<i>Ctrl + P</i> = π\n<i>Ctrl + R</i> = √\n\n<i>Ctrl + 0</i> = °\n<i>Ctrl + 2</i> = ²\n<i>Ctrl + 3</i> = ³\n<i>Ctrl + 4</i> = ⁴"));
         nasc.add (new NascFunction.nasc ("atom", "Periodic Table",
                                          "Show a Periodic Table. You can browse through the elements and insert properties into your calculation. Just click on the properties like for example the boiling point."));
         nasc.add (new NascFunction.nasc ("tutorial", "Tutorial",
                                          "Show the NaSC Tutorial again."));
         nasc.add (new NascFunction.nasc ("", "Unit Conversion",
-                                         "You can convert various Units. The keyword is <i>to</i>.\nFor example:\n100€ to $\n23cm to in"));
+                                         "You can convert various Units. The keyword is <i>to</i>.\n\nFor example:\n100€ to $\n23cm to in"));
         nasc.add (new NascFunction.nasc ("amath", "Advanced Math", ""));
 
         return nasc;

@@ -42,7 +42,7 @@ configure_file (${CMAKE_SOURCE_DIR}/src/config.vala.cmake ${CMAKE_SOURCE_DIR}/sr
 
 #GSettings
 include(GSettings)
-add_schema("net.launchpad.nasc.gschema.xml")
+add_schema("com.github.parnold-x.nasc.gschema.xml")
 
 set(NEEDED_PKG
     glib-2.0
@@ -109,25 +109,26 @@ target_link_libraries(nasc
 
 install (TARGETS nasc RUNTIME DESTINATION bin)
 
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/nasc.desktop DESTINATION share/applications)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/com.github.parnold-x.nasc.desktop DESTINATION share/applications)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/com.github.parnold-x.nasc.appdata.xml DESTINATION share/appdata)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/nasc_template.sheets DESTINATION share/qalculate)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/datasets/country.xml DESTINATION share/qalculate)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/datasets/datasetsNasc.xml DESTINATION share/qalculate)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icons/16/nasc.svg DESTINATION share/icons/hicolor/16x16/apps)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icons/24/nasc.svg DESTINATION share/icons/hicolor/24x24/apps)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icons/32/nasc.svg DESTINATION share/icons/hicolor/32x32/apps)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icons/48/nasc.svg DESTINATION share/icons/hicolor/48x48/apps)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icons/64/nasc.svg DESTINATION share/icons/hicolor/64x64/apps)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icons/128/nasc.svg DESTINATION share/icons/hicolor/128x128/apps)
+# install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/datasets/country.xml DESTINATION share/qalculate)
+# install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/datasets/datasetsNasc.xml DESTINATION share/qalculate)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icons/16/com.github.parnold-x.nasc.svg DESTINATION share/icons/hicolor/16x16/apps)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icons/24/com.github.parnold-x.nasc.svg DESTINATION share/icons/hicolor/24x24/apps)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icons/32/com.github.parnold-x.nasc.svg DESTINATION share/icons/hicolor/32x32/apps)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icons/48/com.github.parnold-x.nasc.svg DESTINATION share/icons/hicolor/48x48/apps)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icons/64/com.github.parnold-x.nasc.svg DESTINATION share/icons/hicolor/64x64/apps)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icons/128/com.github.parnold-x.nasc.svg DESTINATION share/icons/hicolor/128x128/apps)
 install (FILES ${QALCULATE_LIB_PATH} DESTINATION /usr/lib)
 install (DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/data/styles DESTINATION share/qalculate)
 #overwrite the standard libqalculate datasets.xml with a extended one
-install (CODE
-    "execute_process (COMMAND cp -R /usr/share/qalculate/datasetsNasc.xml /usr/share/qalculate/datasets.xml)"
-)
-install (CODE
-    "execute_process (COMMAND rm /usr/share/qalculate/datasetsNasc.xml)"
-)
+# install (CODE
+#     "execute_process (COMMAND cp -R /usr/share/qalculate/datasetsNasc.xml /usr/share/qalculate/datasets.xml)"
+# )
+# install (CODE
+#     "execute_process (COMMAND rm /usr/share/qalculate/datasetsNasc.xml)"
+# )
 install (CODE
     "execute_process (COMMAND gtk-update-icon-cache /usr/share/icons/hicolor)"
 )

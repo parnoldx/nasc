@@ -18,7 +18,7 @@
 		</key>
 
 		<key name="window-width" type="i">
-			<default>800</default>
+			<default>850</default>
 			<summary>The user's last window width</summary>
 			<description>
 				The user's last window width

@@ -487,18 +487,15 @@ public class PeriodicTable : Gtk.Grid {
             return;
         }
 
-        var close_but = new Gtk.Button ();
-        var close_img = new Gtk.Image ();
-        close_img.pixbuf = Granite.Widgets.Utils.get_close_pixbuf ();
-        close_but.margin_bottom = 20;
-        close_but.get_style_context ().add_class ("flat");
-        close_but.set_image (close_img);
-        close_but.button_press_event.connect ((evt) => {
+        var close_button = new Gtk.Button.from_icon_name ("go-previous-symbolic", Gtk.IconSize.BUTTON);
+        close_button.set_relief (Gtk.ReliefStyle.NONE);
+        close_button.margin_bottom = 20;
+        attach (close_button, 0, 0, 1, 1);
+        close_button.button_press_event.connect ((evt) => {
             close ();
 
             return false;
         });
-        attach (close_but, 0, 0, 1, 1);
 
         int a = 0;
         int b = 1;
