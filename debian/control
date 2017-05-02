@@ -1,4 +1,4 @@
-Source: nasc
+Source: com.github.parnold-x.nasc
 Section: misc
 Priority: optional
 Maintainer: Peter Arnold <parnold1@gmail.com>
@@ -19,4 +19,4 @@ Package: com.github.parnold-x.nasc
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Pre-Depends: dpkg (>= 1.15.6)
-Description: Its an app where you do maths like a normal person. It lets you type whatever you want and smartly figures out what is math and spits out an answer on the right pane. Then you can plug those answers in to future equations and if that answer changes, so does the equations its used in.
+Description: Do maths like a normal person.
