@@ -1,7 +1,7 @@
-nasc (0.3) UNSTABLE; urgency=low
+com.github.parnold-x.nasc (0.3.3) UNSTABLE; urgency=low
 
   * Move to github
   * Redesign
   * Initial release.
 
- -- Djax <parnold1@gmail.com>  Sa, 28 Mar 2015 18:31:16 +0100
+ -- Peter Arnold <parnold1@gmail.com>  Thu, 02 May 2017 18:31:16 +0100
