@@ -1,7 +1,7 @@
 Source: nasc
 Section: misc
 Priority: optional
-Maintainer: Djax <parnold1@gmail.com>
+Maintainer: Peter Arnold <parnold1@gmail.com>
 Build-Depends: cmake (>= 2.8),
                debhelper (>= 9),
                libgcc1 (>= 1:4.1.1),
@@ -15,7 +15,7 @@ Build-Depends: cmake (>= 2.8),
                valac
 Standards-Version: 3.9.3
 
-Package: nasc
+Package: com.github.parnold-x.nasc
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Pre-Depends: dpkg (>= 1.15.6)
