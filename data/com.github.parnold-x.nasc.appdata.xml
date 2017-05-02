@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2017 Your Name <you@email.com> -->
+<component type="desktop">
+  <id>com.github.parnold-x.nasc.desktop</id>
+  <metadata_license>CC0</metadata_license>
+  <name>NaSC</name>
+  <summary>Do maths like a normal person</summary>
+  <description>
+    <p>Its an app where you do maths like a normal person. It lets you type whatever you want and smartly figures out what is math and spits out an answer on the right pane. Then you can plug those answers in to future equations and if that answer changes, so does the equations its used in.</p>
+  </description>
+  <custom>
+     <value key="x-appcenter-color-primary">#3278cd</value>
+     <value key="x-appcenter-color-primary-text">rgb(157, 200, 236)</value>
+  </custom>
+</component>

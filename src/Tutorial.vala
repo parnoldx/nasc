@@ -30,7 +30,7 @@ internal class TutorialPage : Gtk.Box {
         var main_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 10);
         var content_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
         var desc = new Gtk.Label ("");
-        desc.set_selectable (true);
+        desc.set_selectable (false);
         desc.set_line_wrap (true);
         desc.set_markup (description);
         content_box.pack_start (desc);
@@ -74,7 +74,7 @@ internal class TutorialPage : Gtk.Box {
     }
 
     public void success () {
-        next_button.set_image (new Gtk.Image.from_icon_name ("dialog-ok", Gtk.IconSize.BUTTON));
+        next_button.set_image (new Gtk.Image.from_icon_name ("emblem-ok-symbolic", Gtk.IconSize.BUTTON));
     }
 }
 
@@ -86,7 +86,7 @@ public class Tutorial : Gtk.Stack {
         this.controller = controller;
         this.set_hexpand (true);
         var page0 = new TutorialPage (this,
-                                      "Hi %s, thank you for using NaSC!\nIn NaSC you can put text and math side by side and the answer will be shown on the right pane.".
+                                      "Hello %s!\nIn NaSC you can put text and math side by side and the answer will be shown on the right pane.".
                                        printf (Environment.get_real_name ()),
                                       "Do you want to learn the basics?", 0);
         this.add_named (page0, "0");
@@ -124,14 +124,14 @@ public class Tutorial : Gtk.Stack {
         this.add_named (page8, "8");
         var page9 = new TutorialPage (this,
                                       "or print the week of the year",
-                                      "Calculate: week(12.12.2015)", 9);
+                                      "Calculate: week(12.12.2017)", 9);
         this.add_named (page9, "9");
         var page10 = new TutorialPage (this,
                                        "For a list of all those keywords and their capabilities, just open the help.",
                                        "Calculate: The absolut value of -2 (Hint: abs)", 10);
         this.add_named (page10, "10");
         var page11 = new TutorialPage (this,
-                                       "<b>Shortcuts:</b>\n<i>Ctrl + O</i> = Open ; <i>Ctrl + H</i> = Help ; <i>Ctrl + P</i> = π ; <i>Ctrl + R</i> = √ ; <i>Ctrl + L</i> = Last Answer",
+                                       "<b>Shortcuts:</b>\n<i>Ctrl + H</i> = Help ; <i>Ctrl + P</i> = π ; <i>Ctrl + R</i> = √ ; <i>Ctrl + L</i> = Last Answer",
                                        "Calculate: π * 42cm", 11);
         this.add_named (page11, "11");
         var page12 = new TutorialPage (this,

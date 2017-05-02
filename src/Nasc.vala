@@ -32,9 +32,9 @@ namespace Nasc {
             build_version = Constants.VERSION;
             build_version_info = Constants.VERSION_INFO;
 
-            app_years = "2015";
-            app_icon = "nasc";
-            app_launcher = "nasc.desktop";
+            app_years = "2017";
+            app_icon = "com.github.parnold-x.nasc";
+            app_launcher = "com.github.parnold-x.nasc.desktop";
             application_id = "com.github.parnold-x.nasc";
 
             main_url = "https://github.com/parnold-x/nasc/tree/master";
