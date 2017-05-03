@@ -1,7 +1,8 @@
-com.github.parnold-x.nasc (0.3.3) UNSTABLE; urgency=low
+com.github.parnold-x.nasc (0.4) UNSTABLE; urgency=low
 
+  * update appdata.xml
   * Move to github
   * Redesign
   * Initial release.
 
- -- Peter Arnold <parnold1@gmail.com>  Thu, 02 May 2017 18:31:16 +0100
+ -- Peter Arnold <parnold1@gmail.com>  Wed, 03 May 2017 22:31:16 +0100
