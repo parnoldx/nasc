@@ -1,13 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2017 Your Name <you@email.com> -->
+<!-- Copyright 2017 Peter Arnold <parnold1@gmail.com> -->
 <component type="desktop">
   <id>com.github.parnold-x.nasc.desktop</id>
   <metadata_license>CC0</metadata_license>
+  <project_license>GPL-3.0+</project_license>
   <name>NaSC</name>
   <summary>Do maths like a normal person</summary>
   <description>
     <p>Its an app where you do maths like a normal person. It lets you type whatever you want and smartly figures out what is math and spits out an answer on the right pane. Then you can plug those answers in to future equations and if that answer changes, so does the equations its used in.</p>
   </description>
+  <provides>
+    <binary>nasc</binary>
+  </provides>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/parnold-x/nasc/master/Screenshot.png</image>
+    </screenshot>
+  </screenshots>
+  <developer_name>Peter Arnold</developer_name>
+  <url type="homepage">https://github.com/parnold-x/nasc</url>
+  <url type="bugtracker">https://github.com/parnold-x/nasc/issues</url>
+  <url type="help">https://github.com/parnold-x/nasc/issues</url>
   <custom>
      <value key="x-appcenter-color-primary">#3278cd</value>
      <value key="x-appcenter-color-primary-text">rgb(157, 200, 236)</value>
