@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Peter Arnold <parnold1@gmail.com>
 Build-Depends: cmake (>= 2.8),
                debhelper (>= 9),
-               libgcc1 (>= 1:4.1.1),
+               libgcc1,
                libqalculate-dev,
                libgee-0.8-dev,
                libsoup2.4-dev,
