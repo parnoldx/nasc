@@ -20,7 +20,7 @@ PPA: nasc-team/daily
 ```
 sudo apt-add-repository ppa:nasc-team/daily
 sudo apt-get update
-sudo apt-get install nasc
+sudo apt-get install com.github.parnold-x.nasc
 ```
 
 ## Building
