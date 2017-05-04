@@ -1,0 +1,8 @@
+title: NaSC
+description: Do maths like a normal person
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-architect
+
+gems:
+  - jekyll-mentions
