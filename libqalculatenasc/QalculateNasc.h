@@ -12,7 +12,7 @@ char* Calculator_calculate(const char* string);
 char* Calculator_calculate_store_variable(const char* input, const char* variable);
 
 void clear_variables();
-void abort();
+void abortt();
 
 void delete_calculator();
 

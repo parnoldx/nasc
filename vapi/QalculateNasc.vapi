@@ -17,7 +17,7 @@ public class QalculateNasc {
 	[CCode (cname = "clear_variables")]
 	public static void clear_variables ();
 
-	[CCode (cname = "abort")]
+	[CCode (cname = "abortt")]
 	public static void abort ();
 
 	[CCode (cname = "get_function_size")]
