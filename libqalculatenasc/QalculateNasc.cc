@@ -3,6 +3,7 @@
 #include "QalculateNasc.h"
 #include <memory>
 #include <thread>
+#include <algorithm>
 
 std::shared_ptr<Calculator> calc;
 MathStructure *mstruct;
@@ -196,7 +197,7 @@ extern "C" {
         calc->resetVariables();
     }
 
-    void abort() {
+    void abortt() {
         calc->abort();
     }
 
