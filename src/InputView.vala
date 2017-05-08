@@ -256,7 +256,7 @@ public class InputView : Gtk.Box {
         if (add_space) {
             add_space = false;
 
-            if (s != " ") {
+            if (s != " " && s != "/") {
                 skip_change = true;
                 source_view.buffer.insert (ref it, " ", -1);
                 skip_change = false;
@@ -374,8 +374,7 @@ public class InputView : Gtk.Box {
             iter.assign (it);
             iter.backward_cursor_position ();
             var pre_last_char = source_view.buffer.get_slice (iter, it, true);
-
-            if (!(pre_last_char == " ")) {
+            if (!(pre_last_char == " " || pre_last_char == "/")) {
                 skip_change = true;
                 source_view.buffer.insert (ref it, " ", -1);
                 skip_change = false;

@@ -2,6 +2,7 @@
 <language id="nasc" _name="NaSC" version="2.0" _section="Scientific">
   <metadata>
     <property name="mimetypes">text/x-nasc</property>
+    <property name="line-comment-start">//</property>
     <property name="globs">*.nasc</property>
   </metadata>
 
@@ -474,6 +475,7 @@
 
     <context id="nasc" class="no-spell-check">
       <include>
+        <context ref="def:c-like-comment" style-ref="comment"/>
         <context ref="operator"/>
         <context ref="decimal"/>
         <context ref="floating-point-number"/>
