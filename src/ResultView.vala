@@ -35,6 +35,7 @@ public class ResultView : Gtk.Box {
     public ResultView () {
         result_list = new Gee.ArrayList<ResultLine> ();
         spinner = new Gtk.Spinner ();
+        spinner.active = true;
         spinner.start ();
         spinner_box = new Gtk.Alignment (0.9f, 0, 0, 0);
         spinner_box.add (spinner);
@@ -139,7 +140,7 @@ public class ResultView : Gtk.Box {
     /* shows a spinner at the line */
     public void show_spinner (int line) {
         spinner_box.no_show_all = false;
-        spinner.margin_top = Nasc.top_padding + (line * 27);
+        spinner.margin_top = Nasc.top_padding + (line * 30);
         spinner_box.show_all ();
         /*
          * for (int i = line; i < result_list.size; i++) {

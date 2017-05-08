@@ -217,6 +217,13 @@ internal class CalculatorThread {
             return_str = return_str.replace ("=", ":=");
         }
 
+        // allow comments at the end of a line
+        string[] split2 = return_str.split ("//");
+        if(split2.length == 2){
+            return_str = split2[0];
+        }
+
+
         /* to enable currency signs */
         return_str = return_str.replace ("$", "USD").replace ("€", "EUR").replace ("£", "GBP").replace ("¥", "JPY");
 

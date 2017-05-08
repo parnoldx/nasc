@@ -415,6 +415,8 @@ public class HelpBox : Gtk.Box {
                                          "<i>Ctrl + H</i> = Help\n<i>Ctrl + L</i> = Last Answer\n<i>Ctrl + N</i> = New Sheet\n<i>Ctrl + P</i> = π\n<i>Ctrl + R</i> = √\n\n<i>Ctrl + 0</i> = °\n<i>Ctrl + 2</i> = ²\n<i>Ctrl + 3</i> = ³\n<i>Ctrl + 4</i> = ⁴"));
         nasc.add (new NascFunction.nasc ("atom", "Periodic Table",
                                          "Show a Periodic Table. You can browse through the elements and insert properties into your calculation. Just click on the properties like for example the boiling point."));
+         nasc.add (new NascFunction.nasc ("", "Scrubbing",
+                                         "If you hover over a number you can manipulate this number while pressing the left mouse button and move the mouse to the left or to the right."));
         nasc.add (new NascFunction.nasc ("tutorial", "Tutorial",
                                          "Show the NaSC Tutorial again."));
         nasc.add (new NascFunction.nasc ("", "Unit Conversion",
