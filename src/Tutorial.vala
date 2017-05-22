@@ -95,7 +95,7 @@ public class Tutorial : Gtk.Stack {
                                       "Calculate: 11 + 42", 1);
         this.add_named (page1, "1");
         var page2 = new TutorialPage (this,
-                                      "You can plug the answers (ans) in future equations. Just click on the answer.\nIf a answer changes, so does the equation its used in.",
+                                      "You can plug the answers (ans) in future equations. Just click on the answer.\nIf an answer changes, so does the equation it's used in.",
                                       "Calculate: <i>ans</i> * 2", 2);
         this.add_named (page2, "2");
         var page3 = new TutorialPage (this,
@@ -128,7 +128,7 @@ public class Tutorial : Gtk.Stack {
         this.add_named (page9, "9");
         var page10 = new TutorialPage (this,
                                        "For a list of all those keywords and their capabilities, just open the help.",
-                                       "Calculate: The absolut value of -2 (Hint: abs)", 10);
+                                       "Calculate: The absolute value of -2 (Hint: abs)", 10);
         this.add_named (page10, "10");
         var page11 = new TutorialPage (this,
                                        "<b>Shortcuts:</b>\n<i>Ctrl + H</i> = Help ; <i>Ctrl + P</i> = π ; <i>Ctrl + R</i> = √ ; <i>Ctrl + L</i> = Last Answer",
