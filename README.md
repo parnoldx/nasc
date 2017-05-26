@@ -10,9 +10,7 @@ NaSC is an app where you do maths like a normal person. It lets you type whateve
 
 
 ## Installation
-If you are using elementary OS **Loki**, in order to add a PPA you might need to first run
-
-	sudo apt-get install software-properties-common
+If you are using elementary OS **Loki** just search for NaSC in AppCenter
 
 PPA: nasc-team/daily
 
