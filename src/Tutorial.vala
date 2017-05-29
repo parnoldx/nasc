@@ -100,7 +100,7 @@ public class Tutorial : Gtk.Stack {
         this.add_named (page2, "2");
         var page3 = new TutorialPage (this,
                                       "You can also reference the last answer with the keyword \"ans\" or with \"lineX\" where X is the linenumber of the answer.",
-                                      "Calculate: sin 45° + cos 2rad", 3);
+                                      "Calculate: sin 45° + cos 2rad (Hint: get degrees with ctrl+0)", 3);
         this.add_named (page3, "3");
         var page4 = new TutorialPage (this,
                                       "You can define your own variables",
