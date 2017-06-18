@@ -10,7 +10,7 @@ NaSC is an app where you do maths like a normal person. It lets you type whateve
 
 
 ## Installation
-If you are using elementary OS **Loki** just search for NaSC in AppCenter
+[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.USER.REPO)﻿
 
 PPA: nasc-team/daily
 
