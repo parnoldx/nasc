@@ -120,7 +120,7 @@ install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icons/32/com.github.parnold-x.nasc.sv
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icons/48/com.github.parnold-x.nasc.svg DESTINATION share/icons/hicolor/48x48/apps)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icons/64/com.github.parnold-x.nasc.svg DESTINATION share/icons/hicolor/64x64/apps)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icons/128/com.github.parnold-x.nasc.svg DESTINATION share/icons/hicolor/128x128/apps)
-install (FILES ${QALCULATE_LIB_PATH} DESTINATION ${CMAKE_INSTALL_LIBDIR})
+install (FILES ${QALCULATE_LIB_PATH} DESTINATION /usr/lib/)
 install (DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/data/styles DESTINATION share/qalculate)
 #overwrite the standard libqalculate datasets.xml with a extended one
 # install (CODE

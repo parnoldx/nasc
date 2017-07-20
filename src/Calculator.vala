@@ -413,7 +413,7 @@ public class Calculator : Object {
             stderr.printf ("Error: %s\n", e.message);
         }
 
-        Idle.add (() => {
+        Timeout.add (500, () => {
             /* currency rate update thread */
             update_thread = new UpdateThread (calc_thread.currency_update_filename, calc_thread.currency_update_url);
 

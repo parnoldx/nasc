@@ -7,7 +7,7 @@ TryExec=nasc
 Exec=nasc
 Icon=com.github.parnold-x.nasc
 Terminal=false
-Categories=Utility;Calculator;Education;
+Categories=Utility;Calculator;Education;Science;
 Actions=AboutDialog;
 
 [Desktop Action AboutDialog]
