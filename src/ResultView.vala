@@ -57,10 +57,10 @@ public class ResultView : Gtk.Box {
         text_view.override_font (font_desc);
         /* background color very light grey */
         var color = Gdk.RGBA ();
-        color.red = 230;
-        color.green = 230;
-        color.blue = 230;
-        color.alpha = 0;
+        color.red = 0.9;
+        color.green = 0.9;
+        color.blue = 0.9;
+        color.alpha = 1.0;
         text_view.override_background_color (Gtk.StateFlags.NORMAL, color);
         /* listen on result press */
         text_view.set_events (Gdk.EventMask.BUTTON_PRESS_MASK);
