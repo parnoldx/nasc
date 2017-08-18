@@ -25,7 +25,7 @@ public const string DESCRIPTION = N_("Share files with pastebin service");
 
 namespace Nasc {
     public class PasteBin : GLib.Object {
-        public const int PASTE_ID_LEN = 8;
+        public const int PASTE_ID_LEN = 9;
 
         public const string NEVER = "N";
         public const string TEN_MINUTES = "10M";
