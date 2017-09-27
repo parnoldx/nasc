@@ -148,9 +148,6 @@ public class Controller : Object {
                 if (!dir.query_exists ()) {
                     dir.make_directory ();
                 }
-
-                var template_file = File.new_for_path (NascSettings.template_path);
-                template_file.copy (file, FileCopyFlags.NONE);
             }  catch (Error e) {
                 stderr.printf ("Error: %s\n", e.message);
             }
@@ -159,12 +156,10 @@ public class Controller : Object {
         debug ("getting sheets");
         get_sheets ();
 
-        if (NascSettings.get_instance ().open_sheet >= sheet_list.size) {
-            NascSettings.get_instance ().open_sheet = sheet_list.size - 1;
-        }
-
         debug ("set last sheet");
-        set_sheet (sheet_list.get (NascSettings.get_instance ().open_sheet));
+        if(sheet_list.size > 0) {
+            set_sheet (sheet_list.get (0));
+        }
     }
 
     public string get_content () {
@@ -272,10 +267,12 @@ public class Controller : Object {
         if (sheet_list == null) {
             sheet_list = new Gee.ArrayList<NascSheet> ();
             string[] sheets_split = sheets_file.split (NascSettings.sheet_split_char);
-
             foreach (string sheet in sheets_split) {
                 string[] content = sheet.split (NascSettings.name_split_char);
                 sheet_list.add (new NascSheet (content[0], content[1].replace ("\\n", "\n")));
+            }
+            if (sheet_list.size == 0){
+                sheet_list.add (new NascSheet ("sheet",""));
             }
         }
 

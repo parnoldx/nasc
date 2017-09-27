@@ -24,6 +24,7 @@ include_directories(${QALCULATE_INCLUDE_PATH})
 add_definitions(-w)
 
 set (DATADIR "/usr/share/nasc")
+set (STYLEDIR "/usr/share/qalculate/styles/")
 set (PKGDATADIR "${DATADIR}")
 set (GETTEXT_PACKAGE "nasc")
 set (RELEASE_NAME "nasc")

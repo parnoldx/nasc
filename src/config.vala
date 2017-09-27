@@ -1,5 +1,6 @@
 namespace Constants {
     public const string DATADIR = "/usr/share/nasc";
+    public const string STYLEDIR = "/usr/share/qalculate/styles/";
     public const string PKGDATADIR = "/usr/share/nasc";
     public const string GETTEXT_PACKAGE = "nasc";
     public const string RELEASE_NAME = "nasc";

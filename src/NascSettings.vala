@@ -25,7 +25,6 @@ public class NascSettings : Granite.Services.Settings {
     public const string sheet_split_char = "|§§|";
     public const string name_split_char = "-§-";
     public const string sheet_path = "/.local/share/nasc/";
-    public const string template_path = "/usr/share/qalculate/nasc_template.sheets";
 
     public bool show_tutorial { get; set; }
     public bool advanced_mode { get; set; }

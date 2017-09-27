@@ -239,7 +239,7 @@ public class InputView : Gtk.Box {
         });
         this.pack_start (alignment);
         /* setup syntax highlighting */
-        string[] dirs = { "/usr/share/qalculate/styles/" };
+        string[] dirs = { Constants.STYLEDIR};
         var lang_manager = Gtk.SourceLanguageManager.get_default ();
         lang_manager.set_search_path (dirs);
         this.buffer.set_language (lang_manager.get_language ("nasc"));
