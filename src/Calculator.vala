@@ -356,6 +356,9 @@ internal class UpdateThread {
         if (!update_file.query_exists ()) {
             /* update it */
             try {
+                var target_dir = File.new_for_path (Path.get_dirname (file));
+                target_dir.make_directory_with_parents ();
+
                 debug ("update exchange rates file");
                 var exch_file = File.new_for_uri (url);
                 exch_file.copy (update_file, FileCopyFlags.NONE);
