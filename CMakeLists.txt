@@ -2,6 +2,7 @@ project (nasc)
 cmake_minimum_required (VERSION 2.8)
 cmake_policy (VERSION 2.6)
 
+include(GNUInstallDirs)
 include(ExternalProject)
 
 set(QALCULATE_DEP_PATH ${CMAKE_SOURCE_DIR}/libqalculatenasc)
