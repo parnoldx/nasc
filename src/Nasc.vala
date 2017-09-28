@@ -16,7 +16,7 @@
  * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
  * Boston, MA 02111-1307, USA.
  */
-
+ 
 namespace Nasc {
     public class NascApp : Granite.Application {
         private MainWindow window = null;
@@ -44,8 +44,8 @@ namespace Nasc {
 
             about_authors = { "Peter Arnold <parnold1@gmail.com>" };
             about_artists = { "Harvey Cabaguio <harvey@elementaryos.org>" };
-            about_comments = "Do maths like a normal person";
-            about_translators = null;
+            about_comments = _("Do maths like a normal person");
+            about_translators = _("translator_credits");
             about_license_type = Gtk.License.GPL_3_0;
         }
 
