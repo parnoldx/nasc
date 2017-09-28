@@ -68,9 +68,9 @@ namespace Nasc {
             // open_button.set_tooltip_markup ("Open sheets");
             help_button = new Gtk.ToggleButton ();
             help_button.set_image (new Gtk.Image.from_icon_name ("help-contents", Gtk.IconSize.LARGE_TOOLBAR));
-            help_button.set_tooltip_markup ("Open help");
+            help_button.set_tooltip_markup (_("Open help"));
             var export_button = new Gtk.Button.from_icon_name ("document-export", Gtk.IconSize.LARGE_TOOLBAR);
-            export_button.set_tooltip_markup ("Export…");
+            export_button.set_tooltip_markup (_("Export…"));
             var export_popover = new Gtk.Popover (export_button);
 
             var pdf_button = new Gtk.Button.with_label (_("Export to PDF"));
@@ -189,10 +189,10 @@ namespace Nasc {
                 export_popover.hide ();
                 var sh = controller.actual_sheet.name;
                 Gtk.FileChooserDialog chooser = new Gtk.FileChooserDialog (
-                    "Choose a PDF save location", this, Gtk.FileChooserAction.SAVE,
-                    "_Cancel",
+                    _("Choose a PDF save location"), this, Gtk.FileChooserAction.SAVE,
+                    _("_Cancel"),
                     Gtk.ResponseType.CANCEL,
-                    "_Save",
+                    _("_Save"),
                     Gtk.ResponseType.ACCEPT);
                 chooser.set_current_name ("%s.pdf".printf (sh));
 

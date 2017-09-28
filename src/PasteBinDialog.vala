@@ -213,19 +213,19 @@ namespace Nasc {
 
                 switch (submit_result) {
                     case 2 :
-                        error_desc.append ("The text is void!");
+                        error_desc.append (_("The text is void!"));
                         break;
 
                     case 3:
-                        error_desc.append ("The text format doesn't exist");
+                        error_desc.append (_("The text format doesn't exist"));
                         break;
 
                     default:
-                        error_desc.append ("An error occured");
+                        error_desc.append (_("An error occured"));
                         break;
                 }
 
-                error_desc.append ("\n" + "The text was sent");
+                error_desc.append ("\n" + _("The text was sent"));
                 var err_label = new Label (error_desc.str);
                 box.pack_start (err_label, false, true, 0);
             }

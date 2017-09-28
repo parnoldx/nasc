@@ -31,13 +31,13 @@ if (NOT DEFINED STYLEDIR)
   set (STYLEDIR "/usr/share/qalculate/styles/")
 endif ()
 set (PKGDATADIR "${DATADIR}")
-set (GETTEXT_PACKAGE "nasc")
+set (GETTEXT_PACKAGE ${PROJECT_NAME})
+set (LOCALEDIR ${CMAKE_INSTALL_FULL_LOCALEDIR})
 set (RELEASE_NAME "nasc")
 set (VERSION "0.4")
 set (VERSION_INFO "Release")
 set (PREFIX ${CMAKE_INSTALL_PREFIX})
 set (DOLLAR "$")
-add_definitions ("-DGETTEXT_PACKAGE=\"${GETTEXT_PACKAGE}\"")
 
 list (APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 
@@ -50,6 +50,9 @@ configure_file (${CMAKE_SOURCE_DIR}/src/config.vala.cmake ${CMAKE_SOURCE_DIR}/sr
 include(GSettings)
 add_schema("com.github.parnold-x.nasc.gschema.xml")
 
+# Translations
+add_subdirectory(po)
+
 set(NEEDED_PKG
     glib-2.0
     gee-0.8
@@ -59,7 +62,7 @@ set(NEEDED_PKG
 )
 
 # Definitions
-add_definitions (-DGETTEXT_PACKAGE="nasc")
+add_definitions(-DGETTEXT_PACKAGE="${GETTEXT_PACKAGE}")
 
 find_package(PkgConfig)
 pkg_check_modules(DEPS REQUIRED ${NEEDED_PKG} gthread-2.0 gtksourceview-3.0>=3.10 libqalculate)

@@ -16,6 +16,8 @@
  * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
  * Boston, MA 02111-1307, USA.
  */
+ 
+[CCode(cname="LOCALEDIR")] extern const string LOCALEDIR;
 
 namespace Nasc {
     public class NascApp : Granite.Application {
@@ -44,8 +46,8 @@ namespace Nasc {
 
             about_authors = { "Peter Arnold <parnold1@gmail.com>" };
             about_artists = { "Harvey Cabaguio <harvey@elementaryos.org>" };
-            about_comments = "Do maths like a normal person";
-            about_translators = null;
+            about_comments = _("Do maths like a normal person");
+            about_translators = _("translator_credits");
             about_license_type = Gtk.License.GPL_3_0;
         }
 
@@ -63,6 +65,12 @@ namespace Nasc {
         }
 
         public static void main (string[] args) {
+            // Setup gettext
+            Intl.setlocale(LocaleCategory.MESSAGES, "");
+            Intl.textdomain (Constants.GETTEXT_PACKAGE);
+            Intl.bind_textdomain_codeset (Constants.GETTEXT_PACKAGE, "UTF-8");
+            Intl.bindtextdomain (Constants.GETTEXT_PACKAGE, Constants.LOCALEDIR);
+
             var app = new Nasc.NascApp ();
             app.args = args;
             app.run (args);
