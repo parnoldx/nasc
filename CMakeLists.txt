@@ -23,10 +23,10 @@ include_directories(${QALCULATE_INCLUDE_PATH})
 
 add_definitions(-w)
 
-if (!DATADIR)
+if (NOT DEFINED DATADIR)
   set (DATADIR "/usr/share/nasc")
 endif ()
-if (!STYLEDIR)
+if (NOT DEFINED STYLEDIR)
   set (STYLEDIR "/usr/share/qalculate/styles/")
 endif ()
 set (PKGDATADIR "${DATADIR}")
