@@ -1,0 +1,442 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-09-28 11:14+0200\n"
+"PO-Revision-Date: 2017-09-28 11:17+0200\n"
+"Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
+"Language-Team: \n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.3\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: /home/phw/devel/nasc/po/../src/HelpBox.vala:73
+msgid "Name"
+msgstr "Name"
+
+#: /home/phw/devel/nasc/po/../src/HelpBox.vala:147
+msgid "<big><big>Advanced Math</big></big>"
+msgstr ""
+
+#: /home/phw/devel/nasc/po/../src/HelpBox.vala:157
+msgid "<small>Shows advanced math functions in the help</small>"
+msgstr ""
+
+#: /home/phw/devel/nasc/po/../src/HelpBox.vala:338
+msgid "<small><b>Arguments</b></small>"
+msgstr ""
+
+#: /home/phw/devel/nasc/po/../src/HelpBox.vala:410
+msgid "Copy & Paste"
+msgstr "Kopieren und Einfügen"
+
+#: /home/phw/devel/nasc/po/../src/HelpBox.vala:411
+msgid ""
+"To support the referenced results there are 2 kind of copy in NaSC.\n"
+"The normal copy via context menu or <i>Ctrl + c</i> will replace the "
+"referenced results with their real values.\n"
+"Copy via <i>Ctrl + Shift + C</i> will replace the referenced results with "
+"lineX references.\n"
+"\n"
+"Paste will connect lineX references with the corresponding results."
+msgstr ""
+
+#: /home/phw/devel/nasc/po/../src/HelpBox.vala:412
+msgid "Referencing answers"
+msgstr ""
+
+#: /home/phw/devel/nasc/po/../src/HelpBox.vala:413
+msgid ""
+"You can plug answers in to future equations and if that answer changes, so "
+"does the equations its used in.\n"
+"\n"
+"You either can just click on a previous answer in the result pane, use the "
+"keyword <i>ans</i> for the last answer or the keyword <i>lineX</i> where X "
+"is the number of the line which you want to use."
+msgstr ""
+
+#: /home/phw/devel/nasc/po/../src/HelpBox.vala:414
+msgid "Shortcuts"
+msgstr "Tastaturkürzel"
+
+#: /home/phw/devel/nasc/po/../src/HelpBox.vala:415
+msgid ""
+"<i>Ctrl + H</i> = Help\n"
+"<i>Ctrl + L</i> = Last Answer\n"
+"<i>Ctrl + N</i> = New Sheet\n"
+"<i>Ctrl + P</i> = π\n"
+"<i>Ctrl + R</i> = √\n"
+"\n"
+"<i>Ctrl + 0</i> = °\n"
+"<i>Ctrl + 2</i> = ²\n"
+"<i>Ctrl + 3</i> = ³\n"
+"<i>Ctrl + 4</i> = ⁴"
+msgstr ""
+"<i>Strg + H</i> = Hilfe\n"
+"<i>Strg + L</i> = Letzte Antwort\n"
+"<i>Strg + N</i> = Neues Blatt\n"
+"<i>Strg + P</i> = π\n"
+"<i>Strg + R</i> = √\n"
+"\n"
+"<i>Strg + 0</i> = °\n"
+"<i>Strg + 2</i> = ²\n"
+"<i>Strg + 3</i> = ³\n"
+"<i>Strg + 4</i> = ⁴"
+
+#: /home/phw/devel/nasc/po/../src/HelpBox.vala:416
+msgid "Periodic Table"
+msgstr "Periodensystem"
+
+#: /home/phw/devel/nasc/po/../src/HelpBox.vala:417
+msgid ""
+"Show a Periodic Table. You can browse through the elements and insert "
+"properties into your calculation. Just click on the properties like for "
+"example the boiling point."
+msgstr ""
+
+#: /home/phw/devel/nasc/po/../src/HelpBox.vala:418
+msgid "Scrubbing"
+msgstr ""
+
+#: /home/phw/devel/nasc/po/../src/HelpBox.vala:419
+msgid ""
+"If you hover over a number you can manipulate this number while pressing the "
+"left mouse button and move the mouse to the left or to the right."
+msgstr ""
+
+#: /home/phw/devel/nasc/po/../src/HelpBox.vala:420
+msgid "Tutorial"
+msgstr ""
+
+#: /home/phw/devel/nasc/po/../src/HelpBox.vala:421
+msgid "Show the NaSC Tutorial again."
+msgstr "Das NaSC-Tutorial erneut anzeigen."
+
+#: /home/phw/devel/nasc/po/../src/HelpBox.vala:422
+msgid "Unit Conversion"
+msgstr "Einheitenkonvertierung"
+
+#: /home/phw/devel/nasc/po/../src/HelpBox.vala:423
+msgid ""
+"You can convert various Units. The keyword is <i>to</i>.\n"
+"\n"
+"For example:\n"
+"100€ to $\n"
+"23cm to in"
+msgstr ""
+"Sie können verschiedene Variablen konvertieren. Das Schlüsselwort dafür ist "
+"<i>to</i>.\n"
+"\n"
+"Zum Beispiel:\n"
+"100€ to $\n"
+"23cm to in"
+
+#: /home/phw/devel/nasc/po/../src/HelpBox.vala:424
+msgid "Advanced Math"
+msgstr ""
+
+#: /home/phw/devel/nasc/po/../src/ListFooter.vala:44
+#: /home/phw/devel/nasc/po/../src/ListFooter.vala:45
+msgid "Create new sheet"
+msgstr "Neues Blatt anlegen"
+
+#: /home/phw/devel/nasc/po/../src/ListFooter.vala:52
+#: /home/phw/devel/nasc/po/../src/ListFooter.vala:53
+msgid "Remove sheet"
+msgstr "Blatt entfernen"
+
+#: /home/phw/devel/nasc/po/../src/ListFooter.vala:66
+#: /home/phw/devel/nasc/po/../src/ListFooter.vala:67
+msgid "Undo last sheet removal"
+msgstr ""
+
+#: /home/phw/devel/nasc/po/../src/MainWindow.vala:71
+msgid "Open help"
+msgstr "Hilfe öffnen"
+
+#: /home/phw/devel/nasc/po/../src/MainWindow.vala:73
+msgid "Export…"
+msgstr "Exportieren …"
+
+#: /home/phw/devel/nasc/po/../src/MainWindow.vala:76
+msgid "Export to PDF"
+msgstr "Als PDF exportieren"
+
+#: /home/phw/devel/nasc/po/../src/MainWindow.vala:80
+#: /home/phw/devel/nasc/po/../src/PasteBinDialog.vala:124
+#: /home/phw/devel/nasc/po/../src/PasteBinDialog.vala:127
+msgid "Share via PasteBin"
+msgstr "Mit PasteBin teilen"
+
+#: /home/phw/devel/nasc/po/../src/MainWindow.vala:192
+msgid "Choose a PDF save location"
+msgstr ""
+
+#: /home/phw/devel/nasc/po/../src/MainWindow.vala:193
+msgid "_Cancel"
+msgstr "_Abbrechen"
+
+#: /home/phw/devel/nasc/po/../src/MainWindow.vala:195
+msgid "_Save"
+msgstr "_Speichern"
+
+#: /home/phw/devel/nasc/po/../src/Nasc.vala:49
+msgid "Do maths like a normal person"
+msgstr ""
+
+#: /home/phw/devel/nasc/po/../src/Nasc.vala:50
+msgid "translator_credits"
+msgstr "Philipp Wolfer <ph.wolfer@gmail.com>"
+
+#: /home/phw/devel/nasc/po/../src/PasteBinDialog.vala:23
+msgid "Pastebin"
+msgstr "Pastebin"
+
+#: /home/phw/devel/nasc/po/../src/PasteBinDialog.vala:24
+msgid "Share files with pastebin service"
+msgstr ""
+
+#: /home/phw/devel/nasc/po/../src/PasteBinDialog.vala:141
+msgid "Name:"
+msgstr "Name:"
+
+#: /home/phw/devel/nasc/po/../src/PasteBinDialog.vala:149
+msgid "Expiry time:"
+msgstr ""
+
+#: /home/phw/devel/nasc/po/../src/PasteBinDialog.vala:154
+msgid "Keep this paste private"
+msgstr ""
+
+#: /home/phw/devel/nasc/po/../src/PasteBinDialog.vala:155
+msgid "Upload"
+msgstr "Hochladen"
+
+#: /home/phw/devel/nasc/po/../src/PasteBinDialog.vala:216
+msgid "The text is void!"
+msgstr "Der Text ist leer!"
+
+#: /home/phw/devel/nasc/po/../src/PasteBinDialog.vala:220
+msgid "The text format doesn't exist"
+msgstr ""
+
+#: /home/phw/devel/nasc/po/../src/PasteBinDialog.vala:224
+msgid "An error occured"
+msgstr ""
+
+#: /home/phw/devel/nasc/po/../src/PasteBinDialog.vala:228
+msgid "The text was sent"
+msgstr "Der Text wurde gesendet"
+
+#: /home/phw/devel/nasc/po/../src/PasteBinDialog.vala:253
+msgid "Never"
+msgstr "Nie"
+
+#: /home/phw/devel/nasc/po/../src/PasteBinDialog.vala:254
+msgid "Ten minutes"
+msgstr "Zehn Minuten"
+
+#: /home/phw/devel/nasc/po/../src/PasteBinDialog.vala:255
+msgid "One hour"
+msgstr "Eine Stunde"
+
+#: /home/phw/devel/nasc/po/../src/PasteBinDialog.vala:256
+msgid "One day"
+msgstr "Ein Tag"
+
+#: /home/phw/devel/nasc/po/../src/PasteBinDialog.vala:257
+msgid "One month"
+msgstr "Ein Monat"
+
+#: /home/phw/devel/nasc/po/../src/PeriodicTable.vala:160
+msgid "Weight:"
+msgstr "Gewicht:"
+
+#: /home/phw/devel/nasc/po/../src/PeriodicTable.vala:182
+msgid "Boiling Point:"
+msgstr "Siedepunkt:"
+
+#: /home/phw/devel/nasc/po/../src/PeriodicTable.vala:204
+msgid "Melting Point:"
+msgstr "Schmelzpunkt:"
+
+#: /home/phw/devel/nasc/po/../src/PeriodicTable.vala:227
+msgid "Density:"
+msgstr "Dichte:"
+
+#: /home/phw/devel/nasc/po/../src/PeriodicTable.vala:248
+msgid "Classification:"
+msgstr "Klassifikation:"
+
+#: /home/phw/devel/nasc/po/../src/PeriodicTable.vala:278
+msgid "Alkali Metal"
+msgstr ""
+
+#: /home/phw/devel/nasc/po/../src/PeriodicTable.vala:282
+msgid "Alkaline-Earth Metal"
+msgstr ""
+
+#: /home/phw/devel/nasc/po/../src/PeriodicTable.vala:286
+msgid "Lanthanide"
+msgstr ""
+
+#: /home/phw/devel/nasc/po/../src/PeriodicTable.vala:290
+msgid "Actinide"
+msgstr ""
+
+#: /home/phw/devel/nasc/po/../src/PeriodicTable.vala:294
+msgid "Transition Metal"
+msgstr ""
+
+#: /home/phw/devel/nasc/po/../src/PeriodicTable.vala:298
+msgid "Metal"
+msgstr "Metall"
+
+#: /home/phw/devel/nasc/po/../src/PeriodicTable.vala:302
+msgid "Metalloid"
+msgstr ""
+
+#: /home/phw/devel/nasc/po/../src/PeriodicTable.vala:306
+msgid "Non-Metal"
+msgstr ""
+
+#: /home/phw/devel/nasc/po/../src/PeriodicTable.vala:310
+msgid "Halogen"
+msgstr "Halogen"
+
+#: /home/phw/devel/nasc/po/../src/PeriodicTable.vala:314
+msgid "Noble Gas"
+msgstr "Edelgas"
+
+#: /home/phw/devel/nasc/po/../src/PeriodicTable.vala:318
+msgid "Transactinide"
+msgstr ""
+
+#: /home/phw/devel/nasc/po/../src/PeriodicTable.vala:322
+msgid "Unknown"
+msgstr "Unbekannt"
+
+#: /home/phw/devel/nasc/po/../src/Tutorial.vala:89
+#, c-format
+msgid ""
+"Hello %s!\n"
+"In NaSC you can put text and math side by side and the answer will be shown "
+"on the right pane."
+msgstr ""
+
+#: /home/phw/devel/nasc/po/../src/Tutorial.vala:91
+msgid "Do you want to learn the basics?"
+msgstr "Wollen Sie die Grundlagen lernen?"
+
+#: /home/phw/devel/nasc/po/../src/Tutorial.vala:94
+msgid "Let's start with simple math."
+msgstr ""
+
+#: /home/phw/devel/nasc/po/../src/Tutorial.vala:95
+msgid "Calculate: 11 + 42"
+msgstr "Berechne: 11 + 42"
+
+#: /home/phw/devel/nasc/po/../src/Tutorial.vala:98
+msgid ""
+"You can plug the answers (ans) in future equations. Just click on the "
+"answer.\n"
+"If an answer changes, so does the equation it's used in."
+msgstr ""
+
+#: /home/phw/devel/nasc/po/../src/Tutorial.vala:99
+msgid "Calculate: <i>ans</i> * 2"
+msgstr "Berechne: <i>ans</i> * 2"
+
+#: /home/phw/devel/nasc/po/../src/Tutorial.vala:102
+msgid ""
+"You can also reference the last answer with the keyword \"ans\" or with "
+"\"lineX\" where X is the linenumber of the answer."
+msgstr ""
+
+#: /home/phw/devel/nasc/po/../src/Tutorial.vala:103
+msgid "Calculate: sin 45° + cos 2rad (Hint: get degrees with ctrl+0)"
+msgstr "Berechne: sin 45° + cos 2rad (Tipp: Grad-Zeichen mit Strg+0 einfügen)"
+
+#: /home/phw/devel/nasc/po/../src/Tutorial.vala:106
+msgid "You can define your own variables"
+msgstr "Sie können eigene Variablen definieren"
+
+#: /home/phw/devel/nasc/po/../src/Tutorial.vala:107
+msgid "Calculate: a = 5"
+msgstr "Berechne: a = 5"
+
+#: /home/phw/devel/nasc/po/../src/Tutorial.vala:110
+msgid "and use them in your equations"
+msgstr ""
+
+#: /home/phw/devel/nasc/po/../src/Tutorial.vala:111
+msgid "Calculate: 22 + a"
+msgstr "Berechne: 22 + a"
+
+#: /home/phw/devel/nasc/po/../src/Tutorial.vala:114
+msgid "You can get answers in various units"
+msgstr ""
+
+#: /home/phw/devel/nasc/po/../src/Tutorial.vala:115
+msgid "Calculate: 14 cm * 3 cm"
+msgstr "Berechne: 14 cm * 3 cm"
+
+#: /home/phw/devel/nasc/po/../src/Tutorial.vala:118
+msgid "and convert between these units"
+msgstr ""
+
+#: /home/phw/devel/nasc/po/../src/Tutorial.vala:119
+msgid "Calculate: <i>ans</i> to in"
+msgstr "Berechne: <i>ans</i> to in"
+
+#: /home/phw/devel/nasc/po/../src/Tutorial.vala:122
+msgid "You can play with time"
+msgstr ""
+
+#: /home/phw/devel/nasc/po/../src/Tutorial.vala:123
+msgid "Calculate: 3days + 4hour + 4years to ms"
+msgstr "Berechne: 3days + 4hour + 4years to ms"
+
+#: /home/phw/devel/nasc/po/../src/Tutorial.vala:126
+msgid "or print the week of the year"
+msgstr ""
+
+#: /home/phw/devel/nasc/po/../src/Tutorial.vala:127
+msgid "Calculate: week(12.12.2017)"
+msgstr "Berechne: week(12.12.2017)"
+
+#: /home/phw/devel/nasc/po/../src/Tutorial.vala:130
+msgid ""
+"For a list of all those keywords and their capabilities, just open the help."
+msgstr ""
+
+#: /home/phw/devel/nasc/po/../src/Tutorial.vala:131
+msgid "Calculate: The absolute value of -2 (Hint: abs)"
+msgstr "Beechne: The absolute value of -2 (Tipp: abs)"
+
+#: /home/phw/devel/nasc/po/../src/Tutorial.vala:134
+msgid ""
+"<b>Shortcuts:</b>\n"
+"<i>Ctrl + H</i> = Help ; <i>Ctrl + P</i> = π ; <i>Ctrl + R</i> = √ ; <i>Ctrl "
+"+ L</i> = Last Answer"
+msgstr ""
+
+#: /home/phw/devel/nasc/po/../src/Tutorial.vala:135
+msgid "Calculate: π * 42cm"
+msgstr "Berechne: π * 42cm"
+
+#: /home/phw/devel/nasc/po/../src/Tutorial.vala:138
+msgid "Great, you finished the Tutorial."
+msgstr "Großartig, Sie haben das Tutorial beendet."
+
+#: /home/phw/devel/nasc/po/../src/Tutorial.vala:139
+msgid "Have fun with NaSC"
+msgstr ""
