@@ -17,8 +17,6 @@
  * Boston, MA 02111-1307, USA.
  */
  
-[CCode(cname="LOCALEDIR")] extern const string LOCALEDIR;
-
 namespace Nasc {
     public class NascApp : Granite.Application {
         private MainWindow window = null;
@@ -65,12 +63,6 @@ namespace Nasc {
         }
 
         public static void main (string[] args) {
-            // Setup gettext
-            Intl.setlocale(LocaleCategory.MESSAGES, "");
-            Intl.textdomain (Constants.GETTEXT_PACKAGE);
-            Intl.bind_textdomain_codeset (Constants.GETTEXT_PACKAGE, "UTF-8");
-            Intl.bindtextdomain (Constants.GETTEXT_PACKAGE, Constants.LOCALEDIR);
-
             var app = new Nasc.NascApp ();
             app.args = args;
             app.run (args);
