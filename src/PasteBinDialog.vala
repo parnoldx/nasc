@@ -55,7 +55,7 @@ namespace Nasc {
 
             string api_url = "https://pastebin.com/api/api_post.php";
 
-            var session = new SessionSync ();
+            var session = new Session ();
             var message = new Message ("POST", api_url);
 
             string request = Form.encode (
