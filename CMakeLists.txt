@@ -1,34 +1,20 @@
 project (nasc)
-cmake_minimum_required (VERSION 2.8)
+cmake_minimum_required (VERSION 3.1)
 cmake_policy (VERSION 2.6)
 
 include(GNUInstallDirs)
-include(ExternalProject)
-
-set(QALCULATE_DEP_PATH ${CMAKE_SOURCE_DIR}/libqalculatenasc)
-set(QALCULATE_LIB_PATH ${CMAKE_BINARY_DIR}/libqalculatenasc.so)
-set(QALCULATE_INCLUDE_PATH ${QALCULATE_DEP_PATH}/include)
-
-ExternalProject_Add(libqalculatenasc
-  PREFIX ${QALCULATE_DEP_PATH}
-  SOURCE_DIR ${QALCULATE_DEP_PATH}
-  CONFIGURE_COMMAND
-      ${QALCULATE_DEP_PATH}/configure.sh --src=${QALCULATE_DEP_PATH}
-                                        --prefix=${CMAKE_BINARY_DIR}
-                                        --libdir=${CMAKE_BINARY_DIR}
-  BUILD_COMMAND make all install
-  BUILD_IN_SOURCE 1
-)
-
-include_directories(${QALCULATE_INCLUDE_PATH})
 
 add_definitions(-w)
 
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
 if (NOT DEFINED DATADIR)
-  set (DATADIR "/usr/share/nasc")
+  set (DATADIR "${CMAKE_INSTALL_PREFIX}/share/nasc")
 endif ()
 if (NOT DEFINED STYLEDIR)
-  set (STYLEDIR "/usr/share/qalculate/styles/")
+  set (STYLEDIR "${CMAKE_INSTALL_PREFIX}/share/qalculate/styles/")
 endif ()
 set (PKGDATADIR "${DATADIR}")
 set (GETTEXT_PACKAGE "nasc")
@@ -65,7 +51,8 @@ find_package(PkgConfig)
 pkg_check_modules(DEPS REQUIRED ${NEEDED_PKG} gthread-2.0 gtksourceview-3.0>=3.10 libqalculate)
 add_definitions(${DEPS_CFLAGS})
 
-link_libraries(${DEPS_LIBRARIES} qalculatenasc)
+add_subdirectory(libqalculatenasc)
+
 link_directories(${DEPS_LIBRARY_DIRS})
 link_directories(${CMAKE_BINARY_DIR})
 
@@ -107,11 +94,14 @@ OPTIONS
 #add_subdirectory (po)
 include_directories(${CMAKE_BINARY_DIR})
 include_directories(${CMAKE_SOURCE_DIR})
+include_directories(${CMAKE_SOURCE_DIR}/libqalculatenasc)
 add_executable(nasc ${VALA_C})
 add_dependencies(nasc
-    libqalculatenasc)
+    qalculatenasc)
 target_link_libraries(nasc
-  ${QALCULATE_LIB_PATH})
+  ${QALCULATE_LIB_PATH}
+  ${DEPS_LIBRARIES}
+  qalculatenasc)
 
 install (TARGETS nasc RUNTIME DESTINATION bin)
 
