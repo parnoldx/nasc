@@ -2,28 +2,20 @@ project (nasc)
 cmake_minimum_required (VERSION 2.8)
 cmake_policy (VERSION 2.6)
 
-include(ExternalProject)
-
-set(QALCULATE_DEP_PATH ${CMAKE_SOURCE_DIR}/libqalculatenasc)
-set(QALCULATE_LIB_PATH ${CMAKE_BINARY_DIR}/libqalculatenasc.so)
-set(QALCULATE_INCLUDE_PATH ${QALCULATE_DEP_PATH}/include)
-
-ExternalProject_Add(libqalculatenasc
-  PREFIX ${QALCULATE_DEP_PATH}
-  SOURCE_DIR ${QALCULATE_DEP_PATH}
-  CONFIGURE_COMMAND
-      ${QALCULATE_DEP_PATH}/configure.sh --src=${QALCULATE_DEP_PATH}
-                                        --prefix=${CMAKE_BINARY_DIR}
-                                        --libdir=${CMAKE_BINARY_DIR}
-  BUILD_COMMAND make all install
-  BUILD_IN_SOURCE 1
-)
-
-include_directories(${QALCULATE_INCLUDE_PATH})
+include(GNUInstallDirs)
 
 add_definitions(-w)
 
-set (DATADIR "/usr/share/nasc")
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+if (NOT DEFINED DATADIR)
+  set (DATADIR "${CMAKE_INSTALL_PREFIX}/share/nasc")
+endif ()
+if (NOT DEFINED STYLEDIR)
+  set (STYLEDIR "${CMAKE_INSTALL_PREFIX}/share/qalculate/styles/")
+endif ()
 set (PKGDATADIR "${DATADIR}")
 set (GETTEXT_PACKAGE "nasc")
 set (RELEASE_NAME "nasc")
@@ -59,7 +51,8 @@ find_package(PkgConfig)
 pkg_check_modules(DEPS REQUIRED ${NEEDED_PKG} gthread-2.0 gtksourceview-3.0>=3.10 libqalculate)
 add_definitions(${DEPS_CFLAGS})
 
-link_libraries(${DEPS_LIBRARIES} qalculatenasc)
+add_subdirectory(libqalculatenasc)
+
 link_directories(${DEPS_LIBRARY_DIRS})
 link_directories(${CMAKE_BINARY_DIR})
 
@@ -101,17 +94,19 @@ OPTIONS
 #add_subdirectory (po)
 include_directories(${CMAKE_BINARY_DIR})
 include_directories(${CMAKE_SOURCE_DIR})
+include_directories(${CMAKE_SOURCE_DIR}/libqalculatenasc)
 add_executable(nasc ${VALA_C})
 add_dependencies(nasc
-    libqalculatenasc)
+    qalculatenasc)
 target_link_libraries(nasc
-  ${QALCULATE_LIB_PATH})
+  ${QALCULATE_LIB_PATH}
+  ${DEPS_LIBRARIES}
+  qalculatenasc)
 
 install (TARGETS nasc RUNTIME DESTINATION bin)
 
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/com.github.parnold-x.nasc.desktop DESTINATION share/applications)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/com.github.parnold-x.nasc.appdata.xml DESTINATION share/appdata)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/nasc_template.sheets DESTINATION share/qalculate)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/com.github.parnold-x.nasc.appdata.xml DESTINATION share/metainfo)
 # install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/datasets/country.xml DESTINATION share/qalculate)
 # install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/datasets/datasetsNasc.xml DESTINATION share/qalculate)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icons/16/com.github.parnold-x.nasc.svg DESTINATION share/icons/hicolor/16x16/apps)
@@ -120,7 +115,7 @@ install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icons/32/com.github.parnold-x.nasc.sv
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icons/48/com.github.parnold-x.nasc.svg DESTINATION share/icons/hicolor/48x48/apps)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icons/64/com.github.parnold-x.nasc.svg DESTINATION share/icons/hicolor/64x64/apps)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icons/128/com.github.parnold-x.nasc.svg DESTINATION share/icons/hicolor/128x128/apps)
-install (FILES ${QALCULATE_LIB_PATH} DESTINATION /usr/lib/)
+install (FILES ${QALCULATE_LIB_PATH} DESTINATION ${CMAKE_INSTALL_LIBDIR})
 install (DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/data/styles DESTINATION share/qalculate)
 #overwrite the standard libqalculate datasets.xml with a extended one
 # install (CODE

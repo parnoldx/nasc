@@ -25,7 +25,7 @@ public const string DESCRIPTION = N_("Share files with pastebin service");
 
 namespace Nasc {
     public class PasteBin : GLib.Object {
-        public const int PASTE_ID_LEN = 8;
+        public const int PASTE_ID_LEN = 9;
 
         public const string NEVER = "N";
         public const string TEN_MINUTES = "10M";
@@ -53,9 +53,9 @@ namespace Nasc {
                 return 2;
             }
 
-            string api_url = "http://pastebin.com/api/api_post.php";
+            string api_url = "https://pastebin.com/api/api_post.php";
 
-            var session = new SessionSync ();
+            var session = new Session ();
             var message = new Message ("POST", api_url);
 
             string request = Form.encode (
@@ -145,6 +145,7 @@ namespace Nasc {
 
             expiry_combo = new ComboBoxText ();
             populate_expiry_combo ();
+            expiry_combo.set_active (0);
             var expiry_combo_l = new Label (_("Expiry time:"));
             var expiry_combo_box = new Box (Gtk.Orientation.HORIZONTAL, 28);
             expiry_combo_box.pack_start (expiry_combo_l, false, true, 0);
