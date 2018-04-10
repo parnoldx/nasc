@@ -5,3 +5,5 @@ include_directories(${QALC_INCLUDE_DIRS})
 add_library(qalculatenasc SHARED
   QalculateNasc.cc)
 target_link_libraries(qalculatenasc ${QALC_LIBRARIES})
+
+install (TARGETS qalculatenasc LIBRARY DESTINATION lib)
