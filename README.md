@@ -22,7 +22,8 @@ sudo apt-get install com.github.parnold-x.nasc
 ```
 
 ## Building
-Dependencies:
+
+Make sure you have the dependencies installed:
 * valac
 * glib-2.0
 * gee-0.8
@@ -32,8 +33,15 @@ Dependencies:
 * libqalculate
 * gtksourceview-3.0 
 * gthread-2.0
- 
-then build with:
+
+Clone the repository and enter the project folder:
+
+```
+git clone https://github.com/parnold-x/nasc.git
+cd nasc
+```
+
+Build the project:
  
 ```
 mkdir build/ && cd build
