@@ -51,6 +51,8 @@ find_package(PkgConfig)
 pkg_check_modules(DEPS REQUIRED ${NEEDED_PKG} gthread-2.0 gtksourceview-3.0>=3.10 libqalculate)
 add_definitions(${DEPS_CFLAGS})
 
+add_subdirectory(libqalculatenasc)
+
 link_directories(${DEPS_LIBRARY_DIRS})
 link_directories(${CMAKE_BINARY_DIR})
 
@@ -93,10 +95,13 @@ OPTIONS
 include_directories(${CMAKE_BINARY_DIR})
 include_directories(${CMAKE_SOURCE_DIR})
 include_directories(${CMAKE_SOURCE_DIR}/libqalculatenasc)
-add_executable(nasc ${VALA_C} libqalculatenasc/QalculateNasc.cc)
+add_executable(nasc ${VALA_C})
+add_dependencies(nasc
+    qalculatenasc)
 target_link_libraries(nasc
   ${QALCULATE_LIB_PATH}
-  ${DEPS_LIBRARIES})
+  ${DEPS_LIBRARIES}
+  qalculatenasc)
 
 install (TARGETS nasc RUNTIME DESTINATION bin)
 
