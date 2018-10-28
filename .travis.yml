@@ -1,24 +1,22 @@
----
- language: node_js
- node_js:
+language: node_js
+
+node_js:
   - lts/*
- sudo: required
- services:
+
+sudo: required
+
+services:
   - docker
- addons:
+
+addons:
   apt:
     sources:
       - ubuntu-toolchain-r-test
     packages:
       - libstdc++-5-dev
- cache:
-  directories:
-    - /tmp/liftoff
- matrix:
-  include:
-    - env: DIST=juno
- install:
-  - npm install @elementaryos/houston
- script:
+
+install:
+  - npm i -g @elementaryos/houston
+
+script:
   - houston ci
-    --distribution $DIST
