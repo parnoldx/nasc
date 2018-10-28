@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2017 Peter Arnold <parnold1@gmail.com> -->
 <component type="desktop">
-  <id>com.github.parnold-x.nasc.desktop</id>
+  <id>com.github.parnold-x.nasc</id>
   <metadata_license>CC0</metadata_license>
   <project_license>GPL-3.0+</project_license>
   <name>NaSC</name>
@@ -66,6 +66,6 @@
   <custom>
      <value key="x-appcenter-color-primary">#3278cd</value>
      <value key="x-appcenter-color-primary-text">rgb(157, 200, 236)</value>
-    <value key="x-appcenter-suggested-price"></value>
+    <value key="x-appcenter-suggested-price">8</value>
   </custom>
 </component>
