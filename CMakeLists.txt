@@ -1,4 +1,4 @@
-project (nasc)
+project (com.github.parnold-x.nasc)
 cmake_minimum_required (VERSION 2.8)
 cmake_policy (VERSION 2.6)
 
@@ -51,6 +51,8 @@ find_package(PkgConfig)
 pkg_check_modules(DEPS REQUIRED ${NEEDED_PKG} gthread-2.0 gtksourceview-3.0>=3.10 libqalculate)
 add_definitions(${DEPS_CFLAGS})
 
+add_subdirectory(libqalculatenasc)
+
 link_directories(${DEPS_LIBRARY_DIRS})
 link_directories(${CMAKE_BINARY_DIR})
 
@@ -93,12 +95,15 @@ OPTIONS
 include_directories(${CMAKE_BINARY_DIR})
 include_directories(${CMAKE_SOURCE_DIR})
 include_directories(${CMAKE_SOURCE_DIR}/libqalculatenasc)
-add_executable(nasc ${VALA_C} libqalculatenasc/QalculateNasc.cc)
-target_link_libraries(nasc
+add_executable(com.github.parnold-x.nasc ${VALA_C})
+add_dependencies(com.github.parnold-x.nasc
+    qalculatenasc)
+target_link_libraries(com.github.parnold-x.nasc
   ${QALCULATE_LIB_PATH}
-  ${DEPS_LIBRARIES})
+  ${DEPS_LIBRARIES}
+  qalculatenasc)
 
-install (TARGETS nasc RUNTIME DESTINATION bin)
+install (TARGETS com.github.parnold-x.nasc RUNTIME DESTINATION bin)
 
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/com.github.parnold-x.nasc.desktop DESTINATION share/applications)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/com.github.parnold-x.nasc.appdata.xml DESTINATION share/metainfo)

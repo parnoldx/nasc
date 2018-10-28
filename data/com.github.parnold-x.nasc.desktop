@@ -3,8 +3,8 @@ Type=Application
 Name=NaSC
 Comment=Do maths like a normal person
 GenericName=NaSC
-TryExec=nasc
-Exec=nasc
+TryExec=com.github.parnold-x.nasc
+Exec=com.github.parnold-x.nasc
 Icon=com.github.parnold-x.nasc
 Terminal=false
 Categories=Utility;Calculator;Education;Science;
@@ -12,4 +12,4 @@ Actions=AboutDialog;
 
 [Desktop Action AboutDialog]
 Name=About NaSC
-Exec=nasc --about
+Exec=com.github.parnold-x.nasc --about
