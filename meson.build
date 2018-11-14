@@ -91,14 +91,19 @@ executable(
 )
 
 # set up post-install script
-python = import('python')
-python3 = python.find_installation('python3')
+
+# FIXME: meson#4070
+# python = import('python')
+# python3 = python.find_installation('python3')
+
+python3 = find_program('python3')
 
 schemadir = join_paths(get_option('prefix'), get_option('datadir'), 'glib-2.0', 'schemas')
 iconsdir = join_paths(get_option('prefix'), get_option('datadir'), 'icons')
 
 meson.add_install_script(
-    'meson/post_install.py',
+    python3.path(),
+    join_paths(meson.current_source_dir(), 'meson', 'post_install.py'),
     '--schemadir', schemadir,
     '--iconsdir', iconsdir,
 )
