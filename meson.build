@@ -46,16 +46,7 @@ config_header = configure_file(
 )
 
 # build libqalculatenasc static library
-libqalculatenasc = static_library(
-    'libqalculatenasc',
-
-    'libqalculatenasc/QalculateNasc.cc',
-    'libqalculatenasc/QalculateNasc.h',
-
-    dependencies: [
-        meson.get_compiler('cpp').find_library('libqalculate'),
-    ],
-)
+subdir('libqalculatenasc')
 
 # build com.github.parnold-x.nasc binary
 executable(
