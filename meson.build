@@ -7,6 +7,7 @@ project(
 
 gettext_name = 'nasc'
 
+# check vala compiler version
 if meson.get_compiler('vala').version() < '0.28.0'
     error('vala compiler version 0.28.0 or newer is required.')
 endif
@@ -44,6 +45,19 @@ config_header = configure_file(
     configuration: conf_data
 )
 
+# build libqalculatenasc static library
+libqalculatenasc = static_library(
+    'libqalculatenasc',
+
+    'libqalculatenasc/QalculateNasc.cc',
+    'libqalculatenasc/QalculateNasc.h',
+
+    dependencies: [
+        meson.get_compiler('cpp').find_library('libqalculate'),
+    ],
+)
+
+# build com.github.parnold-x.nasc binary
 executable(
     meson.project_name(),
 
@@ -65,8 +79,9 @@ executable(
 
     config_header,
 
-    'libqalculatenasc/QalculateNasc.cc',
-    include_directories: [include_directories('libqalculatenasc')],
+    include_directories: [
+        include_directories('libqalculatenasc')
+    ],
 
     dependencies: [
         dependency('gee-0.8'),
@@ -75,15 +90,27 @@ executable(
         dependency('gtk+-3.0'),
         dependency('gtksourceview-3.0', version: '>=3.10'),
         dependency('libsoup-2.4'),
-        meson.get_compiler('c').find_library('libqalculate'),
         meson.get_compiler('vala').find_library('posix'),
         meson.get_compiler('vala').find_library('QalculateNasc', dirs: [join_paths(meson.current_source_dir(), 'vapi')])
     ],
 
+    link_with: libqalculatenasc,
+
     install: true
 )
 
-meson.add_install_script('meson/post_install.py')
+# set up post-install script
+python = import('python')
+python3 = python.find_installation('python3')
+
+schemadir = join_paths(get_option('prefix'), get_option('datadir'), 'glib-2.0', 'schemas')
+iconsdir = join_paths(get_option('prefix'), get_option('datadir'), 'icons')
+
+meson.add_install_script(
+    'meson/post_install.py',
+    '--schemadir', schemadir,
+    '--iconsdir', iconsdir,
+)
 
 subdir('data')
 subdir('icons')

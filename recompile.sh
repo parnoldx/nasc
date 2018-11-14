@@ -4,7 +4,5 @@ rm -rf build
 
 meson build --prefix=/usr
 
-pushd build
-ninja
-popd
+ninja -C build
 
