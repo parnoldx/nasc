@@ -8,7 +8,7 @@ project(
 gettext_name = 'nasc'
 
 # check vala compiler version
-if meson.get_compiler('vala').version() < '0.28.0'
+if meson.get_compiler('vala').version().version_compare('<0.28.0')
     error('vala compiler version 0.28.0 or newer is required.')
 endif
 
