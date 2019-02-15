@@ -45,8 +45,10 @@ public class Controller : Object {
     public NascSheet actual_sheet { get; private set; }
     private Gee.LinkedList<NascSheet> removal_list;
 
-    private string sheet_path = Environment.get_home_dir ()
-                                + NascSettings.sheet_path + "nasc.sheets";
+    private string sheet_base = Path.build_filename (
+                                Environment.get_user_data_dir(),
+                                NascSettings.sheet_dir);
+    private string sheet_path;
 
     private string _sheets;
     public string sheets_file {
@@ -93,6 +95,7 @@ public class Controller : Object {
     public signal void periodic ();
 
     public Controller (InputView input, ResultView results) {
+        this.sheet_path = Path.build_filename (this.sheet_base, "nasc.sheets");
         this.enable_calc = input.operators;
         this.removal_list = new Gee.LinkedList<NascSheet> ();
         /* add " to " to enable_calc list to allow variable to other unit conversion */
@@ -142,8 +145,7 @@ public class Controller : Object {
 
         if (!file.query_exists ()) {
             try {
-                var dir = File.new_for_path (Environment.get_home_dir ()
-                                             + NascSettings.sheet_path);
+                var dir = File.new_for_path (sheet_base);
 
                 if (!dir.query_exists ()) {
                     dir.make_directory ();
