@@ -2,12 +2,14 @@
 Type=Application
 Name=NaSC
 Comment=Do maths like a normal person
-GenericName=NaSC
+GenericName=Desktop calculator
 TryExec=com.github.parnold-x.nasc
 Exec=com.github.parnold-x.nasc
 Icon=com.github.parnold-x.nasc
+StartupWMClass=nasc
+StartupNotify=true
 Terminal=false
-Categories=Utility;Calculator;Education;Science;
+Categories=Utility;Calculator;Education;Math;
 Actions=AboutDialog;
 
 [Desktop Action AboutDialog]
