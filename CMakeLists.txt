@@ -1,4 +1,4 @@
-project (com.github.parnold-x.nasc)
+project (com.github.parnold_x.nasc)
 cmake_minimum_required (VERSION 2.8)
 cmake_policy (VERSION 2.6)
 
@@ -34,7 +34,7 @@ configure_file (${CMAKE_SOURCE_DIR}/src/config.vala.in ${CMAKE_SOURCE_DIR}/src/c
 
 #GSettings
 include(GSettings)
-add_schema("data/com.github.parnold-x.nasc.gschema.xml")
+add_schema("data/com.github.parnold_x.nasc.gschema.xml")
 
 set(NEEDED_PKG
     glib-2.0
@@ -97,27 +97,27 @@ OPTIONS
 include_directories(${CMAKE_BINARY_DIR})
 include_directories(${CMAKE_SOURCE_DIR})
 include_directories(${CMAKE_SOURCE_DIR}/libqalculatenasc)
-add_executable(com.github.parnold-x.nasc ${VALA_C})
-add_dependencies(com.github.parnold-x.nasc
+add_executable(com.github.parnold_x.nasc ${VALA_C})
+add_dependencies(com.github.parnold_x.nasc
     qalculatenasc)
-target_link_libraries(com.github.parnold-x.nasc
+target_link_libraries(com.github.parnold_x.nasc
   ${QALCULATE_LIB_PATH}
   ${DEPS_LIBRARIES}
   qalculatenasc
   -lcln)
 
-install (TARGETS com.github.parnold-x.nasc RUNTIME DESTINATION bin)
+install (TARGETS com.github.parnold_x.nasc RUNTIME DESTINATION bin)
 
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/com.github.parnold-x.nasc.desktop DESTINATION share/applications)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/com.github.parnold-x.nasc.appdata.xml DESTINATION share/metainfo)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/com.github.parnold_x.nasc.desktop DESTINATION share/applications)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/com.github.parnold_x.nasc.appdata.xml DESTINATION share/metainfo)
 # install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/datasets/country.xml DESTINATION share/qalculate)
 # install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/datasets/datasetsNasc.xml DESTINATION share/qalculate)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icons/16/com.github.parnold-x.nasc.svg DESTINATION share/icons/hicolor/16x16/apps)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icons/24/com.github.parnold-x.nasc.svg DESTINATION share/icons/hicolor/24x24/apps)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icons/32/com.github.parnold-x.nasc.svg DESTINATION share/icons/hicolor/32x32/apps)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icons/48/com.github.parnold-x.nasc.svg DESTINATION share/icons/hicolor/48x48/apps)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icons/64/com.github.parnold-x.nasc.svg DESTINATION share/icons/hicolor/64x64/apps)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icons/128/com.github.parnold-x.nasc.svg DESTINATION share/icons/hicolor/128x128/apps)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icons/16/com.github.parnold_x.nasc.svg DESTINATION share/icons/hicolor/16x16/apps)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icons/24/com.github.parnold_x.nasc.svg DESTINATION share/icons/hicolor/24x24/apps)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icons/32/com.github.parnold_x.nasc.svg DESTINATION share/icons/hicolor/32x32/apps)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icons/48/com.github.parnold_x.nasc.svg DESTINATION share/icons/hicolor/48x48/apps)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icons/64/com.github.parnold_x.nasc.svg DESTINATION share/icons/hicolor/64x64/apps)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icons/128/com.github.parnold_x.nasc.svg DESTINATION share/icons/hicolor/128x128/apps)
 install (FILES ${QALCULATE_LIB_PATH} DESTINATION ${CMAKE_INSTALL_LIBDIR})
 install (DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/data/styles DESTINATION share/qalculate)
 #overwrite the standard libqalculate datasets.xml with a extended one

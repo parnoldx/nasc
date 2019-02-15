@@ -32,8 +32,8 @@ namespace Nasc {
             build_version = Constants.VERSION;
             build_version_info = Constants.VERSION_INFO;
 
-            app_launcher = "com.github.parnold-x.nasc.desktop";
-            application_id = "com.github.parnold-x.nasc";
+            app_launcher = "com.github.parnold_x.nasc.desktop";
+            application_id = "com.github.parnold_x.nasc";
         }
 
         public NascApp () {

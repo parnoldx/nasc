@@ -1,5 +1,5 @@
 <schemalist>
-	<schema id="com.github.parnold-x.nasc" path="/com/github/parnold-x/nasc/" gettext-domain="nasc">
+	<schema id="com.github.parnold_x.nasc" path="/com/github/parnold-x/nasc/" gettext-domain="nasc">
 		
 		<key name="show-tutorial" type="b">
 			<default>true</default>

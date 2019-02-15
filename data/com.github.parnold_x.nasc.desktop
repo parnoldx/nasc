@@ -3,15 +3,18 @@ Type=Application
 Name=NaSC
 Comment=Do maths like a normal person
 GenericName=Desktop calculator
-TryExec=com.github.parnold-x.nasc
-Exec=com.github.parnold-x.nasc
-Icon=com.github.parnold-x.nasc
+TryExec=com.github.parnold_x.nasc
+Exec=com.github.parnold_x.nasc
+Icon=com.github.parnold_x.nasc
 StartupWMClass=nasc
 StartupNotify=true
 Terminal=false
 Categories=Utility;Calculator;Education;Math;
 Actions=AboutDialog;
 
+X-Desktop-File-Install-Version=0.23
+X-Flatpak-RenamedFrom=nasc.desktop;com.github.parnold-x.nasc.desktop;
+
 [Desktop Action AboutDialog]
 Name=About NaSC
-Exec=com.github.parnold-x.nasc --about
+Exec=com.github.parnold_x.nasc --about

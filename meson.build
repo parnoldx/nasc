@@ -1,5 +1,5 @@
 project(
-    'com.github.parnold-x.nasc',
+    'com.github.parnold_x.nasc',
     'vala', 'c', 'cpp',
     version: '0.5.0',
     default_options: ['cpp_std=c++11']
@@ -48,7 +48,7 @@ config_header = configure_file(
 # build libqalculatenasc static library
 subdir('libqalculatenasc')
 
-# build com.github.parnold-x.nasc binary
+# build com.github.parnold_x.nasc binary
 executable(
     meson.project_name(),
 

@@ -37,7 +37,7 @@ public class NascSettings : Granite.Services.Settings {
     public int open_sheet { get; set; }
 
     private NascSettings () {
-        base ("com.github.parnold-x.nasc");
+        base ("com.github.parnold_x.nasc");
     }
 
     public static NascSettings get_instance () {
