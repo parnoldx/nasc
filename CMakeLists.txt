@@ -101,7 +101,8 @@ add_dependencies(com.github.parnold-x.nasc
 target_link_libraries(com.github.parnold-x.nasc
   ${QALCULATE_LIB_PATH}
   ${DEPS_LIBRARIES}
-  qalculatenasc)
+  qalculatenasc
+  -lcln)
 
 install (TARGETS com.github.parnold-x.nasc RUNTIME DESTINATION bin)
 
