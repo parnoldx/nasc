@@ -30,11 +30,11 @@ list (APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 file(GLOB_RECURSE sources src/*.vala)
 
 # Some configuration
-configure_file (${CMAKE_SOURCE_DIR}/src/config.vala.cmake ${CMAKE_SOURCE_DIR}/src/config.vala)
+configure_file (${CMAKE_SOURCE_DIR}/src/config.vala.in ${CMAKE_SOURCE_DIR}/src/config.vala)
 
 #GSettings
 include(GSettings)
-add_schema("com.github.parnold-x.nasc.gschema.xml")
+add_schema("data/com.github.parnold-x.nasc.gschema.xml")
 
 set(NEEDED_PKG
     glib-2.0
