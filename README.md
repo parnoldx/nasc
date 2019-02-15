@@ -32,11 +32,21 @@ Dependencies:
 * libqalculate
 * gtksourceview-3.0 
 * gthread-2.0
- 
-then build with:
- 
+
+Supported build systems:
+* cmake 2.8
+* meson
+
+### Building with cmake
 ```
 mkdir build/ && cd build
 cmake -DCMAKE_INSTALL_LIBDIR=/usr/lib -DCMAKE_INSTALL_PREFIX:PATH=/usr ..
 make && sudo make install
+```
+
+### Building with meson
+```
+meson build --prefix=/usr
+cd build
+ninja && sudo ninja install
 ```

@@ -1,0 +1,22 @@
+Source: com.github.parnold-x.nasc
+Section: misc
+Priority: optional
+Maintainer: Peter Arnold <parnold1@gmail.com>
+Build-Depends: meson,
+               debhelper (>= 10.5.1),
+               libgcc1,
+               libqalculate-dev,
+               libgee-0.8-dev,
+               libsoup2.4-dev,
+               libglib2.0-dev (>= 2.29.0),
+               libgranite-dev (>= 0.3.0),
+               libgtk-3-dev (>=3.12),
+               libgtksourceview-3.0-dev (>=3.10),
+               valac
+Standards-Version: 4.1.1
+
+Package: com.github.parnold-x.nasc
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}, libqalculate-dev
+Pre-Depends: dpkg (>= 1.15.6)
+Description: Do maths like a normal person.
