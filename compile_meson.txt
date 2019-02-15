@@ -1,0 +1,3 @@
+meson build --prefix=/usr
+
+ninja -C build
