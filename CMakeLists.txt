@@ -86,8 +86,10 @@ CUSTOM_VAPIS
 OPTIONS
   #  --enable-experimental
     --target-glib=2.32 # Remember to keep this updated.
-    --thread
-   # -X -rdynamic
+  #  The --thread option is now deprecated.
+  #  Should be ignored, but actually it leads to a build failure.
+  #  --thread
+  #  -X -rdynamic
   #  -g
 )
 
