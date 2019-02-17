@@ -86,8 +86,10 @@ CUSTOM_VAPIS
 OPTIONS
   #  --enable-experimental
     --target-glib=2.32 # Remember to keep this updated.
-    --thread
-   # -X -rdynamic
+  #  The --thread option is now deprecated.
+  #  Should be ignored, but actually it leads to a build failure.
+  #  --thread
+  #  -X -rdynamic
   #  -g
 )
 
@@ -101,7 +103,8 @@ add_dependencies(com.github.parnold-x.nasc
 target_link_libraries(com.github.parnold-x.nasc
   ${QALCULATE_LIB_PATH}
   ${DEPS_LIBRARIES}
-  qalculatenasc)
+  qalculatenasc
+  -lcln)
 
 install (TARGETS com.github.parnold-x.nasc RUNTIME DESTINATION bin)
 
