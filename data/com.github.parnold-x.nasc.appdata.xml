@@ -12,21 +12,30 @@
   <provides>
     <binary>com.github.parnold-x.nasc</binary>
   </provides>
+  <launchable type="desktop-id">com.github.parnold-x.nasc.desktop</launchable>
   <releases>
-    <release version="0.5.0" date="2018-20-28">
+    <release version="0.5.1" date="2018-11-05">
       <description>
-        <p>Release for Juno</p>
+        <p>Update Debian control file.</p>
+      </description>
+    </release>
+    <release version="0.5.0" date="2018-10-28">
+      <description>
+        <p>Release for Juno.</p>
       </description>
     </release>
   </releases>
   <screenshots>
     <screenshot type="default">
+      <caption>Main view</caption>
       <image>https://raw.githubusercontent.com/parnold-x/nasc/master/Screenshot.png</image>
     </screenshot>
     <screenshot>
+      <caption>Help pane</caption>
       <image>https://raw.githubusercontent.com/parnold-x/nasc/master/Screenshot2.png</image>
     </screenshot>
     <screenshot>
+      <caption>Periodic table</caption>
       <image>https://raw.githubusercontent.com/parnold-x/nasc/master/Screenshot3.png</image>
     </screenshot>
   </screenshots>
@@ -63,9 +72,15 @@
   <url type="homepage">https://github.com/parnold-x/nasc</url>
   <url type="bugtracker">https://github.com/parnold-x/nasc/issues</url>
   <url type="help">https://github.com/parnold-x/nasc/issues</url>
+  <kudos>
+    <kudo>HiDpiIcon</kudo>
+    <kudo>HighContrast</kudo>
+    <kudo>ModernToolkit</kudo>
+    <kudo>UserDocs</kudo>
+  </kudos>
   <custom>
-     <value key="x-appcenter-color-primary">#3278cd</value>
-     <value key="x-appcenter-color-primary-text">rgb(157, 200, 236)</value>
+    <value key="x-appcenter-color-primary">#3278cd</value>
+    <value key="x-appcenter-color-primary-text">rgb(157, 200, 236)</value>
     <value key="x-appcenter-suggested-price">8</value>
   </custom>
 </component>
