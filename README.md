@@ -31,7 +31,7 @@ Dependencies:
 * libsoup-2.4
 * libqalculate
 * gtksourceview-3.0 
-* gthread-2.0
+* libcln 
  
 then build with:
  
