@@ -28,6 +28,7 @@ Dependencies:
 * gee-0.8
 * gtk+-3.0
 * granite
+* libcln
 * libsoup-2.4
 * libqalculate
 * gtksourceview-3.0 
