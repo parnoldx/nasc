@@ -55,7 +55,6 @@ namespace Nasc {
 
             /* Set window properties */
             this.set_default_size (NascSettings.get_instance ().window_width, NascSettings.get_instance ().window_height);
-
             this.delete_event.connect (on_window_closing);
 
             /* Create the toolbar */
