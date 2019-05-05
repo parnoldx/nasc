@@ -61,10 +61,10 @@ public class ResultView : Gtk.Box {
 
         if (NascSettings.get_instance().dark_theme == true){
 
-          color.red = 0.44;
-          color.green = 0.48;
-          color.blue = 0.55;
-          color.alpha = 1.0;
+          color.red = 0.38;
+          color.green = 0.42;
+          color.blue = 0.47;
+          color.alpha = 0.0;
 
         }else{
 

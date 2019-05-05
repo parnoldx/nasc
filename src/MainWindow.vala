@@ -95,8 +95,6 @@ namespace Nasc {
             // toolbar.pack_start (open_button);
             /* TODO settings ? */
 
-            var gtk_settings = Gtk.Settings.get_default ();
-
             Gtk.Image themeImage = new Gtk.Image.from_icon_name ("display-brightness-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
 
             if (NascSettings.get_instance().dark_theme == true){
@@ -142,10 +140,10 @@ namespace Nasc {
                 Gtk.Settings.get_default().set("gtk-application-prefer-dark-theme", true);
 
                 var color = Gdk.RGBA ();
-                color.red = 0.44;
-                color.green = 0.48;
-                color.blue = 0.55;
-                color.alpha = 1.0;
+                color.red = 0.57;
+                color.green = 0.62;
+                color.blue = 0.67;
+                color.alpha = 0.5;
 
                 result_box.text_view.override_background_color (Gtk.StateFlags.NORMAL, color);
                 this.show_all();
