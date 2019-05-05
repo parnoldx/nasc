@@ -45,6 +45,8 @@ namespace Nasc {
             int x = NascSettings.get_instance ().opening_x;
             int y = NascSettings.get_instance ().opening_y;
 
+            stdout.printf("%d\n",(int)NascSettings.get_instance().dark_theme);
+
             if (x != -1 && y != -1) {
                 move (x, y);
             } else {
@@ -94,8 +96,72 @@ namespace Nasc {
             /* var setting_button = new Gtk.Button.from_icon_name("document-properties", Gtk.IconSize.LARGE_TOOLBAR); */
             // toolbar.pack_start (open_button);
             /* TODO settings ? */
+
+            var gtk_settings = Gtk.Settings.get_default ();
+
+            Gtk.Image themeImage = new Gtk.Image.from_icon_name ("display-brightness-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
+
+            if (NascSettings.get_instance().dark_theme == true){
+
+              themeImage = new Gtk.Image.from_icon_name ("weather-clear-night-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
+              Gtk.Settings.get_default().set("gtk-application-prefer-dark-theme", true);
+
+            }else{
+
+              themeImage = new Gtk.Image.from_icon_name ("display-brightness-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
+              Gtk.Settings.get_default().set("gtk-application-prefer-dark-theme", false);
+
+            }
+
+            Gtk.ToolButton themeButton = new Gtk.ToolButton (themeImage, null);
+
+            themeButton.clicked.connect (() => {
+
+              if (NascSettings.get_instance().dark_theme == true){
+
+                themeImage = new Gtk.Image.from_icon_name ("display-brightness-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
+                themeButton.set_icon_widget(themeImage);
+                toolbar.show_all();
+
+                Gtk.Settings.get_default().set("gtk-application-prefer-dark-theme", false);
+
+                var color = Gdk.RGBA ();
+                color.red = 0.9;
+                color.green = 0.9;
+                color.blue = 0.9;
+                color.alpha = 1.0;
+
+                result_box.text_view.override_background_color (Gtk.StateFlags.NORMAL, color);
+
+                NascSettings.get_instance().dark_theme = false;
+
+              }else{
+
+                themeImage = new Gtk.Image.from_icon_name ("weather-clear-night-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
+                themeButton.set_icon_widget(themeImage);
+                toolbar.show_all();
+
+                Gtk.Settings.get_default().set("gtk-application-prefer-dark-theme", true);
+
+                var color = Gdk.RGBA ();
+                color.red = 0.44;
+                color.green = 0.48;
+                color.blue = 0.55;
+                color.alpha = 1.0;
+
+                result_box.text_view.override_background_color (Gtk.StateFlags.NORMAL, color);
+                this.show_all();
+
+                NascSettings.get_instance().dark_theme = true;
+
+
+              }
+
+            });
+
             toolbar.pack_end (export_button);
             toolbar.pack_end (help_button);
+            toolbar.pack_end (themeButton);
 
             main_stack = new Gtk.Stack ();
             var main_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);

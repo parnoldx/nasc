@@ -18,7 +18,7 @@
  */
 
 public class ResultView : Gtk.Box {
-    private Gtk.TextView text_view;
+    public Gtk.TextView text_view;
     private Gdk.Cursor left_ptr = new Gdk.Cursor.for_display (Gdk.Display.get_default (), Gdk.CursorType.LEFT_PTR);
     private Gdk.Cursor hand = new Gdk.Cursor.for_display (Gdk.Display.get_default (), Gdk.CursorType.HAND2);
     private bool hovering_over_result = false;
@@ -56,11 +56,24 @@ public class ResultView : Gtk.Box {
         font_desc.set_size (12 * Pango.SCALE);
         text_view.override_font (font_desc);
         /* background color very light grey */
+
         var color = Gdk.RGBA ();
-        color.red = 0.9;
-        color.green = 0.9;
-        color.blue = 0.9;
-        color.alpha = 1.0;
+
+        if (NascSettings.get_instance().dark_theme == true){
+
+          color.red = 0.44;
+          color.green = 0.48;
+          color.blue = 0.55;
+          color.alpha = 1.0;
+
+        }else{
+
+          color.red = 0.9;
+          color.green = 0.9;
+          color.blue = 0.9;
+          color.alpha = 1.0;
+
+        }
         text_view.override_background_color (Gtk.StateFlags.NORMAL, color);
         /* listen on result press */
         text_view.set_events (Gdk.EventMask.BUTTON_PRESS_MASK);

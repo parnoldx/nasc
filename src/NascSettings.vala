@@ -33,6 +33,7 @@ public class NascSettings : Granite.Services.Settings {
     public int pane_position { get; set; }
     public int opening_x { get; set; }
     public int opening_y { get; set; }
+    public bool dark_theme { get; set; }
 
     public int open_sheet { get; set; }
 

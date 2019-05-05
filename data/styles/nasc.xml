@@ -29,24 +29,24 @@
   <_description>Adapted Solarized Light for NaSC</_description>
 
   <!-- Solarized Palette -->
-  <color name="base03"                      value="#002b36"/>
-  <color name="base02"                      value="#073642"/>
-  <color name="base01"                      value="#586e75"/>
-  <color name="base00"                      value="#333333"/>
-  <color name="base0"                       value="#839496"/>
-  <color name="base1"                       value="#93a1a1"/>
-  <color name="base2"                       value="#eee8d5"/>
-  <color name="base3"                       value="#fdf6e3"/>
-  <color name="yellow"                      value="#b58900"/>
-  <color name="orange"                      value="#cb4b16"/>
-  <color name="red"                         value="#dc322f"/>
-  <color name="magenta"                     value="#d33682"/>
-  <color name="violet"                      value="#6c71c4"/>
-  <color name="blue"                        value="#268bd2"/>
-  <color name="cyan"                        value="#2aa198"/>
-  <color name="green"                       value="#859900"/>
-  <color name="numbers"                     value="#125f92"/>
-  <color name="operator"                    value="#6e7d2a"/>  
+  <color name="base03"                      value="#95c37d"/>
+  <color name="base02"                      value="#404652"/>
+  <color name="base01"                      value="#95c37d"/>
+  <color name="base00"                      value="#a9b1bd"/>
+  <color name="base0"                       value="#777d87"/>
+  <color name="base1"                       value="#95c37d"/>
+  <color name="base2"                       value="#95c37d"/>
+  <color name="base3"                       value="#95c37d"/>
+  <color name="yellow"                      value="#e2bf90"/>
+  <color name="orange"                      value="#d2986a"/>
+  <color name="red"                         value="#e26a75"/>
+  <color name="magenta"                     value="#c775d8"/>
+  <color name="violet"                      value="#c775d8"/>
+  <color name="blue"                        value="#5daeeb"/>
+  <color name="cyan"                        value="#5daeeb"/>
+  <color name="green"                       value="#95c37d"/>
+  <color name="numbers"                     value="#5daeeb"/>
+  <color name="operator"                    value="#6e7d2a"/>
   <color name="functions"                   value="#f37329"/>
   <color name="inet"                        value="#47a8e9"/>
 
@@ -69,7 +69,7 @@
 
   <!-- Right Margin -->
   <style name="right-margin"                foreground="base0" background="base02"/>
-  
+
   <!-- Search Matching -->
   <style name="search-match"                foreground="yellow"/>
 
@@ -96,7 +96,7 @@
   <style name="def:statement"               use-style="def:keyword"/>
 
   <!-- Types -->
-  <style name="def:type"                    foreground="yellow"/> 
+  <style name="def:type"                    foreground="yellow"/>
 
   <!-- Others -->
   <style name="def:preprocessor"            foreground="inet"/>

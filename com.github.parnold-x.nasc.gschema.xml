@@ -1,6 +1,6 @@
 <schemalist>
 	<schema id="com.github.parnold-x.nasc" path="/com/github/parnold-x/nasc/" gettext-domain="nasc">
-		
+
 		<key name="show-tutorial" type="b">
 			<default>true</default>
 			<summary>Show a Tutorial at startup</summary>
@@ -24,7 +24,7 @@
 				The user's last window width
 			</description>
 		</key>
-		
+
 		<key name="window-height" type="i">
 			<default>800</default>
 			<summary>The user's last window height</summary>
@@ -32,7 +32,7 @@
 				The user's last window height
 			</description>
 		</key>
-		
+
 		<key name="pane-position" type="i">
 			<default>445</default>
 			<summary>The user's last pane position</summary>
@@ -52,13 +52,19 @@
 		  <summary>Most recent y position of nasc</summary>
 		  <description>Most recent y position of nasc</description>
 		</key>
-	
+
 		<key name="open-sheet" type="i">
 			<default>0</default>
 			<summary>The open sheet</summary>
 			<description>
 				The open sheet
 			</description>
+		</key>
+
+		<key name="dark-theme" type="b">
+			<default>false</default>
+			<summary>Dark Theme</summary>
+			<description>If the user toggles the dark theme this is true</description>
 		</key>
 	</schema>
 </schemalist>
