@@ -45,8 +45,6 @@ namespace Nasc {
             int x = NascSettings.get_instance ().opening_x;
             int y = NascSettings.get_instance ().opening_y;
 
-            stdout.printf("%d\n",(int)NascSettings.get_instance().dark_theme);
-
             if (x != -1 && y != -1) {
                 move (x, y);
             } else {
