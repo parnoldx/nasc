@@ -6,12 +6,7 @@ GenericName=Desktop calculator
 TryExec=com.github.parnold-x.nasc
 Exec=com.github.parnold-x.nasc
 Icon=com.github.parnold-x.nasc
-StartupWMClass=nasc
-StartupNotify=true
 Terminal=false
 Categories=Utility;Calculator;Education;Math;
-Actions=AboutDialog;
-
-[Desktop Action AboutDialog]
-Name=About NaSC
-Exec=com.github.parnold-x.nasc --about
+Type=Application
+X-GNOME-Gettext-Domain=com.github.parnold-x.nasc
