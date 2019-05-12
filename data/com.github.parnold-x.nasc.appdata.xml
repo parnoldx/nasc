@@ -14,6 +14,11 @@
   </provides>
   <launchable type="desktop-id">com.github.parnold-x.nasc.desktop</launchable>
   <releases>
+    <release version="0.5.3" date="2019-05-12">
+      <description>
+        <p>Fix double NaSC icon</p>
+      </description>
+    </release>
     <release version="0.5.1" date="2018-11-05">
       <description>
         <p>Update Debian control file.</p>
