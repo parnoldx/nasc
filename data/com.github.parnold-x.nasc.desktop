@@ -8,5 +8,4 @@ Exec=com.github.parnold-x.nasc
 Icon=com.github.parnold-x.nasc
 Terminal=false
 Categories=Utility;Calculator;Education;Math;
-Type=Application
 X-GNOME-Gettext-Domain=com.github.parnold-x.nasc
