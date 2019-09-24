@@ -1,0 +1,22 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    container:
+      image: elementary/docker:unstable
+      
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install Dependencies
+      run: |
+        apt update
+        apt install -y gobject-introspection libgee-0.8-dev libsoup2.4-dev libgtksourceview-3.0-dev libcln-dev libgranite-dev libqalculate meson valac
+    - name: Build
+      run: |
+        cmake -DCMAKE_INSTALL_LIBDIR=/usr/lib -DCMAKE_INSTALL_PREFIX:PATH=/usr .
+        make
