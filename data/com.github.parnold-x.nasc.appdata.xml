@@ -14,9 +14,19 @@
   </provides>
   <launchable type="desktop-id">com.github.parnold-x.nasc.desktop</launchable>
   <releases>
+    <release version="0.5.4" date="2019-05-13">
+      <description>
+        <p>Update desktop file.</p>
+      </description>
+    </release>
     <release version="0.5.3" date="2019-05-12">
       <description>
-        <p>Fix double NaSC icon</p>
+        <p>Fix double NaSC icon.</p>
+      </description>
+    </release>
+    <release version="0.5.2" date="2019-02-17">
+      <description>
+        <p>Fix linking of qalculatenasc lib.</p>
       </description>
     </release>
     <release version="0.5.1" date="2018-11-05">
