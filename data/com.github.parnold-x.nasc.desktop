@@ -1,11 +1,14 @@
 [Desktop Entry]
+Version=1.0
 Type=Application
 Name=NaSC
 Comment=Do maths like a normal person
-GenericName=Desktop calculator
+GenericName=Calculator
+X-GNOME-FullName=NaSC Calculator
 TryExec=com.github.parnold-x.nasc
 Exec=com.github.parnold-x.nasc
 Icon=com.github.parnold-x.nasc
 Terminal=false
 Categories=Utility;Calculator;Education;Math;
+Keywords=calculation;arithmetic;scientific;financial;
 X-GNOME-Gettext-Domain=com.github.parnold-x.nasc
