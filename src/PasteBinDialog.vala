@@ -74,7 +74,7 @@ namespace Nasc {
             var output = (string)message.response_body.data;
 
             /* check return value */
-            if (output[0 : 6] != "ERROR:") {
+            if (output[0 : 4] == "http") {
                 /* we need only pastebin url len + id len */
                 output = output[0 : 20 + PASTE_ID_LEN];
                 debug (output);
