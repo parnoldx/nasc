@@ -23,15 +23,19 @@ sudo apt-get install com.github.parnold-x.nasc
 
 ## Building
 Dependencies:
-* valac
-* glib-2.0
-* gee-0.8
-* gtk+-3.0
-* granite
-* libsoup-2.4
-* libqalculate
-* gtksourceview-3.0 
-* libcln 
+
+ * cmake (>= 2.8),
+ * debhelper (>= 9),
+ * libgcc1,
+ * libqalculate-dev,
+ * libgee-0.8-dev,
+ * libsoup2.4-dev,
+ * libglib2.0-dev (>= 2.29.0),
+ * libgranite-dev (>= 0.3.0),
+ * libgtk-3-dev (>=3.12),
+ * libgtksourceview-3.0-dev (>=3.10),
+ * valac
+
  
 then build with:
  
