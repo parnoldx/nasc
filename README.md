@@ -25,7 +25,6 @@ sudo apt-get install com.github.parnold-x.nasc
 Dependencies:
 
  * cmake (>= 2.8),
- * debhelper (>= 9),
  * libgcc1,
  * libqalculate-dev,
  * libgee-0.8-dev,
