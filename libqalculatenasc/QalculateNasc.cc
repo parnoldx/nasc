@@ -5,6 +5,7 @@
 #include <thread>
 #include <algorithm>
 
+using namespace std;
 std::shared_ptr<Calculator> calc;
 MathStructure *mstruct;
 
