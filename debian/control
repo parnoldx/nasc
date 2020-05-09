@@ -2,7 +2,7 @@ Source: com.github.parnold-x.nasc
 Section: misc
 Priority: optional
 Maintainer: Peter Arnold <parnold1@gmail.com>
-Build-Depends: cmake (>= 2.8),
+Build-Depends: meson,
                debhelper (>= 9),
                libgcc1,
                libqalculate-dev,

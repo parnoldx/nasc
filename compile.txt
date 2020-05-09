@@ -1,3 +1,2 @@
-mkdir build && cd build
-cmake -DCMAKE_INSTALL_LIBDIR=/usr/lib -DCMAKE_INSTALL_PREFIX:PATH=/usr ..
-make
+meson build --prefix=/usr
+ninja -C build

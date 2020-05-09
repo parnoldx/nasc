@@ -14,8 +14,8 @@ jobs:
     - name: Install Dependencies
       run: |
         apt update
-        apt install -y gobject-introspection libgee-0.8-dev libsoup2.4-dev libgtksourceview-3.0-dev libcln-dev libgranite-dev libqalculate-dev cmake valac
+        apt install -y gobject-introspection libgee-0.8-dev libsoup2.4-dev libgtksourceview-3.0-dev libcln-dev libgranite-dev libqalculate-dev meson valac
     - name: Build
       run: |
-        cmake -DCMAKE_INSTALL_LIBDIR=/usr/lib -DCMAKE_INSTALL_PREFIX:PATH=/usr .
-        make
+        meson build --prefix=/usr
+        ninja -C build
