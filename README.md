@@ -24,7 +24,7 @@ sudo apt-get install com.github.parnold-x.nasc
 ## Building
 Dependencies:
 
- * cmake (>= 2.8),
+ * meson,
  * libgcc1,
  * libqalculate-dev,
  * libgee-0.8-dev,
@@ -39,7 +39,6 @@ Dependencies:
 then build with:
  
 ```
-mkdir build/ && cd build
-cmake -DCMAKE_INSTALL_LIBDIR=/usr/lib -DCMAKE_INSTALL_PREFIX:PATH=/usr ..
-make && sudo make install
+meson build --prefix=/usr
+ninja -C build install
 ```
