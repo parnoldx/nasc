@@ -12,15 +12,6 @@ NaSC is an app where you do maths like a normal person. It lets you type whateve
 ## Installation
 [![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.parnold-x.nasc)﻿
 
-PPA: nasc-team/daily
-
-
-```
-sudo apt-add-repository ppa:nasc-team/daily
-sudo apt-get update
-sudo apt-get install com.github.parnold-x.nasc
-```
-
 ## Building
 Dependencies:
 
