@@ -1,0 +1,3 @@
+[submodule "subprojects/libqalculate"]
+	path = subprojects/libqalculate
+	url = https://github.com/parnold-x/libqalculate.git
