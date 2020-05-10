@@ -1,5 +1,5 @@
 libqalculate = subproject('libqalculate')
-libqalculate_lib = libqalculate.get_variable('libqalculate_lib')
+libqalculate_dep = libqalculate.get_variable('libqalculate_dep')
 
 libqalculatenasc = static_library(
     'qalculatenasc',
@@ -7,7 +7,7 @@ libqalculatenasc = static_library(
     'QalculateNasc.cc',
     
     dependencies: [
-        dependency('cln')
-    ],
-    link_with: libqalculate_lib
+        dependency('cln'),
+        libqalculate_dep
+    ]
 )
