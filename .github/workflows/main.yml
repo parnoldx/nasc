@@ -16,7 +16,7 @@ jobs:
     - name: Install Dependencies
       run: |
         apt update
-        apt install -y gobject-introspection libgee-0.8-dev libsoup2.4-dev libgtksourceview-3.0-dev libcln-dev libgranite-dev libqalculate-dev meson valac libcurl4
+        apt install -y gobject-introspection libgee-0.8-dev libsoup2.4-dev libgtksourceview-3.0-dev libcln-dev libgranite-dev libqalculate-dev libcurl4-openssl-dev meson valac
     - name: Build
       run: |
         meson build --prefix=/usr

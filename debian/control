@@ -12,7 +12,7 @@ Build-Depends: meson,
                libgranite-dev (>= 0.3.0),
                libgtk-3-dev (>=3.12),
                libgtksourceview-3.0-dev (>=3.10),
-               libcurl4,
+               libcurl4-openssl-dev,
                valac
 Standards-Version: 3.9.3
 
