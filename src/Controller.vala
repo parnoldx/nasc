@@ -146,6 +146,13 @@ public class Controller : Object {
             input.skip_change = false;
         });
         this.calculator = new Calculator ();
+        this.input.get_functions.connect(()=>{
+            var list = new Gee.ArrayList<NascFunction>();
+            list.add_all(calculator.functions);
+            list.add_all(calculator.advanced_functions);
+            return list;
+        });
+
         debug ("loading sheets");
         /* ensure nasc.sheets exists */
         var file = File.new_for_path (sheet_path);

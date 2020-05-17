@@ -160,11 +160,12 @@ internal class CalculatorThread {
                 continue;
             }
 
-            if (category == "Utilities" || category == "Trigonometry" || category == "Step Functions"
+            if (category == "Utilities" || category == "Step Functions"
                 || category.contains ("Statistics/") || category.contains ("Economics/") || category.contains ("Geometry/")
                 || category == "Combinatorics" || category == "Logical" || category == "Date & Time"
                 || category == "Miscellaneous" || category == "Number Theory/Arithmetics" || category == "Number Theory/Integers"
-                || category == "Number Theory/Number Bases" || category == "Number Theory/Polynomials") {
+                || category == "Number Theory/Number Bases" || category == "Number Theory/Polynomials"
+                || category == "Calculus/Named Integrals") {
                 advanced_functions.add (new NascFunction (i, category));
                 continue;
             } else if (category == "Exponents & Logarithms") {
@@ -180,13 +181,6 @@ internal class CalculatorThread {
 
                 if (func_name == "export" || func_name == "genvector" || func_name == "load" || func_name == "permanent"
                     || func_name == "area" || func_name == "matrix2vector") {
-                    advanced_functions.add (new NascFunction (i, category));
-                    continue;
-                }
-            } else if (category == "Calculus/Named Integrals"){
-                var func_name = QalculateNasc.get_function_name (i);
-
-                if (func_name == "fresnelc" || func_name == "fresnels" ) {
                     advanced_functions.add (new NascFunction (i, category));
                     continue;
                 }

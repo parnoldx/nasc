@@ -45,6 +45,7 @@ public class InputView : Gtk.Box {
     public signal void quit ();
     public signal void cursor_line_change (int line);
     public signal void copy_result_to_clipboard (int line);
+    public signal Gee.List<NascFunction> get_functions();
 
     public InputView () {
         try {
@@ -374,7 +375,39 @@ public class InputView : Gtk.Box {
 
                 return;
             }
+            var functions = get_functions ();
+            if (functions != null){
+            foreach (var fct in functions) {
+                iter.assign (it);
+                iter2.assign (it);
+                if (check_pre_it (fct.name, iter, iter2)) {
+                    skip_change = true;
+                    iter.assign (it);
+                    iter2.assign (it);
+                    int offset = iter.get_offset () + 1;
+                    /* to prevent errors, buffer delete makes the iter invalid which leads to errors */
+                    GLib.Timeout.add (1, () => {
+                        Gtk.TextIter iter3, iter4;
+                        iter3 = Gtk.TextIter ();
+                        iter4 = Gtk.TextIter ();
+                        source_view.buffer.get_iter_at_offset (out iter3, offset);
+                        source_view.buffer.get_iter_at_offset (out iter4, offset);
+                       
+                        source_view.buffer.insert (ref iter4, "()", -1);
+    
+                        source_view.buffer.get_iter_at_offset (out iter4, offset+1);
+                        source_view.buffer.place_cursor (iter4);
+                        skip_change = false;
+                        changed_line (line, -1, get_text_line_to_end (line));
+    
+                        return false;
+                    });
+                    return;
+                }
+            }
+            }
         }
+        
 
         if (operators.contains (s)) {
             source_view.buffer.get_iter_at_line_index (out iter2, it.get_line (), 0);
@@ -482,7 +515,6 @@ public class InputView : Gtk.Box {
         if (iter.get_line_offset () == 0) {
             return false;
         }
-
         for (int i = s.length - 1; i >= 0; i--) {
             string s_char = s.substring (i, 1);
             var iter_char = source_view.buffer.get_slice (iter, iter2, true);
@@ -494,7 +526,6 @@ public class InputView : Gtk.Box {
             iter.backward_cursor_position ();
             iter2.backward_cursor_position ();
         }
-
         /* if pre char is a letter character return false */
         var iter_char = source_view.buffer.get_slice (iter, iter2, true);
 
