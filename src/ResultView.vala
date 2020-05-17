@@ -68,9 +68,21 @@ public class ResultView : Gtk.Box {
             if (!hovering_over_result) {
                 return false;
             }
-
+           
             Gtk.TextIter start, end, iter;
             int x, y;
+            text_view.window_to_buffer_coords (Gtk.TextWindowType.TEXT, (int)evt.x, (int)evt.y, out x, out y);
+            text_view.get_iter_at_location (out iter, x, y);
+            int line_number = iter.get_line ();
+            if(evt.button == 3){
+                //right click copy result
+                var res = result_list.get (line_number);
+                if (res == null) {
+                    return false;
+                }
+                Gtk.Clipboard.get (Gdk.SELECTION_CLIPBOARD).set_text (res.value, -1);
+                return true;
+            }
 
             text_view.buffer.get_selection_bounds (out start, out end);
 
@@ -78,9 +90,7 @@ public class ResultView : Gtk.Box {
                 return false;
             }
 
-            text_view.window_to_buffer_coords (Gtk.TextWindowType.TEXT, (int)evt.x, (int)evt.y, out x, out y);
-            text_view.get_iter_at_location (out iter, x, y);
-            int line_number = iter.get_line ();
+
             insert_variable (result_list.get (line_number));
             text_view.get_window (Gtk.TextWindowType.TEXT).set_cursor (left_ptr);
 
