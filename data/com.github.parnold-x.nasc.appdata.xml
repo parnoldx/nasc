@@ -24,7 +24,7 @@
         <p>Right click on a result copies it to the clipboard</p>
         <p>Auto complete functions with parenthesis</p>
         <p>Quit on Ctrl + Q</p>
-        <p>Fix of a parsing error in the Help pane</p>
+        <p>Fix of a parsing error in the help pane</p>
       </description>
     </release>
     <release version="0.5.4" date="2019-05-13">
