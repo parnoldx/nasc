@@ -133,6 +133,13 @@ public class Controller : Object {
         this.input.cursor_line_change.connect ((line) => {
             results.update (line, true);
         });
+        this.input.copy_result_to_clipboard.connect ((line) => {
+            var res = results.result_list.get (line);
+            if (res == null) {
+                return;
+            }
+            Gtk.Clipboard.get (Gdk.SELECTION_CLIPBOARD).set_text (res.value, -1);
+        });
         this.results.insert_variable.connect ((res) => {
             input.skip_change = true;
             input.insert_variable (res);

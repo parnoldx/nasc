@@ -44,6 +44,7 @@ public class InputView : Gtk.Box {
     public signal void help ();
     public signal void quit ();
     public signal void cursor_line_change (int line);
+    public signal void copy_result_to_clipboard (int line);
 
     public InputView () {
         try {
@@ -165,6 +166,11 @@ public class InputView : Gtk.Box {
                         var text = get_replaced_marked_content ();
 
                         if (text == null) {
+                            //nothing selected so copy result
+                            Gtk.TextIter iter;
+                            source_view.buffer.get_iter_at_offset (out iter, source_view.buffer.cursor_position);
+                            int actual_line = iter.get_line ();
+                            copy_result_to_clipboard (actual_line);
                             return true;
                         }
 
