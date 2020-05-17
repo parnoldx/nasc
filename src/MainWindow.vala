@@ -120,8 +120,16 @@ namespace Nasc {
             right_stack.add_named (result_box, "result");
             pane = new Gtk.Paned (Gtk.Orientation.HORIZONTAL);
             pane.expand = true;
-            pane.pack1 (input_box, true, false);
-            pane.pack2 (right_stack, true, false);
+            var scrollInput = new Gtk.ScrolledWindow (null, null);
+            scrollInput.set_policy (Gtk.PolicyType.AUTOMATIC, Gtk.PolicyType.NEVER);
+            scrollInput.add(input_box);
+
+            var scrollResult = new Gtk.ScrolledWindow (null, null);
+            scrollResult.set_policy (Gtk.PolicyType.AUTOMATIC, Gtk.PolicyType.NEVER);
+            scrollResult.add(right_stack);
+
+            pane.pack1 (scrollInput, true, false);
+            pane.pack2 (scrollResult, true, false);
             pane.set_position (NascSettings.get_instance ().pane_position);
             var scroll = new Gtk.ScrolledWindow (null, null);
             scroll.set_policy (Gtk.PolicyType.AUTOMATIC, Gtk.PolicyType.AUTOMATIC);
