@@ -183,6 +183,13 @@ internal class CalculatorThread {
                     advanced_functions.add (new NascFunction (i, category));
                     continue;
                 }
+            } else if (category == "Calculus/Named Integrals"){
+                var func_name = QalculateNasc.get_function_name (i);
+
+                if (func_name == "fresnelc" || func_name == "fresnels" ) {
+                    advanced_functions.add (new NascFunction (i, category));
+                    continue;
+                }
             }
 
             functions.add (new NascFunction (i, category));

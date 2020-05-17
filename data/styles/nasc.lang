@@ -233,6 +233,10 @@
       <keyword>asinh</keyword>
       <keyword>acosh</keyword>
       <keyword>atanh</keyword>
+      <keyword>si</keyword>
+      <keyword>ci</keyword>
+      <keyword>shi</keyword>
+      <keyword>chi</keyword>
       <keyword>radtodef</keyword>
       <keyword>zeta</keyword>
       <keyword>gamma</keyword>

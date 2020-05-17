@@ -17,6 +17,6 @@ Standards-Version: 3.9.3
 
 Package: com.github.parnold-x.nasc
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}, libqalculate-dev
+Depends: ${misc:Depends}, ${shlibs:Depends}
 Pre-Depends: dpkg (>= 1.15.6)
 Description: Do maths like a normal person.
