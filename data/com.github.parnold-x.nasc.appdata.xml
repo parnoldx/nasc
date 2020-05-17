@@ -14,7 +14,7 @@
   </provides>
   <launchable type="desktop-id">com.github.parnold-x.nasc.desktop</launchable>
   <releases>
-    <release version="0.6.0" date="2020-05-17">
+    <release version="0.6.1" date="2020-05-17">
       <description>
         <p>Build libqalculate as submodule - This means better calculation results and more functions</p>
         <p>Added convert to different number bases. E.g. 16734003 to hex</p>
