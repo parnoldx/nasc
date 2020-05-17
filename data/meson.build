@@ -13,12 +13,6 @@ install_data(
     install_dir: schemadir,
 )
 
-#install_data(
-#    'datasets/country.xml',
-#    'datasets/datasetsNasc.xml',
-#    install_dir: join_paths(get_option('datadir'), 'qalculate')
-#)
-
 install_data(
     'styles/def.lang',
     'styles/language.dtd',

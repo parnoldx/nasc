@@ -21,7 +21,7 @@ pkg_data_dir = join_paths(
 style_dir = join_paths(
     get_option('prefix'),
     get_option('datadir'),
-    'qalculate',
+    'nasc',
     'styles'
 )
 
@@ -45,8 +45,9 @@ config_header = configure_file(
     configuration: conf_data
 )
 
-# build libqalculatenasc static library
-subdir('libqalculatenasc')
+# build libqalculate static library
+libqalculate = subproject('libqalculate')
+libqalculate_dep_static = libqalculate.get_variable('libqalculate_lib_static')
 
 # build com.github.parnold-x.nasc binary
 executable(
@@ -69,9 +70,10 @@ executable(
     'src/Tutorial.vala',
 
     config_header,
-
+    libqalculate.get_variable('definition_resource'),
+    
     include_directories: [
-        include_directories('libqalculatenasc')
+        include_directories('subprojects/libqalculate/libqalculate')
     ],
 
     dependencies: [
@@ -81,11 +83,12 @@ executable(
         dependency('gtk+-3.0'),
         dependency('gtksourceview-3.0', version: '>=3.10'),
         dependency('libsoup-2.4'),
+        #dependency('cln'),
         meson.get_compiler('vala').find_library('posix'),
         meson.get_compiler('vala').find_library('QalculateNasc', dirs: [join_paths(meson.current_source_dir(), 'vapi')])
     ],
 
-    link_with: libqalculatenasc,
+    link_with: libqalculate_dep_static,
 
     install: true
 )
