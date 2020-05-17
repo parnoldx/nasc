@@ -14,6 +14,19 @@
   </provides>
   <launchable type="desktop-id">com.github.parnold-x.nasc.desktop</launchable>
   <releases>
+    <release version="0.6.0" date="2020-05-17">
+      <description>
+        <p>Build libqalculate as submodule - This means better calculation results and more functions</p>
+        <p>Added convert to different number bases. E.g. 16734003 to hex</p>
+        <p>Available number bases: hex bin dec oct duo roman bijective roman sexa fp32 fp64 fp16 fp80 fp128</p>
+        <p>Improved scroll behavior when using long equations or results</p>
+        <p>Ctrl + Shift + C copys result when nothing is marked in the input pane</p>
+        <p>Right click on a result copies it to the clipboard</p>
+        <p>Auto complete functions with parenthesis</p>
+        <p>Quit on Ctrl + Q</p>
+        <p>Fix of a parsing error in the Help pane</p>
+      </description>
+    </release>
     <release version="0.5.4" date="2019-05-13">
       <description>
         <p>Update desktop file.</p>
