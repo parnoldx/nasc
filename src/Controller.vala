@@ -372,6 +372,11 @@ public class Controller : Object {
                     return true;
                 }
             }
+            foreach (var v in calculator.defined_variables){
+                if (input.has_prefix (v)){
+                    return true;
+                }
+            }
 
             if (input == "tutorial()") {
                 tutorial ();
