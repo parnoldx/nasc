@@ -15,18 +15,10 @@ NaSC is an app where you do maths like a normal person. It lets you type whateve
 ## Building
 Dependencies:
 
- * meson,
- * libgcc1,
- * libgee-0.8-dev,
- * libsoup2.4-dev,
- * libglib2.0-dev (>= 2.29.0),
- * libgranite-dev (>= 0.3.0),
- * libgtk-3-dev (>=3.12),
- * libgtksourceview-3.0-dev (>=3.10),
- * libcurl4-openssl-dev,
- * valac
+```
+apt install -y gobject-introspection libgee-0.8-dev libsoup2.4-dev libgtksourceview-3.0-dev libcln-dev libgranite-dev libqalculate-dev libcurl4-openssl-dev libmpfr-dev intltool meson valac
+```
 
- 
 then build with:
  
 ```
