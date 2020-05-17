@@ -255,7 +255,7 @@ namespace Nasc {
 
                 return false;
             });
-
+            input_box.focus (Gtk.DirectionType.DOWN);
             /* update width */
             result_box.set_width (pane.get_allocated_width () - pane.position - 1);
         }
