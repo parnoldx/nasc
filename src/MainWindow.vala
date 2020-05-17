@@ -174,6 +174,9 @@ namespace Nasc {
                 help_button.active = !help_button.active;
                 help_toggle ();
             });
+            input_box.quit.connect (() => {
+                app.quit();
+            });
             help_box.close_help.connect (() => {
                 help_button.active = !help_button.active;
                 help_toggle ();

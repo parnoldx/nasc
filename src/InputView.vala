@@ -42,6 +42,7 @@ public class InputView : Gtk.Box {
     public signal void new_trigger ();
     public signal void escape ();
     public signal void help ();
+    public signal void quit ();
     public signal void cursor_line_change (int line);
 
     public InputView () {
@@ -152,6 +153,11 @@ public class InputView : Gtk.Box {
 
                     case Gdk.Key.h:
                         help ();
+
+                        return true;
+
+                    case Gdk.Key.q:
+                        quit ();
 
                         return true;
 
