@@ -93,6 +93,7 @@ public class Controller : Object {
 
     public signal void tutorial ();
     public signal void periodic ();
+    private bool skip_update = false;
 
     public Controller (InputView input, ResultView results) {
         this.sheet_path = Path.build_filename (this.sheet_base, "nasc.sheets");
@@ -187,6 +188,9 @@ public class Controller : Object {
     }
 
     async void update_results (int line, int total_lines, string text) {
+        if (skip_update) {
+            return;
+        }
         /* make sure only one calc cycle is present at a time */
         if (calc_lock) {
             calculator.cancel.cancel ();
@@ -196,22 +200,23 @@ public class Controller : Object {
             GLib.Timeout.add (10, () => {
                 update_results.callback ();
 
-                return false;
+                return true;
             });
             yield;
         }
 
         calc_lock = true;
         calculator.cancel.reset ();
-        var line_texts = text.split ("\n");
+        string[] line_texts = text.split ("\n");
         int index = 0;
         total_lines = results.result_list.size;
 
         for (int i = line; i < total_lines; i++) {
-            if (line_texts[index] != null && check_for_calculation (line_texts[index])) {
+            var line_text = line_texts[index];
+            if (line_text != null && check_for_calculation (line_text)) {
                 string result = "";
                 calculator.calculate_store_variable.begin (
-                    line_texts[index], NascSettings.variable_names + "%d".printf (i),
+                    line_text, NascSettings.variable_names + "%d".printf (i),
                     (obj, res) => {
                     result = calculator.calculate_store_variable.end (res);
                     update_results.callback ();
@@ -262,12 +267,13 @@ public class Controller : Object {
         if (content == null) {
             content = "";
         }
-
+        skip_update = true;
         input.buffer.text = content;
-        input.process_new_content ();
+        //input.process_new_content ();
         Gtk.TextIter iter = Gtk.TextIter ();
         input.source_view.buffer.get_iter_at_offset (out iter, input.source_view.buffer.cursor_position);
         override_line = iter.get_line ();
+        skip_update = false;
         input.process_new_content ();
     }
 
@@ -357,11 +363,8 @@ public class Controller : Object {
     private bool check_for_calculation (string input) {
         if (input == null || input == "") {
             return false;
-        } else if (input.contains ("http://")) {
-            return false;
-        } else if (input.has_suffix ("atom()")) {
-            periodic ();
-
+        } 
+        if (input.contains ("http://")) {
             return false;
         } else if (digit_regex.match (input)) {
             /* cases when a digit is present and it should not be calculated? */
@@ -386,7 +389,8 @@ public class Controller : Object {
                     return true;
                 }
             }
-            foreach (var v in calculator.defined_variables){
+            Gee.List<string> defined_variables = calculator.defined_variables;
+            foreach (var v in defined_variables){
                 if (input.has_prefix (v)){
                     return true;
                 }
@@ -394,7 +398,9 @@ public class Controller : Object {
 
             if (input == "tutorial()") {
                 tutorial ();
-            }
+            } else if (input ==  "atom()") {
+                periodic ();
+            } 
 
             return false;
         }
@@ -431,4 +437,7 @@ public class Controller : Object {
 
         return sb.str;
     }
+
+        
+
 }
