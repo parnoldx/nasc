@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2017 Peter Arnold <parnold1@gmail.com> -->
+<!-- Copyright 2020 Peter Arnold <parnold1@gmail.com> -->
 <component type="desktop">
   <id>com.github.parnold-x.nasc</id>
   <metadata_license>CC0</metadata_license>
@@ -16,11 +16,11 @@
   <releases>
      <release version="0.7.0" date="2020-05-30">
       <description>
-        <p>You can now manage multiple calculation sheets - load, add, remove and rename sheets<p>
-        <p>Fixed a bug that should make NaSC much more stable<p>
-        <p>Save sheets dynamically<p>
+        <p>You can now manage multiple calculation sheets - load, add, remove and rename sheets</p>
+        <p>Fixed a bug that should make NaSC much more stable</p>
+        <p>Save sheets dynamically</p>
         <p>Removed auto complete functions with parenthesis</p>
-        <p>Preperation to make NaSC translatable<p>
+        <p>Preperation to make NaSC translatable</p>
       </description>
     </release>
     <release version="0.6.1" date="2020-05-17">
