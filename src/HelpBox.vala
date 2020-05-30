@@ -409,11 +409,11 @@ public class HelpBox : Gtk.Box {
         var nasc = new Gee.ArrayList<NascFunction> ();
         nasc.add (new NascFunction.nasc ("", _("Copy & Paste"),
                                             _("To support the referenced results there are 2 kind of copy in NaSC.") + "\n"
-                                            + _("The normal copy via context menu or <i>Ctrl + c</i> will replace the referenced results with their real values."); + "\n"
-                                            + _("Copy via <i>Ctrl + Shift + C</i> will replace the referenced results with lineX references."); + "\n\n"
+                                            + _("The normal copy via context menu or <i>Ctrl + c</i> will replace the referenced results with their real values.") + "\n"
+                                            + _("Copy via <i>Ctrl + Shift + C</i> will replace the referenced results with lineX references.") + "\n\n"
                                             + _("Paste will connect lineX references with the corresponding results.")));
         nasc.add (new NascFunction.nasc ("", _("Referencing answers"),
-                                            _("You can plug answers in to future equations and if that answer changes, so does the equations its used in."); + "\n\n"
+                                            _("You can plug answers in to future equations and if that answer changes, so does the equations its used in.") + "\n\n"
                                             + _("You either can just click on a previous answer in the result pane, use the keyword <i>ans</i> for the last answer or the keyword <i>lineX</i> where X is the number of the line which you want to use.")));
         nasc.add (new NascFunction.nasc ("", _("Shortcuts"),
                                             "<i>Ctrl + H</i> = " + _("Help") + "\n"
