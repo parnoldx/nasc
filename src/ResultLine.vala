@@ -71,7 +71,7 @@ public class ResultLine : GLib.Object {
                 context.text_extents (tmp, out extents);
             }
 
-            tmp += "...";
+            tmp += "…";
             this.value = tmp;
         } else {
             this.value = value;

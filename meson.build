@@ -25,6 +25,10 @@ style_dir = join_paths(
     'styles'
 )
 
+
+# Translation module
+i18n = import ('i18n')
+
 add_project_arguments(
     '-DGETTEXT_PACKAGE="@0@"'.format(gettext_name),
     language: ['c', 'cpp']
@@ -109,3 +113,4 @@ meson.add_install_script(
 
 subdir('data')
 subdir('icons')
+subdir('po')

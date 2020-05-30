@@ -407,21 +407,35 @@ public class HelpBox : Gtk.Box {
 
     private Gee.ArrayList<NascFunction> get_nasc_functions () {
         var nasc = new Gee.ArrayList<NascFunction> ();
-        nasc.add (new NascFunction.nasc ("", "Copy & Paste",
-                                         "To support the referenced results there are 2 kind of copy in NaSC.\nThe normal copy via context menu or <i>Ctrl + c</i> will replace the referenced results with their real values.\nCopy via <i>Ctrl + Shift + C</i> will replace the referenced results with lineX references.\n\nPaste will connect lineX references with the corresponding results."));
-        nasc.add (new NascFunction.nasc ("", "Referencing answers",
-                                         "You can plug answers in to future equations and if that answer changes, so does the equations its used in.\n\nYou either can just click on a previous answer in the result pane, use the keyword <i>ans</i> for the last answer or the keyword <i>lineX</i> where X is the number of the line which you want to use."));
-        nasc.add (new NascFunction.nasc ("", "Shortcuts",
-                                         "<i>Ctrl + H</i> = Help\n<i>Ctrl + L</i> = Last Answer\n<i>Ctrl + N</i> = New Sheet\n<i>Ctrl + P</i> = π\n<i>Ctrl + R</i> = √\n\n<i>Ctrl + 0</i> = °\n<i>Ctrl + 2</i> = ²\n<i>Ctrl + 3</i> = ³\n<i>Ctrl + 4</i> = ⁴"));
-        nasc.add (new NascFunction.nasc ("atom", "Periodic Table",
-                                         "Show a Periodic Table. You can browse through the elements and insert properties into your calculation. Just click on the properties like for example the boiling point."));
-         nasc.add (new NascFunction.nasc ("", "Scrubbing",
-                                         "If you hover over a number you can manipulate this number while pressing the left mouse button and move the mouse to the left or to the right."));
-        nasc.add (new NascFunction.nasc ("tutorial", "Tutorial",
-                                         "Show the NaSC Tutorial again."));
-        nasc.add (new NascFunction.nasc ("", "Unit Conversion",
-                                         "You can convert various Units. The keyword is <i>to</i>.\n\nFor example:\n100€ to $\n23cm to in"));
-        nasc.add (new NascFunction.nasc ("amath", "Advanced Math", ""));
+        nasc.add (new NascFunction.nasc ("", _("Copy & Paste"),
+                                            _("To support the referenced results there are 2 kind of copy in NaSC.") + "\n"
+                                            + _("The normal copy via context menu or <i>Ctrl + c</i> will replace the referenced results with their real values.") + "\n"
+                                            + _("Copy via <i>Ctrl + Shift + C</i> will replace the referenced results with lineX references.") + "\n\n"
+                                            + _("Paste will connect lineX references with the corresponding results.")));
+        nasc.add (new NascFunction.nasc ("", _("Referencing answers"),
+                                            _("You can plug answers in to future equations and if that answer changes, so does the equations its used in.") + "\n\n"
+                                            + _("You either can just click on a previous answer in the result pane, use the keyword <i>ans</i> for the last answer or the keyword <i>lineX</i> where X is the number of the line which you want to use.")));
+        nasc.add (new NascFunction.nasc ("", _("Shortcuts"),
+                                            "<i>Ctrl + H</i> = " + _("Help") + "\n"
+                                            + "<i>Ctrl + L</i> = " + _("Last Answer") + "\n"
+                                            + "<i>Ctrl + N</i> = " + _("New Sheet") + "\n"
+                                            + "<i>Ctrl + P</i> = π\n"
+                                            + "<i>Ctrl + R</i> = √\n"
+                                            + "\n"
+                                            + "<i>Ctrl + 0</i> = °\n"
+                                            + "<i>Ctrl + 2</i> = ²\n"
+                                            + "<i>Ctrl + 3</i> = ³\n"
+                                            + "<i>Ctrl + 4</i> = ⁴\n"));
+        nasc.add (new NascFunction.nasc ("atom", _("Periodic Table"),
+                                         _("Show a Periodic Table. You can browse through the elements and insert properties into your calculation. Just click on the properties like for example the boiling point.")));
+         nasc.add (new NascFunction.nasc ("", _("Scrubbing"),
+                                         _("If you hover over a number you can manipulate this number while pressing the left mouse button and move the mouse to the left or to the right.")));
+        nasc.add (new NascFunction.nasc ("tutorial", _("Tutorial"),
+                                         _("Show the NaSC Tutorial again.")));
+        nasc.add (new NascFunction.nasc ("", _("Unit Conversion"),
+                                            _("You can convert various Units. The keyword is <i>to</i>.") + "\n\n"
+                                            + _("For example:\n100€ to $\n23cm to in")));
+        nasc.add (new NascFunction.nasc ("amath", _("Advanced Math"), ""));
 
         return nasc;
     }
