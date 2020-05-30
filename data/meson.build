@@ -29,6 +29,7 @@ install_data(
     'styles/language2.rng',
     'styles/nasc.lang',
     'styles/nasc.xml',
+    'styles/nasc_dark.xml',
     'styles/styles.rng',
     install_dir: style_dir
 )

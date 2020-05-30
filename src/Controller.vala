@@ -200,7 +200,7 @@ public class Controller : Object {
             GLib.Timeout.add (10, () => {
                 update_results.callback ();
 
-                return true;
+                return false;
             });
             yield;
         }
@@ -214,6 +214,10 @@ public class Controller : Object {
         for (int i = line; i < total_lines; i++) {
             var line_text = line_texts[index];
             if (line_text != null && check_for_calculation (line_text)) {
+                if (calculator.cancel.is_cancelled ()) {
+                    calc_lock = false;
+                    return;
+                }
                 string result = "";
                 calculator.calculate_store_variable.begin (
                     line_text, NascSettings.variable_names + "%d".printf (i),
@@ -238,7 +242,6 @@ public class Controller : Object {
 
                 if (calculator.cancel.is_cancelled ()) {
                     calc_lock = false;
-
                     return;
                 }
 
