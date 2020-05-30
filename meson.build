@@ -36,7 +36,7 @@ dependencies = [
     dependency ('libsoup-2.4'),
     #dependency ('cln'),
     meson.get_compiler ('vala').find_library ('posix'),
-    meson.get_compiler ('vala').find_library ('QalculateNasc', dirs: [join_paths (meson.current_source_dir ()), 'vapi')])
+    meson.get_compiler ('vala').find_library ('QalculateNasc', dirs: [join_paths (meson.current_source_dir (), 'vapi')])
 ]
 
 # Build libqalculate static library
