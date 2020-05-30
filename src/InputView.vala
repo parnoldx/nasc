@@ -411,7 +411,7 @@ public class InputView : Gtk.Box {
         int[] line_array = {};
         int delta = 0;
 
-        while (search.forward (start_iter, out start_iter, out end_iter)) {
+        while (search.forward2 (start_iter, out start_iter, out end_iter)) {
             MatchInfo info;
             var text = source_view.buffer.get_text (start_iter, end_iter, false);
             digit_regex.match (text, 0, out info);
