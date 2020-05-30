@@ -375,37 +375,6 @@ public class InputView : Gtk.Box {
 
                 return;
             }
-            var functions = get_functions ();
-            if (functions != null){
-            foreach (var fct in functions) {
-                iter.assign (it);
-                iter2.assign (it);
-                if (check_pre_it (fct.name, iter, iter2)) {
-                    skip_change = true;
-                    iter.assign (it);
-                    iter2.assign (it);
-                    int offset = iter.get_offset () + 1;
-                    /* to prevent errors, buffer delete makes the iter invalid which leads to errors */
-                    GLib.Timeout.add (1, () => {
-                        Gtk.TextIter iter3, iter4;
-                        iter3 = Gtk.TextIter ();
-                        iter4 = Gtk.TextIter ();
-                        source_view.buffer.get_iter_at_offset (out iter3, offset);
-                        source_view.buffer.get_iter_at_offset (out iter4, offset);
-                       
-                        source_view.buffer.insert (ref iter4, "()", -1);
-    
-                        source_view.buffer.get_iter_at_offset (out iter4, offset+1);
-                        source_view.buffer.place_cursor (iter4);
-                        skip_change = false;
-                        changed_line (line, -1, get_text_line_to_end (line));
-    
-                        return false;
-                    });
-                    return;
-                }
-            }
-            }
         }
         
 

@@ -341,7 +341,7 @@ public class Tutorial : Gtk.Stack {
                 bool found = false;
 
                 foreach (var rl in controller.results.result_list) {
-                    if (rl.value.replace (".", ",") == "6,510013 in²") {
+                    if (rl.value.replace (".", ",") == "6,5100130 in²") {
                         found = true;
                     }
                 }
