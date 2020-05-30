@@ -1,0 +1,6 @@
+src/MainWindow.vala
+src/HelpBox.vala
+src/ListFooter.vala
+src/PasteBinDialog.vala
+src/PeriodicTable.vala
+src/Tutorial.vala

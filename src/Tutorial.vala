@@ -86,57 +86,57 @@ public class Tutorial : Gtk.Stack {
         this.controller = controller;
         this.set_hexpand (true);
         var page0 = new TutorialPage (this,
-                                      "Hello %s!\nIn NaSC you can put text and math side by side and the answer will be shown on the right pane.".
-                                       printf (Environment.get_real_name ()),
-                                      "Do you want to learn the basics?", 0);
+                                      _("Hello %s!").printf (Environment.get_real_name ()) + "\n" + _("In NaSC you can put text and math side by side and the answer will be shown on the right pane."),
+                                      _("Do you want to learn the basics?"), 0);
         this.add_named (page0, "0");
         var page1 = new TutorialPage (this,
-                                      "Let's start with simple math.",
-                                      "Calculate: 11 + 42", 1);
+                                      _("Let's start with simple math."),
+                                      _("Calculate: 11 + 42"), 1);
         this.add_named (page1, "1");
         var page2 = new TutorialPage (this,
-                                      "You can plug the answers (ans) in future equations. Just click on the answer.\nIf an answer changes, so does the equation it's used in.",
-                                      "Calculate: <i>ans</i> * 2", 2);
+                                      _("You can plug the answers (ans) in future equations. Just click on the answer."); + "\n"
+                                      + _("If an answer changes, so does the equation it's used in."),
+                                      _("Calculate: <i>ans</i> * 2"), 2);
         this.add_named (page2, "2");
         var page3 = new TutorialPage (this,
-                                      "You can also reference the last answer with the keyword \"ans\" or with \"lineX\" where X is the linenumber of the answer.",
-                                      "Calculate: sin 45° + cos 2rad (Hint: get degrees with ctrl+0)", 3);
+                                      _("You can also reference the last answer with the keyword \"ans\" or with \"lineX\" where X is the linenumber of the answer."),
+                                      _("Calculate: sin 45° + cos 2rad (Hint: get degrees with ctrl+0)"), 3);
         this.add_named (page3, "3");
         var page4 = new TutorialPage (this,
-                                      "You can define your own variables",
-                                      "Calculate: a = 5", 4);
+                                      _("You can define your own variables"),
+                                      _("Calculate: a = 5"), 4);
         this.add_named (page4, "4");
         var page5 = new TutorialPage (this,
-                                      "and use them in your equations",
-                                      "Calculate: 22 + a", 5);
+                                      _("and use them in your equations"),
+                                      _("Calculate: 22 + a"), 5);
         this.add_named (page5, "5");
         var page6 = new TutorialPage (this,
-                                      "You can get answers in various units",
-                                      "Calculate: 14 cm * 3 cm", 6);
+                                      _("You can get answers in various units"),
+                                      _("Calculate: 14 cm * 3 cm"), 6);
         this.add_named (page6, "6");
         var page7 = new TutorialPage (this,
-                                      "and convert between these units",
-                                      "Calculate: <i>ans</i> to in", 7);
+                                      _("and convert between these units"),
+                                      _("Calculate: <i>ans</i> to in"), 7);
         this.add_named (page7, "7");
         var page8 = new TutorialPage (this,
-                                      "You can play with time",
-                                      "Calculate: 3days + 4hour + 4years to ms", 8);
+                                      _("You can play with time"),
+                                      _("Calculate: 3days + 4hour + 4years to ms"), 8);
         this.add_named (page8, "8");
         var page9 = new TutorialPage (this,
-                                      "or print the week of the year",
-                                      "Calculate: week(12.12.2017)", 9);
+                                      _("or print the week of the year"),
+                                      _("Calculate: week(12.12.2017)"), 9);
         this.add_named (page9, "9");
         var page10 = new TutorialPage (this,
-                                       "For a list of all those keywords and their capabilities, just open the help.",
-                                       "Calculate: The absolute value of -2 (Hint: abs)", 10);
+                                       _("For a list of all those keywords and their capabilities, just open the help."),
+                                       _("Calculate: The absolute value of -2 (Hint: abs)"), 10);
         this.add_named (page10, "10");
         var page11 = new TutorialPage (this,
-                                       "<b>Shortcuts:</b>\n<i>Ctrl + H</i> = Help ; <i>Ctrl + P</i> = π ; <i>Ctrl + R</i> = √ ; <i>Ctrl + L</i> = Last Answer",
-                                       "Calculate: π * 42cm", 11);
+                                       "<b>" + _("Shortcuts:") + "</b>\n<i>Ctrl + H</i> = " + _("Help") + "; <i>Ctrl + P</i> = π ; <i>Ctrl + R</i> = √ ; <i>Ctrl + L</i> = " + _("Last Answer")),
+                                       _("Calculate: π * 42cm"), 11);
         this.add_named (page11, "11");
         var page12 = new TutorialPage (this,
-                                       "Great, you finished the Tutorial.",
-                                       "Have fun with NaSC", 12);
+                                       _("Great, you finished the Tutorial."),
+                                       _("Have fun with NaSC"), 12);
         this.add_named (page12, "12");
 
         foreach (var tp in get_children ()) {
