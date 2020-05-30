@@ -49,8 +49,14 @@ namespace Nasc {
             if (x != -1 && y != -1) {
                 move (x, y);
             } else {
-                x = (Gdk.Screen.width () - default_width) / 2;
-                y = (Gdk.Screen.height () - default_height) / 2;
+                var display = Gdk.Display.get_default ();
+                var monitor = display.get_primary_monitor ();
+                var geometry = monitor.get_geometry ();
+                var scale_factor = monitor.get_scale_factor ();
+                var width = scale_factor * geometry.width;
+                var height = scale_factor * geometry.height;
+                x = (width - default_width) / 2;
+                y = (height - default_height) / 2;
                 move (x, y);
             }
 

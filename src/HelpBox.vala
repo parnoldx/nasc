@@ -85,7 +85,7 @@ public class HelpBox : Gtk.Box {
         var detail_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
         headline = new Gtk.Label ("");
         headline.margin_top = 10;
-        headline.margin_left = 10;
+        headline.margin_start = 10;
         headline.halign = Gtk.Align.START;
         headline.set_alignment (0, 0);
         headline.use_markup = true;
@@ -94,7 +94,7 @@ public class HelpBox : Gtk.Box {
 
         name_label = new Gtk.Label ("");
         name_label.margin_top = 8;
-        name_label.margin_left = 10;
+        name_label.margin_start = 10;
         name_label.halign = Gtk.Align.START;
         name_label.use_markup = true;
         name_label.wrap = true;
@@ -102,14 +102,14 @@ public class HelpBox : Gtk.Box {
 
         arg_label = new Gtk.Label ("");
         arg_label.margin_top = 8;
-        arg_label.margin_left = 10;
+        arg_label.margin_start = 10;
         arg_label.halign = Gtk.Align.START;
         arg_label.use_markup = true;
         arg_label.wrap = true;
 
         arg_list_label = new Gtk.Label ("");
         arg_list_label.margin_top = 10;
-        arg_list_label.margin_left = 20;
+        arg_list_label.margin_start = 20;
         arg_list_label.halign = Gtk.Align.START;
         arg_list_label.use_markup = true;
         arg_list_label.wrap = true;
@@ -117,7 +117,7 @@ public class HelpBox : Gtk.Box {
 
         desc_label = new Gtk.Label ("");
         desc_label.margin_top = 10;
-        desc_label.margin_left = 10;
+        desc_label.margin_start = 10;
         desc_label.halign = Gtk.Align.START;
         desc_label.use_markup = true;
         desc_label.wrap = true;
@@ -138,7 +138,7 @@ public class HelpBox : Gtk.Box {
         var amath_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
         var a_headline = new Gtk.Label ("");
         a_headline.margin_top = 10;
-        a_headline.margin_left = 10;
+        a_headline.margin_start = 10;
         a_headline.halign = Gtk.Align.START;
         a_headline.set_alignment (0, 0);
         a_headline.use_markup = true;
@@ -148,7 +148,7 @@ public class HelpBox : Gtk.Box {
 
         var a_desc_label = new Gtk.Label ("");
         a_desc_label.margin_top = 10;
-        a_desc_label.margin_left = 10;
+        a_desc_label.margin_start = 10;
         a_desc_label.halign = Gtk.Align.START;
         a_desc_label.use_markup = true;
         a_desc_label.wrap = true;
@@ -158,7 +158,7 @@ public class HelpBox : Gtk.Box {
 
         var a_switch = new Gtk.Switch ();
         a_switch.margin_top = 10;
-        a_switch.margin_left = 10;
+        a_switch.margin_start = 10;
         a_switch.halign = Gtk.Align.START;
         a_switch.set_active (NascSettings.get_instance ().advanced_mode);
         a_switch.notify["active"].connect (() => {
