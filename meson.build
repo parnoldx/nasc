@@ -11,6 +11,9 @@ if meson.get_compiler ('vala').version ().version_compare ('<0.28.0')
     error ('vala compiler version 0.28.0 or newer is required.')
 endif
 
+# Translation module
+i18n = import ('i18n')
+
 # Project arguments
 add_project_arguments (
     '-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name ()),
@@ -67,5 +70,6 @@ executable (
 )
 
 subdir('data')
+subdir('po')
 
 meson.add_install_script ('meson/post_install.py')
