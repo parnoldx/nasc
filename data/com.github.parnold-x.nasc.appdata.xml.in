@@ -14,6 +14,15 @@
   </provides>
   <launchable type="desktop-id">com.github.parnold-x.nasc.desktop</launchable>
   <releases>
+     <release version="0.7.0" date="2020-05-30">
+      <description>
+        <p>You can now manage multiple calculation sheets - load, add, remove and rename sheets<p>
+        <p>Fixed a bug that should make NaSC much more stable<p>
+        <p>Save sheets dynamically<p>
+        <p>Removed auto complete functions with parenthesis</p>
+        <p>Preperation to make NaSC translatable<p>
+      </description>
+    </release>
     <release version="0.6.1" date="2020-05-17">
       <description>
         <p>Build libqalculate as submodule - This means better calculation results and more functions</p>
@@ -25,31 +34,6 @@
         <p>Auto complete functions with parenthesis</p>
         <p>Quit on Ctrl + Q</p>
         <p>Fix of a parsing error in the help pane</p>
-      </description>
-    </release>
-    <release version="0.5.4" date="2019-05-13">
-      <description>
-        <p>Update desktop file.</p>
-      </description>
-    </release>
-    <release version="0.5.3" date="2019-05-12">
-      <description>
-        <p>Fix double NaSC icon.</p>
-      </description>
-    </release>
-    <release version="0.5.2" date="2019-02-17">
-      <description>
-        <p>Fix linking of qalculatenasc lib.</p>
-      </description>
-    </release>
-    <release version="0.5.1" date="2018-11-05">
-      <description>
-        <p>Update Debian control file.</p>
-      </description>
-    </release>
-    <release version="0.5.0" date="2018-10-28">
-      <description>
-        <p>Release for Juno.</p>
       </description>
     </release>
   </releases>
