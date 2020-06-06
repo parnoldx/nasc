@@ -371,6 +371,11 @@ public class Controller : Object {
             /* cases when a digit is present and it should not be calculated? */
             return true;
         } else {
+            if (input == "tutorial()") {
+                tutorial ();
+            } else if (input ==  "atom()") {
+                periodic ();
+            } 
             foreach (var op in this.enable_calc) {
                 if (input.contains (op)) {
                     return true;
@@ -396,13 +401,6 @@ public class Controller : Object {
                     return true;
                 }
             }
-
-            if (input == "tutorial()") {
-                tutorial ();
-            } else if (input ==  "atom()") {
-                periodic ();
-            } 
-
             return false;
         }
     }

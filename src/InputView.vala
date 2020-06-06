@@ -114,6 +114,10 @@ public class InputView : Gtk.Box {
                 backspace_button = true;
 
                 return false;
+            } else if (e.keyval == Gdk.Key.Return) {
+                source_view.buffer.insert_at_cursor (" ", -1);
+
+                return false;
             }
 
             if ((e.state & Gdk.ModifierType.CONTROL_MASK) != 0) {
@@ -680,12 +684,10 @@ public class InputView : Gtk.Box {
                     if (ws != null) {
                         if (real_values) {
                             replacement = ws.result.full_value;
+                        } else if (for_calculator) {
+                            replacement = ws.get_variable_name ();
                         } else {
-                            if (for_calculator) {
-                                replacement = ws.get_variable_name ();
-                            } else {
-                                replacement = "line%d".printf (ws.result.line + 1);
-                            }
+                            replacement = "line%d".printf (ws.result.line + 1);
                         }
                     }
                 }

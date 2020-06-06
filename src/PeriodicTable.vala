@@ -161,7 +161,7 @@ public class PeriodicTable : Gtk.Grid {
                 context.text_extents (weight_key, out extents);
                 int x_start = (int)(200 - extents.width);
                 context.move_to (x_start, 24);
-                string weight_txt = weight_key + " " + weight;
+                string weight_txt = weight_key + " " + weight.replace("interval(","").replace(")","");
                 context.show_text (weight_txt);
 
                 if (weight != "") {
@@ -183,7 +183,7 @@ public class PeriodicTable : Gtk.Grid {
                 context.text_extents (boiling_key, out extents);
                 x_start = (int)(200 - extents.width);
                 context.move_to (x_start, 48);
-                string boiling_txt = boiling_key + " " + boiling;
+                string boiling_txt = boiling_key + " " + boiling.replace("interval(","").replace(")","");
                 context.show_text (boiling_txt);
 
                 if (boiling != "") {
@@ -205,7 +205,7 @@ public class PeriodicTable : Gtk.Grid {
                 context.text_extents (melting_key, out extents);
                 x_start = (int)(200 - extents.width);
                 context.move_to (x_start, 72);
-                string melting_txt = melting_key + " " + melting;
+                string melting_txt = melting_key + " " + melting.replace("interval(","").replace(")","");
                 context.show_text (melting_txt);
 
                 if (melting != "") {
@@ -228,7 +228,7 @@ public class PeriodicTable : Gtk.Grid {
                 context.text_extents (density_key, out extents);
                 x_start = (int)(200 - extents.width);
                 context.move_to (x_start, 96);
-                string density_txt = density_key + " " + density;
+                string density_txt = density_key + " " + density.replace("interval ","").replace(")","");
                 context.show_text (density_txt);
 
                 if (density != "") {
