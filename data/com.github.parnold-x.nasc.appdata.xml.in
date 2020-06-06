@@ -14,7 +14,7 @@
   </provides>
   <launchable type="desktop-id">com.github.parnold-x.nasc.desktop</launchable>
   <releases>
-     <release version="0.7.0" date="2020-05-30">
+     <release version="0.7.1" date="2020-05-30">
       <description>
         <p>You can now manage multiple calculation sheets - load, add, remove and rename sheets</p>
         <p>Fixed a bug that should make NaSC much more stable</p>
