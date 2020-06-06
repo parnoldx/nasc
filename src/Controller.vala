@@ -106,7 +106,6 @@ public class Controller : Object {
             digit_regex = new Regex ("\\d", RegexCompileFlags.OPTIMIZE);
         } catch (GLib.RegexError ex) {
         }
-
         this.input = input;
         this.results = results;
         this.input.changed_line.connect ((line, total_lines, text) => {
@@ -204,7 +203,6 @@ public class Controller : Object {
             });
             yield;
         }
-
         calc_lock = true;
         calculator.cancel.reset ();
         string[] line_texts = text.split ("\n");

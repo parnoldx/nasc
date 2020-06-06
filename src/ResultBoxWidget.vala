@@ -59,7 +59,11 @@ public class ResultBoxWidget : Gtk.DrawingArea {
         int box_height = 22;
         int box_width = ((int)extents.width) + 2 * box_dx_text;
         /* draw box */
-        context.set_source_rgba (0.854901961, 0.933333333, 0.984313725, 0.6);
+        if (NascSettings.get_instance ().dark_mode) {
+            context.set_source_rgba (0.854901961, 0.933333333, 0.984313725, 0.9);
+        } else {
+            context.set_source_rgba (0.854901961, 0.933333333, 0.984313725, 0.6);
+        }
         context.set_line_width (1);
         roundedrec (context, x, y + dy, box_width, box_height, 4, true);
         roundedrec (context, x, y + dy, box_width, box_height, 4, false);

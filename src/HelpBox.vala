@@ -25,7 +25,11 @@ internal class HelpCellRenderer : Gtk.CellRendererText {
                                  Gdk.Rectangle cell_area,
                                  Gtk.CellRendererState flags) {
         if (category) {
-            ctx.set_source_rgba (0.82353, 0.82353, 0.82353, 1);
+            if (NascSettings.get_instance ().dark_mode) {
+                ctx.set_source_rgba (0.4, 0.4, 0.4, 1);
+            } else {
+                ctx.set_source_rgba (0.82353, 0.82353, 0.82353, 1);
+            }
             ctx.rectangle (cell_area.x - 5, cell_area.y, cell_area.width + 10, cell_area.height);
             ctx.fill ();
             ctx.set_line_width (1);
@@ -310,7 +314,7 @@ public class HelpBox : Gtk.Box {
         }
 
         if (category == "Variables") {
-            name_label.set_markup ("<small><b>%s</b></small>".printf (GLib.Markup.escape_text(name)));
+            name_label.set_markup ("<b>%s</b>".printf (GLib.Markup.escape_text(name)));
             list_store.get_value (iter, 3, out val);
             arg_label.set_markup ("<small>%s</small>".printf (GLib.Markup.escape_text(val.get_string ())));
             arg_list_label.set_text ("");
@@ -333,7 +337,7 @@ public class HelpBox : Gtk.Box {
             desc_label.set_text ("");
         } else {
             list_store.get_value (iter, 4, out val);
-            name_label.set_markup ("<small><b>%s</b>(%s)</small>".printf (GLib.Markup.escape_text(name), GLib.Markup.escape_text(val.get_string ())));
+            name_label.set_markup ("<b>%s</b>(%s)".printf (GLib.Markup.escape_text(name), GLib.Markup.escape_text(val.get_string ())));
             list_store.get_value (iter, 5, out val);
             arg_label.set_markup ("<small><b>Arguments</b></small>");
             arg_list_label.set_markup ("<small>%s</small>".printf (GLib.Markup.escape_text(val.get_string ())));

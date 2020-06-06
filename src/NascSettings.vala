@@ -17,7 +17,7 @@
  * Boston, MA 02111-1307, USA.
  */
 
-public class NascSettings : Granite.Services.Settings {
+public class NascSettings : Object {
     private static NascSettings? instance = null;
 
     /* constants */
@@ -25,7 +25,9 @@ public class NascSettings : Granite.Services.Settings {
     public const string sheet_split_char = "|§§|";
     public const string name_split_char = "-§-";
     public const string sheet_dir = "nasc";
-
+   
+   
+    public bool dark_mode { get; private set; }
     public bool show_tutorial { get; set; }
     public bool advanced_mode { get; set; }
     public int window_width { get; set; }
@@ -37,7 +39,17 @@ public class NascSettings : Granite.Services.Settings {
     public int open_sheet { get; set; }
 
     private NascSettings () {
-        base ("com.github.parnold-x.nasc");
+        var settings = new GLib.Settings ("com.github.parnold-x.nasc");
+        settings.bind ("show-tutorial", this, "show_tutorial", SettingsBindFlags.DEFAULT);
+        settings.bind ("advanced-mode", this, "advanced_mode", SettingsBindFlags.DEFAULT);
+        settings.bind ("window-width", this, "window_width", SettingsBindFlags.DEFAULT);
+        settings.bind ("window-height", this, "window_height", SettingsBindFlags.DEFAULT);
+        settings.bind ("pane-position", this, "pane_position", SettingsBindFlags.DEFAULT);
+        settings.bind ("opening-x", this, "opening_x", SettingsBindFlags.DEFAULT);
+        settings.bind ("opening-y", this, "opening_y", SettingsBindFlags.DEFAULT);
+        settings.bind ("open-sheet", this, "open_sheet", SettingsBindFlags.DEFAULT);
+        // TODO change to prefer dark eos setting when available
+        dark_mode = Gtk.Settings.get_default ().gtk_application_prefer_dark_theme;
     }
 
     public static NascSettings get_instance () {

@@ -55,12 +55,21 @@ public class ResultView : Gtk.Box {
         var font_desc = text_view.get_style_context ().get_font (Gtk.StateFlags.NORMAL);
         font_desc.set_size (12 * Pango.SCALE);
         text_view.override_font (font_desc);
-        /* background color very light grey */
+
         var color = Gdk.RGBA ();
-        color.red = 0.9;
-        color.green = 0.9;
-        color.blue = 0.9;
-        color.alpha = 1.0;
+        if (NascSettings.get_instance ().dark_mode) {
+            /* background color light black */
+            color.red = 0.38;
+            color.green = 0.42;
+            color.blue = 0.47;
+            color.alpha = 0.0;
+        } else {
+            /* background color very light grey */
+            color.red = 0.9;
+            color.green = 0.9;
+            color.blue = 0.9;
+            color.alpha = 1.0;
+        }
         text_view.override_background_color (Gtk.StateFlags.NORMAL, color);
         /* listen on result press */
         text_view.set_events (Gdk.EventMask.BUTTON_PRESS_MASK);
