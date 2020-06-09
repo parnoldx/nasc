@@ -14,11 +14,12 @@
   </provides>
   <launchable type="desktop-id">com.github.parnold-x.nasc.desktop</launchable>
   <releases>
-      <release version="0.7.2" date="2020-06-09">
+      <release version="0.7.3" date="2020-06-09">
       <description>
         <p>Fixed a bug that caused a crash during startup</p>
         <p>Fixed a case where the ans and line tokens failed to parse</p>
         <p>Support for dark themes</p>
+        <p>Share panes to MathB.in</p>
       </description>
     </release>
      <release version="0.7.1" date="2020-05-30">
