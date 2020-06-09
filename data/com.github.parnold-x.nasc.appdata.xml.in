@@ -14,6 +14,13 @@
   </provides>
   <launchable type="desktop-id">com.github.parnold-x.nasc.desktop</launchable>
   <releases>
+      <release version="0.7.2" date="2020-06-09">
+      <description>
+        <p>Fixed a bug that caused a crash during startup</p>
+        <p>Fixed a case where the ans and line tokens failed to parse</p>
+        <p>Support for dark themes</p>
+      </description>
+    </release>
      <release version="0.7.1" date="2020-05-30">
       <description>
         <p>You can now manage multiple calculation sheets - load, add, remove and rename sheets</p>
