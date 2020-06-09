@@ -84,7 +84,7 @@ namespace Nasc {
             pdf_button.get_style_context ().add_class ("flat");
             pdf_button.margin = 5;
 
-            var share_button = new Gtk.Button.with_label (_("Share via PasteBin"));
+            var share_button = new Gtk.Button.with_label (_("Share via MathB.in"));
             share_button.get_style_context ().add_class ("flat");
             share_button.margin = 5;
             share_button.margin_top = 0;
@@ -231,7 +231,7 @@ namespace Nasc {
 
             share_button.clicked.connect (() => {
                 export_popover.hide ();
-                new PasteBinDialog (this, controller);
+                new MathBinDialog (this, controller);
             });
 
             controller.tutorial.connect (() => {

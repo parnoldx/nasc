@@ -409,32 +409,31 @@ public class Controller : Object {
     }
 
     public string get_export_text () {
-        var input_text = get_content ().split ("\n");
+        var input_text = input.get_replaced_content (true).split ("\n");
         string[] result_text = {};
 
         foreach (var rl in this.results.result_list) {
-            result_text += rl.value;
+            result_text += rl.full_value;
         }
 
-        int longest_line = 80;
         var sb = new StringBuilder ();
 
         for (int i = 0; i < input_text.length; i++) {
-            sb.append (input_text[i]);
-            int actual_length = 0;
-            unichar c;
-
-            for (int k = 0; input_text[i].get_next_char (ref k, out c);) {
-                actual_length++;
+            if(result_text[i] == ""){
+                sb.append (input_text[i]);
+                sb.append ("  \\n");
+            } else {
+                var left = input_text[i];
+                sb.append ("$");
+                //TODO maybe convert some things to latex commands?
+                sb.append (left);
+                if (!(left.contains ("=")&&!left.contains ("("))){
+                    sb.append("=");
+                    sb.append (result_text[i]);
+                }
+                sb.append ("$");
+                sb.append ("  \\n");
             }
-
-            for (int j = actual_length; j < longest_line; j++) {
-                sb.append (" ");
-            }
-
-            sb.append ("| ");
-            sb.append (result_text[i]);
-            sb.append ("\n");
         }
 
         return sb.str;

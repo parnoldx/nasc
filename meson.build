@@ -66,7 +66,7 @@ executable(
     'src/Nasc.vala',
     'src/NascSettings.vala',
     'src/OpenBox.vala',
-    'src/PasteBinDialog.vala',
+    'src/MathBinDialog.vala',
     'src/PeriodicTable.vala',
     'src/ResultBoxWidget.vala',
     'src/ResultLine.vala',
@@ -86,7 +86,7 @@ executable(
         dependency('granite'),
         dependency('gtk+-3.0'),
         dependency('gtksourceview-3.0', version: '>=3.10'),
-        dependency('libsoup-2.4'),
+        dependency('webkit2gtk-4.0'),
         #dependency('cln'),
         meson.get_compiler('vala').find_library('posix'),
         meson.get_compiler('vala').find_library('QalculateNasc', dirs: [join_paths(meson.current_source_dir(), 'vapi')])
