@@ -120,18 +120,19 @@ public class InputView : Gtk.Box {
                 int offset = iter.get_offset ();
                 source_view.buffer.insert_at_cursor (" ", -1);
 
+                source_view.buffer.insert_at_cursor ("\n", -1);
                 GLib.Timeout.add (2, () => {
-                Gtk.TextIter iter3, iter4;
-                iter3 = Gtk.TextIter ();
-                iter4 = Gtk.TextIter ();
-                source_view.buffer.get_iter_at_offset (out iter3, offset);
-                source_view.buffer.get_iter_at_offset (out iter4, offset+1);
-                source_view.buffer.delete (ref iter3, ref iter4);
+                    Gtk.TextIter iter3, iter4;
+                    iter3 = Gtk.TextIter ();
+                    iter4 = Gtk.TextIter ();
+                    source_view.buffer.get_iter_at_offset (out iter3, offset);
+                    source_view.buffer.get_iter_at_offset (out iter4, offset+1);
+                    source_view.buffer.delete (ref iter3, ref iter4);
 
-                return false;
+                    return false;
                 });
 
-                return false;
+                return true;
             }
 
             if ((e.state & Gdk.ModifierType.CONTROL_MASK) != 0) {
@@ -615,7 +616,7 @@ public class InputView : Gtk.Box {
     }
 
     /* get content with lineX replacements */
-    public string get_replaced_content () {
+    public string get_replaced_content (bool real_values = false) {
         Gtk.TextIter start, end;
         this.buffer.get_start_iter (out start);
         this.buffer.get_end_iter (out end);
@@ -625,7 +626,7 @@ public class InputView : Gtk.Box {
         }
 
         var text = this.buffer.get_slice (start, end, false);
-        text = replace_widget_markers (0, text, false, false);
+        text = replace_widget_markers (0, text, false, real_values);
 
         return text;
     }
