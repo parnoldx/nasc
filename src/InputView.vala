@@ -115,7 +115,21 @@ public class InputView : Gtk.Box {
 
                 return false;
             } else if (e.keyval == Gdk.Key.Return) {
+                Gtk.TextIter iter;
+                source_view.buffer.get_end_iter (out iter);
+                int offset = iter.get_offset ();
                 source_view.buffer.insert_at_cursor (" ", -1);
+
+                GLib.Timeout.add (2, () => {
+                Gtk.TextIter iter3, iter4;
+                iter3 = Gtk.TextIter ();
+                iter4 = Gtk.TextIter ();
+                source_view.buffer.get_iter_at_offset (out iter3, offset);
+                source_view.buffer.get_iter_at_offset (out iter4, offset+1);
+                source_view.buffer.delete (ref iter3, ref iter4);
+
+                return false;
+                });
 
                 return false;
             }
@@ -384,7 +398,7 @@ public class InputView : Gtk.Box {
                 return;
             }
         }
-        
+
 
         if (operators.contains (s)) {
             source_view.buffer.get_iter_at_line_index (out iter2, it.get_line (), 0);

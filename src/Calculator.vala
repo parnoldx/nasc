@@ -83,7 +83,7 @@ internal class CalculatorThread {
     public Gee.List<NascFunction> functions { get; private set; }
     public Gee.List<NascFunction> advanced_functions { get; private set; }
     public Gee.List<NascVariabel> variables { get; private set; }
-   
+
     public string currency_update_url { get; private set; }
     public string currency_update_filename { get; private set; }
 
@@ -402,7 +402,7 @@ public class Calculator : Object {
     }
 
     private Gee.List<string> _defined_variables;
-    public Gee.List<string> defined_variables { 
+    public Gee.List<string> defined_variables {
         get{
             _defined_variables = new Gee.ArrayList<string> ();
             for (int i = 0; i < QalculateNasc.get_variable_size (); i++) {
@@ -413,7 +413,7 @@ public class Calculator : Object {
             return _defined_variables;
         }
         private set {
-            
+
         }
     }
 

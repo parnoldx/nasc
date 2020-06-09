@@ -174,7 +174,11 @@ public class Controller : Object {
 
         debug ("set last sheet");
         if(sheet_list.size > 0) {
-            set_sheet (sheet_list.get (0));
+            //delay sheet loading, TODO fix and make better. Prevents thread issues with the calculator
+            GLib.Timeout.add (300, () => {
+                set_sheet (sheet_list.get (0));
+                return false;
+            });
         }
     }
 
@@ -364,7 +368,7 @@ public class Controller : Object {
     private bool check_for_calculation (string input) {
         if (input == null || input == "") {
             return false;
-        } 
+        }
         if (input.contains ("http://")) {
             return false;
         } else if (digit_regex.match (input)) {
@@ -375,7 +379,7 @@ public class Controller : Object {
                 tutorial ();
             } else if (input ==  "atom()") {
                 periodic ();
-            } 
+            }
             foreach (var op in this.enable_calc) {
                 if (input.contains (op)) {
                     return true;
@@ -395,8 +399,7 @@ public class Controller : Object {
                     return true;
                 }
             }
-            Gee.List<string> defined_variables = calculator.defined_variables;
-            foreach (var v in defined_variables){
+            foreach (var v in calculator.defined_variables){
                 if (input.has_prefix (v)){
                     return true;
                 }
@@ -437,6 +440,6 @@ public class Controller : Object {
         return sb.str;
     }
 
-        
+
 
 }
