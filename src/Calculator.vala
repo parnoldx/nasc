@@ -89,7 +89,6 @@ internal class CalculatorThread {
 
     private Regex digit_regex;
     private Regex pretty_regex;
-    private const unichar superscript_digits[] = { '⁰', '¹', '²', '³', '⁴', '⁵', '⁶', '⁷', '⁸', '⁹' };
 
     public AsyncQueue<Calculation> calculations { get; private set; }
     public AsyncQueue<Calculation> results { get; private set; }
@@ -270,7 +269,7 @@ internal class CalculatorThread {
 
                 if (active) {
                     if (digit_regex.match (c.to_string ())) {
-                        sb.append_unichar (superscript_digits[int.parse (c.to_string ())]);
+                        sb.append_unichar (Calculator.superscript_digits[int.parse (c.to_string ())]);
                         continue;
                     } else {
                         active = false;
@@ -280,7 +279,7 @@ internal class CalculatorThread {
                 sb.append_unichar (c);
                 ex_end = true;
             } else {
-                sb.append_unichar (superscript_digits[int.parse (c.to_string ())]);
+                sb.append_unichar (Calculator.superscript_digits[int.parse (c.to_string ())]);
             }
         }
 
@@ -290,7 +289,7 @@ internal class CalculatorThread {
             exponent = "⁻" + exponent;
         }
 
-        return pretty_result.substring (0, pretty_result.last_index_of ("E")) + " x 10" + exponent;
+        return pretty_result.substring (0, pretty_result.last_index_of ("E")) + " × 10" + exponent;
     }
 
     private string pretty_print2 (string str) {
@@ -301,7 +300,7 @@ internal class CalculatorThread {
         for (int i = 0; str.get_next_char (ref i, out c);) {
             if (active) {
                 if (digit_regex.match (c.to_string ())) {
-                    sb.append_unichar (superscript_digits[int.parse (c.to_string ())]);
+                    sb.append_unichar (Calculator.superscript_digits[int.parse (c.to_string ())]);
                     continue;
                 } else {
                     active = false;
@@ -376,6 +375,8 @@ internal class UpdateThread {
 }
 
 public class Calculator : Object {
+
+    public const unichar superscript_digits[] = { '⁰', '¹', '²', '³', '⁴', '⁵', '⁶', '⁷', '⁸', '⁹' };
     public Gee.List<NascFunction> functions {
         get {
             return calc_thread.functions;

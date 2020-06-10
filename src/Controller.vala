@@ -425,11 +425,10 @@ public class Controller : Object {
             } else {
                 var left = input_text[i];
                 sb.append ("$");
-                //TODO maybe convert some things to latex commands?
-                sb.append (left);
+                sb.append (replace_for_latex (left));
                 if (!(left.contains ("=")&&!left.contains ("("))){
                     sb.append("=");
-                    sb.append (result_text[i]);
+                    sb.append (replace_for_latex (result_text[i]));
                 }
                 sb.append ("$");
                 sb.append ("  \\n");
@@ -437,6 +436,19 @@ public class Controller : Object {
         }
 
         return sb.str;
+    }
+
+    private string replace_for_latex (string val) {
+        //TODO maybe convert more things to latex commands?
+        string newval = val.replace (" to ","$ $to$ $");
+        //convert superscript
+        //todo
+        // unichar c;
+
+        // for (int i = 0; val.get_next_char (ref i, out c);) {
+        //       
+        // }
+        return newval;
     }
 
 
