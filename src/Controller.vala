@@ -93,6 +93,7 @@ public class Controller : Object {
 
     public signal void tutorial ();
     public signal void periodic ();
+    private bool skip_update = false;
 
     public Controller (InputView input, ResultView results) {
         this.sheet_path = Path.build_filename (this.sheet_base, "nasc.sheets");
@@ -105,7 +106,6 @@ public class Controller : Object {
             digit_regex = new Regex ("\\d", RegexCompileFlags.OPTIMIZE);
         } catch (GLib.RegexError ex) {
         }
-
         this.input = input;
         this.results = results;
         this.input.changed_line.connect ((line, total_lines, text) => {
@@ -174,7 +174,11 @@ public class Controller : Object {
 
         debug ("set last sheet");
         if(sheet_list.size > 0) {
-            set_sheet (sheet_list.get (0));
+            //delay sheet loading, TODO fix and make better. Prevents thread issues with the calculator
+            GLib.Timeout.add (300, () => {
+                set_sheet (sheet_list.get (0));
+                return false;
+            });
         }
     }
 
@@ -187,6 +191,9 @@ public class Controller : Object {
     }
 
     async void update_results (int line, int total_lines, string text) {
+        if (skip_update) {
+            return;
+        }
         /* make sure only one calc cycle is present at a time */
         if (calc_lock) {
             calculator.cancel.cancel ();
@@ -200,18 +207,22 @@ public class Controller : Object {
             });
             yield;
         }
-
         calc_lock = true;
         calculator.cancel.reset ();
-        var line_texts = text.split ("\n");
+        string[] line_texts = text.split ("\n");
         int index = 0;
         total_lines = results.result_list.size;
 
         for (int i = line; i < total_lines; i++) {
-            if (line_texts[index] != null && check_for_calculation (line_texts[index])) {
+            var line_text = line_texts[index];
+            if (line_text != null && check_for_calculation (line_text)) {
+                if (calculator.cancel.is_cancelled ()) {
+                    calc_lock = false;
+                    return;
+                }
                 string result = "";
                 calculator.calculate_store_variable.begin (
-                    line_texts[index], NascSettings.variable_names + "%d".printf (i),
+                    line_text, NascSettings.variable_names + "%d".printf (i),
                     (obj, res) => {
                     result = calculator.calculate_store_variable.end (res);
                     update_results.callback ();
@@ -233,7 +244,6 @@ public class Controller : Object {
 
                 if (calculator.cancel.is_cancelled ()) {
                     calc_lock = false;
-
                     return;
                 }
 
@@ -262,12 +272,13 @@ public class Controller : Object {
         if (content == null) {
             content = "";
         }
-
+        skip_update = true;
         input.buffer.text = content;
-        input.process_new_content ();
+        //input.process_new_content ();
         Gtk.TextIter iter = Gtk.TextIter ();
         input.source_view.buffer.get_iter_at_offset (out iter, input.source_view.buffer.cursor_position);
         override_line = iter.get_line ();
+        skip_update = false;
         input.process_new_content ();
     }
 
@@ -357,16 +368,18 @@ public class Controller : Object {
     private bool check_for_calculation (string input) {
         if (input == null || input == "") {
             return false;
-        } else if (input.contains ("http://")) {
-            return false;
-        } else if (input.has_suffix ("atom()")) {
-            periodic ();
-
+        }
+        if (input.contains ("http://")) {
             return false;
         } else if (digit_regex.match (input)) {
             /* cases when a digit is present and it should not be calculated? */
             return true;
         } else {
+            if (input == "tutorial()") {
+                tutorial ();
+            } else if (input ==  "atom()") {
+                periodic ();
+            }
             foreach (var op in this.enable_calc) {
                 if (input.contains (op)) {
                     return true;
@@ -391,44 +404,41 @@ public class Controller : Object {
                     return true;
                 }
             }
-
-            if (input == "tutorial()") {
-                tutorial ();
-            }
-
             return false;
         }
     }
 
     public string get_export_text () {
-        var input_text = get_content ().split ("\n");
+        var input_text = input.get_replaced_content (true).split ("\n");
         string[] result_text = {};
 
         foreach (var rl in this.results.result_list) {
-            result_text += rl.value;
+            result_text += rl.full_value;
         }
 
-        int longest_line = 80;
         var sb = new StringBuilder ();
 
         for (int i = 0; i < input_text.length; i++) {
-            sb.append (input_text[i]);
-            int actual_length = 0;
-            unichar c;
-
-            for (int k = 0; input_text[i].get_next_char (ref k, out c);) {
-                actual_length++;
+            if(result_text[i] == ""){
+                sb.append (input_text[i]);
+                sb.append ("  \\n");
+            } else {
+                var left = input_text[i];
+                sb.append ("$");
+                //TODO maybe convert some things to latex commands?
+                sb.append (left);
+                if (!(left.contains ("=")&&!left.contains ("("))){
+                    sb.append("=");
+                    sb.append (result_text[i]);
+                }
+                sb.append ("$");
+                sb.append ("  \\n");
             }
-
-            for (int j = actual_length; j < longest_line; j++) {
-                sb.append (" ");
-            }
-
-            sb.append ("| ");
-            sb.append (result_text[i]);
-            sb.append ("\n");
         }
 
         return sb.str;
     }
+
+
+
 }

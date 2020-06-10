@@ -114,6 +114,25 @@ public class InputView : Gtk.Box {
                 backspace_button = true;
 
                 return false;
+            } else if (e.keyval == Gdk.Key.Return) {
+                Gtk.TextIter iter;
+                source_view.buffer.get_end_iter (out iter);
+                int offset = iter.get_offset ();
+                source_view.buffer.insert_at_cursor (" ", -1);
+
+                source_view.buffer.insert_at_cursor ("\n", -1);
+                GLib.Timeout.add (2, () => {
+                    Gtk.TextIter iter3, iter4;
+                    iter3 = Gtk.TextIter ();
+                    iter4 = Gtk.TextIter ();
+                    source_view.buffer.get_iter_at_offset (out iter3, offset);
+                    source_view.buffer.get_iter_at_offset (out iter4, offset+1);
+                    source_view.buffer.delete (ref iter3, ref iter4);
+
+                    return false;
+                });
+
+                return true;
             }
 
             if ((e.state & Gdk.ModifierType.CONTROL_MASK) != 0) {
@@ -258,7 +277,11 @@ public class InputView : Gtk.Box {
         this.buffer.set_language (lang_manager.get_language ("nasc"));
         var style_scheme_manager = new Gtk.SourceStyleSchemeManager ();
         style_scheme_manager.set_search_path (dirs);
-        this.buffer.style_scheme = style_scheme_manager.get_scheme ("nasc");
+        if (NascSettings.get_instance ().dark_mode) {
+            this.buffer.style_scheme = style_scheme_manager.get_scheme ("nasc_dark");
+        } else {
+            this.buffer.style_scheme = style_scheme_manager.get_scheme ("nasc");
+        }
     }
 
     private void process_insert_text (ref Gtk.TextIter it, string s, int i) {
@@ -375,39 +398,8 @@ public class InputView : Gtk.Box {
 
                 return;
             }
-            var functions = get_functions ();
-            if (functions != null){
-            foreach (var fct in functions) {
-                iter.assign (it);
-                iter2.assign (it);
-                if (check_pre_it (fct.name, iter, iter2)) {
-                    skip_change = true;
-                    iter.assign (it);
-                    iter2.assign (it);
-                    int offset = iter.get_offset () + 1;
-                    /* to prevent errors, buffer delete makes the iter invalid which leads to errors */
-                    GLib.Timeout.add (1, () => {
-                        Gtk.TextIter iter3, iter4;
-                        iter3 = Gtk.TextIter ();
-                        iter4 = Gtk.TextIter ();
-                        source_view.buffer.get_iter_at_offset (out iter3, offset);
-                        source_view.buffer.get_iter_at_offset (out iter4, offset);
-                       
-                        source_view.buffer.insert (ref iter4, "()", -1);
-    
-                        source_view.buffer.get_iter_at_offset (out iter4, offset+1);
-                        source_view.buffer.place_cursor (iter4);
-                        skip_change = false;
-                        changed_line (line, -1, get_text_line_to_end (line));
-    
-                        return false;
-                    });
-                    return;
-                }
-            }
-            }
         }
-        
+
 
         if (operators.contains (s)) {
             source_view.buffer.get_iter_at_line_index (out iter2, it.get_line (), 0);
@@ -434,6 +426,7 @@ public class InputView : Gtk.Box {
         skip_change = true;
         int cursor_pos;
         Gtk.TextIter start_iter, end_iter, cursor;
+        bool has_wrapped_around;
         source_view.buffer.get_iter_at_offset (out cursor, source_view.buffer.cursor_position);
         cursor_pos = cursor.get_offset ();
         source_view.buffer.get_iter_at_offset (out start_iter, 0);
@@ -442,7 +435,7 @@ public class InputView : Gtk.Box {
         int[] line_array = {};
         int delta = 0;
 
-        while (search.forward (start_iter, out start_iter, out end_iter)) {
+        while (search.forward2 (start_iter, out start_iter, out end_iter, out has_wrapped_around)) {
             MatchInfo info;
             var text = source_view.buffer.get_text (start_iter, end_iter, false);
             digit_regex.match (text, 0, out info);
@@ -623,7 +616,7 @@ public class InputView : Gtk.Box {
     }
 
     /* get content with lineX replacements */
-    public string get_replaced_content () {
+    public string get_replaced_content (bool real_values = false) {
         Gtk.TextIter start, end;
         this.buffer.get_start_iter (out start);
         this.buffer.get_end_iter (out end);
@@ -633,7 +626,7 @@ public class InputView : Gtk.Box {
         }
 
         var text = this.buffer.get_slice (start, end, false);
-        text = replace_widget_markers (0, text, false, false);
+        text = replace_widget_markers (0, text, false, real_values);
 
         return text;
     }
@@ -706,12 +699,10 @@ public class InputView : Gtk.Box {
                     if (ws != null) {
                         if (real_values) {
                             replacement = ws.result.full_value;
+                        } else if (for_calculator) {
+                            replacement = ws.get_variable_name ();
                         } else {
-                            if (for_calculator) {
-                                replacement = ws.get_variable_name ();
-                            } else {
-                                replacement = "line%d".printf (ws.result.line + 1);
-                            }
+                            replacement = "line%d".printf (ws.result.line + 1);
                         }
                     }
                 }

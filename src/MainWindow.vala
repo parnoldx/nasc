@@ -29,13 +29,14 @@ namespace Nasc {
         private Controller controller;
         private InputView input_box;
         private ResultView result_box;
-        // private OpenBox open_box;
+        private OpenBox open_box;
         private HelpBox help_box;
         private PeriodicTable periodic_box;
-        // private Gtk.ToggleButton open_button;
+        private Gtk.ToggleButton open_button;
         private Gtk.ToggleButton help_button;
         private Gtk.Stack main_stack;
         private Gtk.Stack right_stack;
+        private Gtk.ScrolledWindow scrollResult;
 
         public MainWindow (NascApp app) {
             this.app = app;
@@ -48,8 +49,14 @@ namespace Nasc {
             if (x != -1 && y != -1) {
                 move (x, y);
             } else {
-                x = (Gdk.Screen.width () - default_width) / 2;
-                y = (Gdk.Screen.height () - default_height) / 2;
+                var display = Gdk.Display.get_default ();
+                var monitor = display.get_primary_monitor ();
+                var geometry = monitor.get_geometry ();
+                var scale_factor = monitor.get_scale_factor ();
+                var width = scale_factor * geometry.width;
+                var height = scale_factor * geometry.height;
+                x = (width - default_width) / 2;
+                y = (height - default_height) / 2;
                 move (x, y);
             }
 
@@ -63,21 +70,21 @@ namespace Nasc {
             toolbar.set_title (app.program_name);
             this.set_titlebar (toolbar);
             toolbar.show_close_button = true;
-            // open_button = new Gtk.ToggleButton ();
-            // open_button.set_image (new Gtk.Image.from_icon_name ("document-open", Gtk.IconSize.LARGE_TOOLBAR));
-            // open_button.set_tooltip_markup ("Open sheets");
+            open_button = new Gtk.ToggleButton ();
+            open_button.set_image (new Gtk.Image.from_icon_name ("document-open", Gtk.IconSize.LARGE_TOOLBAR));
+            open_button.set_tooltip_markup ("Open sheets");
             help_button = new Gtk.ToggleButton ();
             help_button.set_image (new Gtk.Image.from_icon_name ("help-contents", Gtk.IconSize.LARGE_TOOLBAR));
-            help_button.set_tooltip_markup (_("Open help"));
+            help_button.set_tooltip_markup ("Open help");
             var export_button = new Gtk.Button.from_icon_name ("document-export", Gtk.IconSize.LARGE_TOOLBAR);
-            export_button.set_tooltip_markup (_("Export…"));
+            export_button.set_tooltip_markup ("Export…");
             var export_popover = new Gtk.Popover (export_button);
 
             var pdf_button = new Gtk.Button.with_label (_("Export to PDF"));
             pdf_button.get_style_context ().add_class ("flat");
             pdf_button.margin = 5;
 
-            var share_button = new Gtk.Button.with_label (_("Share via PasteBin"));
+            var share_button = new Gtk.Button.with_label (_("Share via MathB.in"));
             share_button.get_style_context ().add_class ("flat");
             share_button.margin = 5;
             share_button.margin_top = 0;
@@ -92,7 +99,7 @@ namespace Nasc {
             });
 
             /* var setting_button = new Gtk.Button.from_icon_name("document-properties", Gtk.IconSize.LARGE_TOOLBAR); */
-            // toolbar.pack_start (open_button);
+            toolbar.pack_start (open_button);
             /* TODO settings ? */
             toolbar.pack_end (export_button);
             toolbar.pack_end (help_button);
@@ -110,7 +117,7 @@ namespace Nasc {
 
             right_stack = new Gtk.Stack ();
 
-            // open_box = new OpenBox ();
+            open_box = new OpenBox ();
 
             input_box = new InputView ();
             result_box = new ResultView ();
@@ -124,7 +131,7 @@ namespace Nasc {
             scrollInput.set_policy (Gtk.PolicyType.AUTOMATIC, Gtk.PolicyType.NEVER);
             scrollInput.add(input_box);
 
-            var scrollResult = new Gtk.ScrolledWindow (null, null);
+            scrollResult = new Gtk.ScrolledWindow (null, null);
             scrollResult.set_policy (Gtk.PolicyType.AUTOMATIC, Gtk.PolicyType.NEVER);
             scrollResult.add(right_stack);
 
@@ -140,7 +147,7 @@ namespace Nasc {
             });
             scroll.add (pane);
 
-            // content_pane.pack1 (open_box, true, false);
+            content_pane.pack1 (open_box, true, false);
             content_pane.pack2 (scroll, true, false);
             main_box.pack_start (content_pane, true, true, 0);
 
@@ -160,24 +167,24 @@ namespace Nasc {
                 result_box.set_width (pane.get_allocated_width () - pane.position - 1);
             });
 
-            // open_button.toggled.connect (open_toggle);
+            open_button.toggled.connect (open_toggle);
             help_button.toggled.connect (help_toggle);
 
-            // input_box.open.connect (open_toggle);
+            input_box.open.connect (open_toggle);
 
             input_box.new_trigger.connect (() => {
-                // if (!open_box.is_open ()) {
+                if (!open_box.is_open ()) {
                     controller.add_sheet ();
                     result_box.clear ();
-                // }
+                }
             });
 
-            // input_box.escape.connect (() => {
-            //     if (open_box.is_open ()) {
-            //         open_button.set_active (false);
-            //         close_open ();
-            //     }
-            // });
+            input_box.escape.connect (() => {
+                if (open_box.is_open ()) {
+                     open_button.set_active (false);
+                     close_open ();
+                 }
+            });
             input_box.help.connect (() => {
                 help_button.active = !help_button.active;
                 help_toggle ();
@@ -189,12 +196,12 @@ namespace Nasc {
                 help_button.active = !help_button.active;
                 help_toggle ();
             });
-            // open_box.escape.connect (() => {
-            //     if (open_box.is_open ()) {
-            //         open_button.set_active (false);
-            //         close_open ();
-            //     }
-            // });
+            open_box.escape.connect (() => {
+                if (open_box.is_open ()) {
+                     open_button.set_active (false);
+                     close_open ();
+                 }
+             });
 
             pdf_button.clicked.connect (() => {
                 export_popover.hide ();
@@ -224,7 +231,7 @@ namespace Nasc {
 
             share_button.clicked.connect (() => {
                 export_popover.hide ();
-                new PasteBinDialog (this, controller);
+                new MathBinDialog (this, controller);
             });
 
             controller.tutorial.connect (() => {
@@ -277,18 +284,21 @@ namespace Nasc {
             info_bar.show_all ();
         }
 
-        // private void open_toggle () {
-        //     if (!open_box.is_open ()) {
-        //         open_button.set_active (true);
-        //         open_box.open (controller);
-        //         right_stack.hide ();
-        //     } else {
-        //         close_open ();
-        //     }
-        // }
+
+        private void open_toggle () {
+             if (!open_box.is_open ()) {
+                 controller.store_sheet_content ();
+                 open_button.set_active (true);
+                 open_box.open (controller);
+                 scrollResult.hide ();
+             } else {
+                 close_open ();
+             }
+        }
 
         private void help_toggle () {
             if (help_button.active) {
+                controller.store_sheet_content ();
                 right_stack.set_transition_type (Gtk.StackTransitionType.SLIDE_LEFT);
                 right_stack.set_visible_child_name ("help");
                 help_box.search_focus ();
@@ -299,12 +309,12 @@ namespace Nasc {
             }
         }
 
-        // private void close_open () {
-        //     open_button.set_active (false);
-        //     open_box.close ();
-        //     right_stack.show_all ();
-        //     input_box.source_view.grab_focus ();
-        // }
+        private void close_open () {
+             open_button.set_active (false);
+             open_box.close ();
+             scrollResult.show_all ();
+             input_box.source_view.grab_focus ();
+        }
 
         /*
          * Saves the window height and width before closing
