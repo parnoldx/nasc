@@ -210,19 +210,19 @@ internal class CalculatorThread {
 
     private string prepare_string (string input) {
         string return_str = input;
+        
+        // allow comments at the end of a line
+        string[] split2 = return_str.split ("//");
+        if(split2.length == 2){
+            return_str = split2[0];
+        }
+                
         /* in case of a simple assignment like a := 5 where on the left side is just one word you can also use = */
         string[] split = return_str.split ("=");
 
         if (split.length == 2 && split[0].chomp ().split (" ").length == 1) {
             return_str = return_str.replace ("=", ":=");
         }
-
-        // allow comments at the end of a line
-        string[] split2 = return_str.split ("//");
-        if(split2.length == 2){
-            return_str = split2[0];
-        }
-
 
         /* to enable currency signs */
         return_str = return_str.replace ("$", "USD").replace ("€", "EUR").replace ("£", "GBP").replace ("¥", "JPY");
