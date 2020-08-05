@@ -366,7 +366,7 @@ public class Controller : Object {
      * TODO add negativ cases?! do it better!
      */
     private bool check_for_calculation (string input) {
-        if (input == null || input == "") {
+        if (input == null || input.replace(" ","") == "") {
             return false;
         }
         if (input.contains ("http://")) {

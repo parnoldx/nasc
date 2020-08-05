@@ -220,8 +220,8 @@ internal class CalculatorThread {
         /* in case of a simple assignment like a := 5 where on the left side is just one word you can also use = */
         string[] split = return_str.split ("=");
 
-        if (split.length == 2 && split[0].chomp ().split (" ").length == 1) {
-            return_str = return_str.replace ("=", ":=");
+        if (split.length == 2 && split[0].strip ().split (" ").length == 1) {
+            return_str = split[0].strip () + ":="+split[1];
         }
 
         /* to enable currency signs */
