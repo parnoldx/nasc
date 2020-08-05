@@ -14,6 +14,13 @@
   </provides>
   <launchable type="desktop-id">com.github.parnold-x.nasc.desktop</launchable>
   <releases>
+       <release version="0.7.4" date="2020-08-05">
+      <description>
+        <p>Fixed a bug that caused problems when using comments inline</p>
+        <p>Better handling of whitespaces with variable declaration and newlines</p>
+        <p>Improved the updating of the results while doing line movements</p>
+      </description>
+    </release>
       <release version="0.7.3" date="2020-06-09">
       <description>
         <p>Fixed a bug that caused a crash during startup</p>
