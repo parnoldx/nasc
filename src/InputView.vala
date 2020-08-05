@@ -99,6 +99,9 @@ public class InputView : Gtk.Box {
             }
 
             total_lines = lines;
+	    if (actual_line > 0) {
+		actual_line--;
+	    }
             changed_line (actual_line, lines, get_text_line_to_end (actual_line));
             scroll_needed = actual_line == lines - 1;
             backspace_button = false;
@@ -116,8 +119,9 @@ public class InputView : Gtk.Box {
                 return false;
             } else if (e.keyval == Gdk.Key.Return) {
                 Gtk.TextIter iter;
-                source_view.buffer.get_end_iter (out iter);
+                source_view.buffer.get_iter_at_offset (out iter, source_view.buffer.cursor_position);
                 int offset = iter.get_offset ();
+
                 source_view.buffer.insert_at_cursor (" ", -1);
 
                 source_view.buffer.insert_at_cursor ("\n", -1);

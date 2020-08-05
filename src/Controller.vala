@@ -215,6 +215,7 @@ public class Controller : Object {
 
         for (int i = line; i < total_lines; i++) {
             var line_text = line_texts[index];
+
             if (line_text != null && check_for_calculation (line_text)) {
                 if (calculator.cancel.is_cancelled ()) {
                     calc_lock = false;
