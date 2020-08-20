@@ -405,6 +405,13 @@ public class Controller : Object {
                     return true;
                 }
             }
+            /* check on use of user functions */
+            foreach (var fct in calculator.user_functions) {
+                if (input.contains ("%s(".printf (fct.name))) {
+                    return true;
+                }
+            }
+        
             return false;
         }
     }

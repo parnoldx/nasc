@@ -14,6 +14,9 @@ public class QalculateNasc {
 	[CCode (cname = "Calculator_calculate_store_variable")]
 	public static string calculate_store_variable (string input, string variable);
 
+	[CCode (cname = "add_function")]
+	public static void add_function (string name, string expr);
+
 	[CCode (cname = "clear_variables")]
 	public static void clear_variables ();
 

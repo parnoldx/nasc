@@ -82,6 +82,7 @@ internal class Calculation : GLib.Object {
 internal class CalculatorThread {
     public Gee.List<NascFunction> functions { get; private set; }
     public Gee.List<NascFunction> advanced_functions { get; private set; }
+    public Gee.List<NascFunction> user_functions { get; private set; }
     public Gee.List<NascVariabel> variables { get; private set; }
 
     public string currency_update_url { get; private set; }
@@ -100,6 +101,7 @@ internal class CalculatorThread {
         this.cancel = cancel;
         functions = new Gee.ArrayList<NascFunction> ();
         advanced_functions = new Gee.ArrayList<NascFunction> ();
+        user_functions = new Gee.ArrayList<NascFunction> ();
         variables = new Gee.ArrayList<NascVariabel> ();
         calculations = new AsyncQueue<Calculation> ();
         results = new AsyncQueue<Calculation> ();
@@ -127,16 +129,17 @@ internal class CalculatorThread {
 
         while (true) {
             Calculation calc = calculations.pop ();
+            string input = prepare_string (calc.input);
 
             if (calc.save_variable) {
                 calc.output = post_string (QalculateNasc.calculate_store_variable (
-                                               prepare_string (calc.input), calc.variable));
+                    input, calc.variable));
                 results.push (calc);
                 Idle.add ((owned) callback);
             } else {
-                calc.output = post_string (QalculateNasc.calculate (
-                                               prepare_string (calc.input)));
+                calc.output = post_string (QalculateNasc.calculate (input));
                 results.push (calc);
+                Idle.add ((owned) callback);
             }
         }
     }
@@ -227,6 +230,16 @@ internal class CalculatorThread {
         /* to enable currency signs */
         return_str = return_str.replace ("$", "USD").replace ("€", "EUR").replace ("£", "GBP").replace ("¥", "JPY");
 
+        // add user function case
+        if(return_str.has_prefix("function ")){
+            return_str = return_str.replace ("function ", "").chug ();
+            string[] function_split = return_str.split(" ",2);
+            string name = function_split[0];
+            string expr = function_split[1].chug().chomp();
+            QalculateNasc.add_function (name,expr);
+            user_functions.add(new NascFunction.nasc(name,"user","user"));
+            return_str = "1";
+        }
         return return_str;
     }
 
@@ -393,6 +406,16 @@ public class Calculator : Object {
             /* not needed, redirect */
         }
     }
+
+    public Gee.List<NascFunction> user_functions {
+        get {
+            return calc_thread.user_functions;
+        }
+        private set {
+            /* not needed, redirect */
+        }
+    }
+
     public Gee.List<NascVariabel> variables {
         get {
             return calc_thread.variables;
