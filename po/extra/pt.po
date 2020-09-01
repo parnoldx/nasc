@@ -1,0 +1,143 @@
+# Portuguese (Portugal) translations for nasc package.
+# Copyright (C) 2019 THE nasc'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.parnold-x.nasc package.
+# André Barata <andretiagob@protonmail.com>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: extra\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-30 13:51+0200\n"
+"PO-Revision-Date: 2020-08-31 19:27+0100\n"
+"Language-Team: none\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.1\n"
+"Last-Translator: André Barata <andretiagob@protonmail.com>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: pt\n"
+
+#: data/com.github.parnold-x.nasc.desktop.in:5
+#: data/com.github.parnold-x.nasc.appdata.xml.in:7
+msgid "NaSC"
+msgstr "NaSC"
+
+#: data/com.github.parnold-x.nasc.desktop.in:6
+#: data/com.github.parnold-x.nasc.appdata.xml.in:8
+msgid "Do maths like a normal person"
+msgstr "Faça cálculos como uma pessoa normal"
+
+#: data/com.github.parnold-x.nasc.desktop.in:7
+msgid "Calculator"
+msgstr "Calculadora"
+
+#: data/com.github.parnold-x.nasc.desktop.in:11
+msgid "com.github.parnold-x.nasc"
+msgstr "com.github.parnold-x.nasc"
+
+#: data/com.github.parnold-x.nasc.desktop.in:14
+msgid "calculation;arithmetic;scientific;financial;"
+msgstr ""
+"calculation;cálculos;arithmetic;aritmética;scientific;científico;financial;"
+"financeiro;"
+
+#: data/com.github.parnold-x.nasc.appdata.xml.in:10
+msgid ""
+"It’s an app where you do maths like a normal person. It lets you type "
+"whatever you want and smartly figures out what is math and spits out an "
+"answer on the right pane. Then you can plug those answers in to future "
+"equations and if that answer changes, so does the equations it’s used in."
+msgstr ""
+"É uma aplicação onde faz os seus cálculos como uma pessoa normal. Permite "
+"escrever o que quiser e descobre, de forma inteligente, qual é o resultado "
+"do cálculo e exibe uma resposta no painel direito. Depois, pode inserir "
+"essa resposta dentro de equações futuras e se a resposta mudar, também a "
+"equação que foi usada muda."
+
+#: data/com.github.parnold-x.nasc.appdata.xml.in:19
+msgid ""
+"Build libqalculate as submodule - This means better calculation results and "
+"more functions"
+msgstr ""
+"O libqalculate foi construido como um submódulo - Isto significa resultados "
+"de cálculos mais precisos e mais funções"
+
+#: data/com.github.parnold-x.nasc.appdata.xml.in:20
+msgid "Added convert to different number bases. E.g. 16734003 to hex"
+msgstr ""
+"Conversão adicionada a bases de números diferentes Ex. 16734003 para "
+"hexadecimal"
+
+#: data/com.github.parnold-x.nasc.appdata.xml.in:21
+msgid ""
+"Available number bases: hex bin dec oct duo roman bijective roman sexa fp32 "
+"fp64 fp16 fp80 fp128"
+msgstr ""
+"Bases de números disponíveis: hex bin dec oct duo roman bijective roman "
+"sexa fp32 fp64 fp16 fp80 fp128"
+
+#: data/com.github.parnold-x.nasc.appdata.xml.in:22
+msgid "Improved scroll behavior when using long equations or results"
+msgstr ""
+"Comportamento de deslizar melhorado ao usar equações ou resultados longos"
+
+#: data/com.github.parnold-x.nasc.appdata.xml.in:23
+msgid "Ctrl + Shift + C copys result when nothing is marked in the input pane"
+msgstr ""
+"Ctrl + Shift + C copia o resultado quando nada está marcado no painel de "
+"entrada"
+
+#: data/com.github.parnold-x.nasc.appdata.xml.in:24
+msgid "Right click on a result copies it to the clipboard"
+msgstr ""
+"Clicar no botão direito do rato num resultado vai copiá-lo para a área de "
+"transferência"
+
+#: data/com.github.parnold-x.nasc.appdata.xml.in:25
+msgid "Auto complete functions with parenthesis"
+msgstr "Completar funções automaticamente com o parênteses"
+
+#: data/com.github.parnold-x.nasc.appdata.xml.in:26
+msgid "Quit on Ctrl + Q"
+msgstr "Sair ao usar Ctrl + Q"
+
+#: data/com.github.parnold-x.nasc.appdata.xml.in:27
+msgid "Fix of a parsing error in the help pane"
+msgstr "Correção de um erro de análise no painel de ajuda"
+
+#: data/com.github.parnold-x.nasc.appdata.xml.in:32
+msgid "Update desktop file."
+msgstr "Atualização do ficheiro do ambiente de trabalho."
+
+#: data/com.github.parnold-x.nasc.appdata.xml.in:37
+msgid "Fix double NaSC icon."
+msgstr "Correção do ícone duplo do NaSC."
+
+#: data/com.github.parnold-x.nasc.appdata.xml.in:42
+msgid "Fix linking of qalculatenasc lib."
+msgstr "Correção de ligação da qalculatenasc lib."
+
+#: data/com.github.parnold-x.nasc.appdata.xml.in:47
+msgid "Update Debian control file."
+msgstr "Atualização do ficheiro de controlo Debian."
+
+#: data/com.github.parnold-x.nasc.appdata.xml.in:52
+msgid "Release for Juno."
+msgstr "Lançamento para o Juno."
+
+#: data/com.github.parnold-x.nasc.appdata.xml.in:58
+msgid "Main view"
+msgstr "Vista principal"
+
+#: data/com.github.parnold-x.nasc.appdata.xml.in:62
+msgid "Help pane"
+msgstr "Painel de ajuda"
+
+#: data/com.github.parnold-x.nasc.appdata.xml.in:66
+msgid "Periodic table"
+msgstr "Tabela periódica"
+
+#: data/com.github.parnold-x.nasc.appdata.xml.in:99
+msgid "Peter Arnold"
+msgstr "Peter Arnold"
