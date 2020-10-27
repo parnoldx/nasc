@@ -63,6 +63,14 @@ namespace Nasc {
             /* Set window properties */
             this.set_default_size (NascSettings.get_instance ().window_width, NascSettings.get_instance ().window_height);
 
+            /* Set window icon */
+            try {
+                this.icon = Gtk.IconTheme.get_default ().load_icon (
+				    "com.github.parnold-x.nasc", 48, 0);
+            } catch (Error e) {
+                stderr.printf ("Could not load application icon: %s\n", e.message);
+            }
+
             this.delete_event.connect (on_window_closing);
 
             /* Create the toolbar */
