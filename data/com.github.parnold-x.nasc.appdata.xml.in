@@ -18,7 +18,7 @@
       <description>
         Introduce user functions
         <p>To define a user function type e.g.: function kineticEnergy 0.5*\x*\y^2</p>
-        <p>The you can use it anywhere e.g. car = kineticEnergy(1000 kg, 3 m/s)</p>
+        <p>Then you can use it anywhere e.g. car = kineticEnergy(1000 kg, 3 m/s)</p>
       </description>
     </release>
        <release version="0.7.4" date="2020-08-05">
