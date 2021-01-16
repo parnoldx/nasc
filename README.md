@@ -1,4 +1,5 @@
-# NaSC
+# NaSC 
+![alt nasc](https://raw.githubusercontent.com/parnold-x/nasc/master/icons/48/com.github.parnold-x.nasc.svg)
 
 ### Do maths like a normal person
 
