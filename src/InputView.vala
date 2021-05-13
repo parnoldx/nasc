@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2015 Peter Arnold
+ * Copyright (c) 2021 Peter Arnold
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
@@ -115,7 +115,21 @@ public class InputView : Gtk.Box {
                 return true;
             } else if (e.keyval == Gdk.Key.BackSpace) {
                 backspace_button = true;
-
+                
+                Gtk.TextIter iter = Gtk.TextIter ();
+                source_view.buffer.get_iter_at_offset (out iter, source_view.buffer.cursor_position);
+                if (iter.get_offset() < 2) {
+                    return false;
+                }
+                iter.backward_cursor_position ();
+                Gtk.TextIter iter2 = Gtk.TextIter ();
+                iter2.assign (iter);
+                iter.backward_cursor_position ();
+               
+                var iter_char = source_view.buffer.get_slice (iter, iter2, true);
+                if (iter_char == " ") {
+                    add_space = false;
+                }
                 return false;
             } else if (e.keyval == Gdk.Key.Return) {
                 Gtk.TextIter iter;
@@ -295,7 +309,7 @@ public class InputView : Gtk.Box {
 
         if (add_space) {
             add_space = false;
-
+            
             if (s != " " && s != "/") {
                 skip_change = true;
                 source_view.buffer.insert (ref it, " ", -1);
