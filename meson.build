@@ -1,7 +1,7 @@
 project(
     'com.github.parnold-x.nasc',
     'vala', 'c', 'cpp',
-    version: '0.7.5',
+    version: '0.7.6',
     default_options: ['cpp_std=c++11']
 )
 
