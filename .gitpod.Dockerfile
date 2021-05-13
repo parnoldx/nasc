@@ -1,14 +1,15 @@
 FROM gitpod/workspace-full-vnc
                     
-USER gitpod
-
-RUN sudo apt-get -q update
-
-RUN sudo apt-get install software-properties-common
-RUN sudo add-apt-repository ppa:vala-team
+USER root
 ARG DEBIAN_FRONTEND=noninteractive
-RUN sudo apt-get -q update
-RUN sudo apt-get install -yq \
+
+RUN apt-get -q update
+
+RUN apt-get install software-properties-common
+RUN add-apt-repository ppa:vala-team
+
+RUN apt-get -q update
+RUN apt-get install -yq \
     at-spi2-core \
     dbus-x11 \
     gnome-common \
