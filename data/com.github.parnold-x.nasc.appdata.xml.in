@@ -14,6 +14,10 @@
   </provides>
   <launchable type="desktop-id">com.github.parnold-x.nasc.desktop</launchable>
   <releases>
+     <release version="0.7.6" date="2021-05-13">
+      <description>
+        <p>Fixed a bug with unnecessary added spaces</p>
+      </description>
       <release version="0.7.5" date="2020-08-20">
       <description>
         Introduce user functions
