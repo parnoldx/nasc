@@ -1,6 +1,7 @@
 image:
   file: .gitpod.Dockerfile
-
+tasks:
+  - init: sh recompile.sh
 vscode:
   extensions:
     - thiagoabreu.vala@0.3.5:wpqKL9G/pGRsFlLDBLF2hA==
