@@ -6,7 +6,7 @@ RUN sudo apt-get -q update
 
 RUN sudo apt-get install software-properties-common
 RUN sudo add-apt-repository ppa:vala-team
-
+ARG DEBIAN_FRONTEND=noninteractive
 RUN sudo apt-get -q update
 RUN sudo apt-get install -yq \
     at-spi2-core \
