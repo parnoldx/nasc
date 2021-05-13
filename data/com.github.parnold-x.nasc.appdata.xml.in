@@ -18,6 +18,7 @@
       <description>
         <p>Fixed a bug regarding unnecessary added spaces</p>
       </description>
+    </release>
       <release version="0.7.5" date="2020-08-20">
       <description>
         Introduce user functions
