@@ -124,7 +124,7 @@ public class Tutorial : Gtk.Stack {
         this.add_named (page8, "8");
         var page9 = new TutorialPage (this,
                                       _("or print the week of the year"),
-                                      _("Calculate: week(12.12.2017)"), 9);
+                                      _("Calculate: week(12.12.2022)"), 9);
         this.add_named (page9, "9");
         var page10 = new TutorialPage (this,
                                        _("For a list of all those keywords and their capabilities, just open the help."),
