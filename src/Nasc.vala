@@ -24,15 +24,6 @@ namespace Nasc {
 
         construct {
             program_name = "NaSC";
-            exec_name = "nasc";
-
-            build_data_dir = Constants.DATADIR;
-            build_pkg_data_dir = Constants.PKGDATADIR;
-            build_release_name = Constants.RELEASE_NAME;
-            build_version = Constants.VERSION;
-            build_version_info = Constants.VERSION_INFO;
-
-            app_launcher = "com.github.parnold-x.nasc.desktop";
             application_id = "com.github.parnold-x.nasc";
         }
 

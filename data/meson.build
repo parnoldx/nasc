@@ -1,3 +1,16 @@
+icon_sizes = ['16', '24', '32', '48', '64', '128']
+
+foreach i : icon_sizes
+    install_data (
+        join_paths ('icons', i, meson.project_name () + '.svg'),
+        install_dir: join_paths (get_option ('datadir'), 'icons', 'hicolor', i + 'x' + i, 'apps')
+    )
+    install_data (
+        join_paths ('icons', i, meson.project_name () + '.svg'),
+        install_dir: join_paths (get_option ('datadir'), 'icons', 'hicolor', i + 'x' + i + '@2', 'apps')
+    )
+endforeach
+
 # Translate and install our .desktop file so the Applications Menu will see it
 i18n.merge_file (
     input: meson.project_name () + '.desktop.in',
@@ -19,7 +32,7 @@ i18n.merge_file (
 
 install_data(
     meson.project_name() + '.gschema.xml',
-    install_dir: schemadir,
+    install_dir: join_paths(get_option('datadir'), 'glib-2.0', 'schemas')
 )
 
 install_data(
@@ -31,5 +44,5 @@ install_data(
     'styles/nasc.xml',
     'styles/nasc_dark.xml',
     'styles/styles.rng',
-    install_dir: style_dir
+    install_dir: join_paths(get_option('datadir'), 'nasc', 'styles')
 )
