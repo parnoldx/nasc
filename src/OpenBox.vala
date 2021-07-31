@@ -126,7 +126,6 @@ public class OpenBox : Gtk.Box {
 
         this.show ();
         grab_focus ();
-        update ();
         this.open_mode = true;
         controller.input.source_view.editable = false;
     }
