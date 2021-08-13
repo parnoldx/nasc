@@ -18,7 +18,7 @@ Build-Depends: meson,
                valac
 Standards-Version: 3.9.3
 
-Package: com.github.parnold-x.nasc
+Package: com.github.parnold_x.nasc
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Pre-Depends: dpkg (>= 1.15.6)

@@ -39,7 +39,7 @@ public class NascSettings : Object {
     public int open_sheet { get; set; }
 
     private NascSettings () {
-        var settings = new GLib.Settings ("com.github.parnold-x.nasc");
+        var settings = new GLib.Settings ("com.github.parnold_x.nasc");
         settings.bind ("show-tutorial", this, "show_tutorial", SettingsBindFlags.DEFAULT);
         settings.bind ("advanced-mode", this, "advanced_mode", SettingsBindFlags.DEFAULT);
         settings.bind ("window-width", this, "window_width", SettingsBindFlags.DEFAULT);

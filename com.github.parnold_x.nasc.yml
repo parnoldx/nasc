@@ -1,10 +1,10 @@
-app-id: com.github.parnold-x.nasc
+app-id: com.github.parnold_x.nasc
 
 runtime: io.elementary.Platform
 runtime-version: '6'
 sdk: io.elementary.Sdk
 
-command: com.github.parnold-x.nasc
+command: com.github.parnold_x.nasc
 
 finish-args:
   - '--share=ipc'

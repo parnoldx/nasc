@@ -66,7 +66,7 @@ namespace Nasc {
             /* Set window icon */
             try {
                 this.icon = Gtk.IconTheme.get_default ().load_icon (
-				    "com.github.parnold-x.nasc", 48, 0);
+				    "com.github.parnold_x.nasc", 48, 0);
             } catch (Error e) {
                 stderr.printf ("Could not load application icon: %s\n", e.message);
             }
