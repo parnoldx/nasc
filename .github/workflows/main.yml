@@ -5,19 +5,27 @@ on: [push, pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+        
     container:
-      image: elementary/docker:unstable
-      
+      image: ghcr.io/elementary/flatpak-platform/runtime:6
+      options: --privileged
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - uses: actions/checkout@v1
-      with:	
-        submodules: true 
-    - name: Install Dependencies
-      run: |
-        apt update
-        apt install -y gobject-introspection libgee-0.8-dev libwebkit2gtk-4.0-dev libgtksourceview-3.0-dev libcln-dev libgranite-dev libcurl4-openssl-dev libmpfr-dev intltool meson valac
-    - name: Build
-      run: |
-        meson build --prefix=/usr
-        ninja -C build
+      # Checks-out your repository under $GITHUB_WORKSPACE, so the job can access it
+    - uses: actions/checkout@v2
+
+      # Builds your flatpak manifest using the Flatpak Builder action
+    - uses: bilelmoussaoui/flatpak-github-actions/flatpak-builder@v3
+      with:
+        bundle: nasc
+        # This uses your app's RDNN ID
+        manifest-path: com.github.parnold-x.nasc.yml
+
+        # You can automatically run any of the tests you've created as part of this workflow
+        run-tests: true
+
+        # These lines specify the location of the elementary Runtime and Sdk
+        repository-name: appcenter
+        repository-url: https://flatpak.elementary.io/repo.flatpakrepo
+        cache-key: "flatpak-builder-${{ github.sha }}"
