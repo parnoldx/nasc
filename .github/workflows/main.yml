@@ -12,8 +12,9 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so the job can access it
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v1
+      with:	
+        submodules: true 
 
       # Builds your flatpak manifest using the Flatpak Builder action
     - uses: bilelmoussaoui/flatpak-github-actions/flatpak-builder@v3
