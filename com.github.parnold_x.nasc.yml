@@ -15,7 +15,8 @@ finish-args:
   - '--filesystem=/etc:ro'
   - '--metadata=X-DConf=migrate-path=/com/github/parnold-x/nasc/'
 
-modules:
+modules: 
+  - gtksourceview.yml
   - mpfr.yml
   - cln.yml
   - name: nasc
