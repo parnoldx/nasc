@@ -16,10 +16,10 @@ finish-args:
   - '--metadata=X-DConf=migrate-path=/com/github/parnold-x/nasc/'
 
 modules:
+  - mpfr.yml
+  - cln.yml
   - name: nasc
     buildsystem: meson
     sources:
       - type: dir
         path: .
-  - mpfr.yml
-  - cln.yml
