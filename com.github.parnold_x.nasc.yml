@@ -16,9 +16,10 @@ finish-args:
   - '--metadata=X-DConf=migrate-path=/com/github/parnold-x/nasc/'
 
 modules: 
-  - gtksourceview.yml
+  - shared-modules/intltool/intltool-0.51.json
   - mpfr.yml
   - cln.yml
+  - gtksourceview.yml
   - name: nasc
     buildsystem: meson
     sources:
