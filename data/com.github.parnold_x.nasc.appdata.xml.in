@@ -14,6 +14,11 @@
   </provides>
   <launchable type="desktop-id">com.github.parnold-x.nasc.desktop</launchable>
   <releases>
+     <release version="0.8.0" date="2021-08-14">
+      <description>
+        <p>Flatpack packaging</p>
+      </description>
+    </release>
      <release version="0.7.7" date="2021-07-31">
       <description>
         <p>Fixed a bug that could caused a crash when opening sheets</p>
