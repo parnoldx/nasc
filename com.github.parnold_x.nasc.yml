@@ -16,7 +16,7 @@ finish-args:
   - '--metadata=X-DConf=migrate-path=/com/github/parnold-x/nasc/'
 
 modules: 
-  - shared-modules/intltool/intltool-0.51.json
+  - intltool.json
   - mpfr.yml
   - cln.yml
   - gtksourceview.yml
