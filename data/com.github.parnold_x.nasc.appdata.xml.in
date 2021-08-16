@@ -114,8 +114,8 @@
     <kudo>UserDocs</kudo>
   </kudos>
   <custom>
-    <value key="x-appcenter-color-primary">#3278cd</value>
-    <value key="x-appcenter-color-primary-text">rgb(157, 200, 236)</value>
+    <value key="x-appcenter-color-primary">#2f76cd</value>
+    <value key="x-appcenter-color-primary-text">#fff</value>
     <value key="x-appcenter-suggested-price">8</value>
     <value key="x-appcenter-stripe">pk_live_RErH63v8TNvv1Z37UIiGJw8y</value>
   </custom>
