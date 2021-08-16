@@ -1,5 +1,5 @@
 <div align="center">
-  <span align="center"> <img width="80" height="80" class="center" src="https://raw.githubusercontent.com/parnold-x/nasc/master/icons/128/com.github.parnold-x.nasc.svg" alt="Icon"></span>
+  <span align="center"> <img width="80" height="80" class="center" src="https://raw.githubusercontent.com/parnold-x/nasc/master/icons/128/com.github.parnold_x.nasc.svg" alt="Icon"></span>
   <h1 align="center">NaSC</h1>
   <h3 align="center">Do maths like a normal person</h3>
 </div>
