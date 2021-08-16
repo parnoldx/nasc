@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2015 Peter Arnold
+ * Copyright (c) 2021 Peter Arnold
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
@@ -48,8 +48,18 @@ public class NascSettings : Object {
         settings.bind ("opening-x", this, "opening_x", SettingsBindFlags.DEFAULT);
         settings.bind ("opening-y", this, "opening_y", SettingsBindFlags.DEFAULT);
         settings.bind ("open-sheet", this, "open_sheet", SettingsBindFlags.DEFAULT);
-        // TODO change to prefer dark eos setting when available
-        dark_mode = Gtk.Settings.get_default ().gtk_application_prefer_dark_theme;
+        var granite_settings = Granite.Settings.get_default ();
+        var gtk_settings = Gtk.Settings.get_default ();
+
+        // Then, we check if the user's preference is for the dark style and set it if it is
+        gtk_settings.gtk_application_prefer_dark_theme = granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK;
+        dark_mode = gtk_settings.gtk_application_prefer_dark_theme;
+
+        // Finally, we listen to changes in Granite.Settings and update our app if the user changes their preference
+        granite_settings.notify["prefers-color-scheme"].connect (() => {
+            gtk_settings.gtk_application_prefer_dark_theme = granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK;
+            dark_mode = gtk_settings.gtk_application_prefer_dark_theme;
+        });
     }
 
     public static NascSettings get_instance () {
