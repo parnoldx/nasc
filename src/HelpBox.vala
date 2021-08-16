@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2015 Peter Arnold
+ * Copyright (c) 2021 Peter Arnold
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
@@ -158,7 +158,7 @@ public class HelpBox : Gtk.Box {
         a_desc_label.wrap = true;
         a_desc_label.justify = Gtk.Justification.LEFT;
         a_desc_label.set_alignment (0, 0);
-        a_desc_label.set_markup ("<small>Shows advanced math functions in the help</small>");
+        a_desc_label.set_markup ("Shows advanced math functions in the help");
 
         var a_switch = new Gtk.Switch ();
         a_switch.margin_top = 10;
@@ -316,19 +316,19 @@ public class HelpBox : Gtk.Box {
         if (category == "Variables") {
             name_label.set_markup ("<b>%s</b>".printf (GLib.Markup.escape_text(name)));
             list_store.get_value (iter, 3, out val);
-            arg_label.set_markup ("<small>%s</small>".printf (GLib.Markup.escape_text(val.get_string ())));
+            arg_label.set_markup ("%s".printf (GLib.Markup.escape_text(val.get_string ())));
             arg_list_label.set_text ("");
             desc_label.set_text ("");
             seper.hide ();
         } else if (category == "NaSC") {
             if (name != "") {
-                name_label.set_markup ("<small><b>%s</b>()</small>".printf (name));
+                name_label.set_markup ("<b>%s</b>()".printf (name));
                 list_store.get_value (iter, 3, out val);
-                arg_label.set_markup ("<small>%s</small>".printf (val.get_string ()));
+                arg_label.set_markup ("%s".printf (val.get_string ()));
             } else {
                 list_store.get_value (iter, 3, out val);
                 name = val.get_string ();
-                name_label.set_markup ("<small>%s</small>".printf (name));
+                name_label.set_markup ("%s".printf (name));
                 arg_label.set_text ("");
             }
 
@@ -339,14 +339,14 @@ public class HelpBox : Gtk.Box {
             list_store.get_value (iter, 4, out val);
             name_label.set_markup ("<b>%s</b>(%s)".printf (GLib.Markup.escape_text(name), GLib.Markup.escape_text(val.get_string ())));
             list_store.get_value (iter, 5, out val);
-            arg_label.set_markup ("<small><b>Arguments</b></small>");
-            arg_list_label.set_markup ("<small>%s</small>".printf (GLib.Markup.escape_text(val.get_string ())));
+            arg_label.set_markup ("<b>Arguments</b>");
+            arg_list_label.set_markup ("%s".printf (GLib.Markup.escape_text(val.get_string ())));
             list_store.get_value (iter, 3, out val);
 
             if (val.get_string () != "") {
                 seper.no_show_all = false;
                 seper.show ();
-                desc_label.set_markup ("<small>%s</small>".printf (GLib.Markup.escape_text(val.get_string ())));
+                desc_label.set_markup ("%s".printf (GLib.Markup.escape_text(val.get_string ())));
             } else {
                 seper.hide ();
                 desc_label.set_text ("");
