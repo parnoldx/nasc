@@ -14,6 +14,7 @@ finish-args:
   - '--filesystem=home'
   - '--filesystem=/etc:ro'
   - '--metadata=X-DConf=migrate-path=/com/github/parnold-x/nasc/'
+  - '--system-talk-name=org.freedesktop.Accounts'
 
 modules: 
   - intltool.json
