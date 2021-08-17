@@ -1,0 +1,412 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.parnold-x.nasc package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.parnold-x.nasc\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-30 14:02+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/MainWindow.vala:71
+msgid "Open help"
+msgstr "Abrir ajuda"
+
+#: src/MainWindow.vala:73
+msgid "Export…"
+msgstr "Exportar..."
+
+#: src/MainWindow.vala:76
+msgid "Export to PDF"
+msgstr "Exportar como PDF"
+
+#: src/MainWindow.vala:80 src/PasteBinDialog.vala:124
+#: src/PasteBinDialog.vala:127
+msgid "Share via PasteBin"
+msgstr "Compartilhar via PasteBin"
+
+#: src/HelpBox.vala:73
+msgid "Name"
+msgstr "Nome"
+
+#: src/HelpBox.vala:410
+msgid "Copy & Paste"
+msgstr "Copiar e Colar"
+
+#: src/HelpBox.vala:411
+msgid "To support the referenced results there are 2 kind of copy in NaSC."
+msgstr ""
+"Para suportar os resultados referenciados há 2 tipos de cópia no NaSC"
+
+#: src/HelpBox.vala:412
+msgid ""
+"The normal copy via context menu or <i>Ctrl + c</i> will replace the "
+"referenced results with their real values."
+msgstr ""
+"Copiar pelo menu de contexto ou <i>Ctrl + c</i> vai substituir os"
+"resultados referidos pelos seus reais valores"
+
+#: src/HelpBox.vala:413
+msgid ""
+"Copy via <i>Ctrl + Shift + C</i> will replace the referenced results with "
+"lineX references."
+msgstr ""
+"Copiar usando <i>Ctrl + Shift + C</i> vai substituir o resultado referenciado com"
+"lineX references"
+
+#: src/HelpBox.vala:414
+msgid "Paste will connect lineX references with the corresponding results."
+msgstr "Colar vai conectar referências lineX com seus resultados correspondentes"
+
+#: src/HelpBox.vala:415
+msgid "Referencing answers"
+msgstr "Referenciar respostas"
+
+#: src/HelpBox.vala:416
+msgid ""
+"You can plug answers in to future equations and if that answer changes, so "
+"does the equations its used in."
+msgstr ""
+"Pode inserir respostas dentro de equações futuras e se a resposta mudar, "
+"também a equação que foi usada muda."
+
+#: src/HelpBox.vala:417
+msgid ""
+"You either can just click on a previous answer in the result pane, use the "
+"keyword <i>ans</i> for the last answer or the keyword <i>lineX</i> where X "
+"is the number of the line which you want to use."
+msgstr ""
+"Você pode também apenas clicar em um resposta prévia no painel de resultado, use a"
+"expressão <i>ans</i> para a última resposta ou a expressão <i>lineX</i> onde X é o número da linha que você quer usar."
+
+#: src/HelpBox.vala:418
+msgid "Shortcuts"
+msgstr "Atalhos"
+
+#: src/HelpBox.vala:419 src/Tutorial.vala:134
+msgid "Help"
+msgstr "Ajuda"
+
+#: src/HelpBox.vala:420 src/Tutorial.vala:134
+msgid "Last Answer"
+msgstr "Última resposta"
+
+#: src/HelpBox.vala:421
+msgid "New Sheet"
+msgstr "Nova folha"
+
+#: src/HelpBox.vala:429
+msgid "Periodic Table"
+msgstr "Tabela periódica"
+
+#: src/HelpBox.vala:430
+msgid ""
+"Show a Periodic Table. You can browse through the elements and insert "
+"properties into your calculation. Just click on the properties like for "
+"example the boiling point."
+msgstr ""
+"Mostrar um Tabela Periódica. Você pode navegar pelos elementos e inserir"
+"suas propriedades em seus calculos. Apenas clique nas propriedades"
+"como por exemplo Ponto de Ebulição"
+
+#: src/HelpBox.vala:431
+msgid "Scrubbing"
+msgstr "Depurar"
+
+#: src/HelpBox.vala:432
+msgid ""
+"If you hover over a number you can manipulate this number while pressing the "
+"left mouse button and move the mouse to the left or to the right."
+msgstr ""
+"Você pode manipular um número enquanto pressiona o botão esquerdo"
+"do mouse e mover o mouse para direita ou esquerda."
+
+#: src/HelpBox.vala:433
+msgid "Tutorial"
+msgstr "Tutorial"
+
+#: src/HelpBox.vala:434
+msgid "Show the NaSC Tutorial again."
+msgstr "Mostrar o Tutorial do NaSC de novo"
+
+#: src/HelpBox.vala:435
+msgid "Unit Conversion"
+msgstr "Conversão de Unidade"
+
+#: src/HelpBox.vala:436
+msgid "You can convert various Units. The keyword is <i>to</i>."
+msgstr "Você pode converter várias Unidades. A expressão é <i>to</i>"
+
+#: src/HelpBox.vala:437
+msgid ""
+"For example:\n"
+"100€ to $\n"
+"23cm to in"
+msgstr ""
+"Por exemplo: \n"
+"100€ to $\n"
+"23cm to in"
+
+#: src/HelpBox.vala:438
+msgid "Advanced Math"
+msgstr "Matemática Avançada"
+
+#: src/ListFooter.vala:44 src/ListFooter.vala:45
+msgid "Create new sheet"
+msgstr "Criar nova página"
+
+#: src/ListFooter.vala:52 src/ListFooter.vala:53
+msgid "Remove sheet"
+msgstr "Remover página"
+
+#: src/ListFooter.vala:66 src/ListFooter.vala:67
+msgid "Undo last sheet removal"
+msgstr "Desfazer remover página"
+
+#: src/PasteBinDialog.vala:23
+msgid "Pastebin"
+msgstr "Pastebin"
+
+#: src/PasteBinDialog.vala:24
+msgid "Share files with pastebin service"
+msgstr "Compartilhar arquivos com pastebin"
+
+#: src/PasteBinDialog.vala:141
+msgid "Name:"
+msgstr "Nome:"
+
+#: src/PasteBinDialog.vala:149
+msgid "Expiry time:"
+msgstr "Tempo de expiração:"
+
+#: src/PasteBinDialog.vala:154
+msgid "Keep this paste private"
+msgstr "Matenha essa colagem privada"
+
+#: src/PasteBinDialog.vala:155
+msgid "Upload"
+msgstr "Upload"
+
+#: src/PasteBinDialog.vala:253
+msgid "Never"
+msgstr "Nunca"
+
+#: src/PasteBinDialog.vala:254
+msgid "Ten minutes"
+msgstr "Dez minutos"
+
+#: src/PasteBinDialog.vala:255
+msgid "One hour"
+msgstr "Um hora"
+
+#: src/PasteBinDialog.vala:256
+msgid "One day"
+msgstr "Um dia"
+
+#: src/PasteBinDialog.vala:257
+msgid "One month"
+msgstr "Um mês"
+
+#: src/PeriodicTable.vala:160
+msgid "Weight:"
+msgstr "Peso:"
+
+#: src/PeriodicTable.vala:182
+msgid "Boiling Point:"
+msgstr "Ponto de Ebulição:"
+
+#: src/PeriodicTable.vala:204
+msgid "Melting Point:"
+msgstr "Ponto de Derretimento:"
+
+#: src/PeriodicTable.vala:227
+msgid "Density:"
+msgstr "Densidade:"
+
+#: src/PeriodicTable.vala:248
+msgid "Classification:"
+msgstr "Classificação:"
+
+#: src/PeriodicTable.vala:278
+msgid "Alkali Metal"
+msgstr "Metal Alcalino"
+
+#: src/PeriodicTable.vala:282
+msgid "Alkaline-Earth Metal"
+msgstr "Metal Alcalinoterroso "
+
+#: src/PeriodicTable.vala:286
+msgid "Lanthanide"
+msgstr "Lantanídeo"
+
+#: src/PeriodicTable.vala:290
+msgid "Actinide"
+msgstr "Actinídeo"
+
+#: src/PeriodicTable.vala:294
+msgid "Transition Metal"
+msgstr "Metais de Transição"
+
+#: src/PeriodicTable.vala:298
+msgid "Metal"
+msgstr "Metal"
+
+#: src/PeriodicTable.vala:302
+msgid "Metalloid"
+msgstr "Semimetal"
+
+#: src/PeriodicTable.vala:306
+msgid "Non-Metal"
+msgstr "Não Metal"
+
+#: src/PeriodicTable.vala:310
+msgid "Halogen"
+msgstr "Halogênio"
+
+#: src/PeriodicTable.vala:314
+msgid "Noble Gas"
+msgstr "Gás Nobre"
+
+#: src/PeriodicTable.vala:318
+msgid "Transactinide"
+msgstr "Transactinídeo"
+
+#: src/PeriodicTable.vala:322
+msgid "Unknown"
+msgstr "Desconhecido"
+
+#: src/Tutorial.vala:89
+#, c-format
+msgid "Hello %s!"
+msgstr "Olá %s!"
+
+#: src/Tutorial.vala:89
+msgid ""
+"In NaSC you can put text and math side by side and the answer will be shown "
+"on the right pane."
+msgstr ""
+"No NaSC você pode por texto e matemática lado a lado e a resposta"
+"vai aparecer no painel a direita"
+
+#: src/Tutorial.vala:90
+msgid "Do you want to learn the basics?"
+msgstr "Quer aprender o básico?"
+
+#: src/Tutorial.vala:93
+msgid "Let's start with simple math."
+msgstr "Vamos comerçar com algo simples."
+
+#: src/Tutorial.vala:94
+msgid "Calculate: 11 + 42"
+msgstr "Calcule: 11 + 42"
+
+#: src/Tutorial.vala:97
+msgid ""
+"You can plug the answers (ans) in future equations. Just click on the answer."
+msgstr ""
+"Você pode colocar a resposta (ans) em equações futuras. Apenas clique"
+"na resposta"
+
+#: src/Tutorial.vala:98
+msgid "If an answer changes, so does the equation it's used in."
+msgstr "Se a resposta mudar, também a equação que foi usada muda."
+
+#: src/Tutorial.vala:99
+msgid "Calculate: <i>ans</i> * 2"
+msgstr "Calcule: <i>ans</i> * 2"
+
+#: src/Tutorial.vala:102
+msgid ""
+"You can also reference the last answer with the keyword \"ans\" or with "
+"\"lineX\" where X is the linenumber of the answer."
+msgstr ""
+"Você também pode referenciar a última resposta com a expressão \"ans\" ou com"
+"\"lineX\" onde X é o número da linha da resposta."
+
+#: src/Tutorial.vala:103
+msgid "Calculate: sin 45° + cos 2rad (Hint: get degrees with ctrl+0)"
+msgstr "Calcule: sin 45° + cos 2rad (Dica: coloque graus com ctrl+0)"
+
+#: src/Tutorial.vala:106
+msgid "You can define your own variables"
+msgstr "Você pode definir suas próprias variáveis"
+
+#: src/Tutorial.vala:107
+msgid "Calculate: a = 5"
+msgstr "Calcule: a = 5"
+
+#: src/Tutorial.vala:110
+msgid "and use them in your equations"
+msgstr "e use-as em suas equações"
+
+#: src/Tutorial.vala:111
+msgid "Calculate: 22 + a"
+msgstr "Calculate: 22 + a"
+
+#: src/Tutorial.vala:114
+msgid "You can get answers in various units"
+msgstr "Você pode conseguir respostas em várias unidades"
+
+#: src/Tutorial.vala:115
+msgid "Calculate: 14 cm * 3 cm"
+msgstr "Calcule: 14 cm * 3 cm"
+
+#: src/Tutorial.vala:118
+msgid "and convert between these units"
+msgstr "e converta entre essas unidades"
+
+#: src/Tutorial.vala:119
+msgid "Calculate: <i>ans</i> to in"
+msgstr "Calcule: <i>ans</i> to in"
+
+#: src/Tutorial.vala:122
+msgid "You can play with time"
+msgstr "Você pode brincar com tempo"
+
+#: src/Tutorial.vala:123
+msgid "Calculate: 3days + 4hour + 4years to ms"
+msgstr "Calcular: 3days + 4hour + 4years to ms"
+
+#: src/Tutorial.vala:126
+msgid "or print the week of the year"
+msgstr "ou exiba a semana do ano"
+
+#: src/Tutorial.vala:127
+msgid "Calculate: week(12.12.2017)"
+msgstr "Calcule: week(12.12.2017)"
+
+#: src/Tutorial.vala:130
+msgid ""
+"For a list of all those keywords and their capabilities, just open the help."
+msgstr ""
+"Para uma lista de todas as expressões e suas capacidades, apenas abra"
+"a ajuda."
+
+#: src/Tutorial.vala:131
+msgid "Calculate: The absolute value of -2 (Hint: abs)"
+msgstr "Calcule: The absolute value of -2 (Dica: abs)"
+
+#: src/Tutorial.vala:134
+msgid "Shortcuts:"
+msgstr "Atalhos:"
+
+#: src/Tutorial.vala:135
+msgid "Calculate: π * 42cm"
+msgstr "Calcule: π * 42cm"
+
+#: src/Tutorial.vala:138
+msgid "Great, you finished the Tutorial."
+msgstr "Parabéns, você terminou o Tutorial."
+
+#: src/Tutorial.vala:139
+msgid "Have fun with NaSC"
+msgstr "Divirta-se com o NaSC"
