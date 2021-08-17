@@ -12,15 +12,22 @@ NaSC is an app where you do maths like a normal person. It lets you type whateve
 [![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.parnold-x.nasc)﻿
 
 ## Building
-Dependencies:
 
-```
+Dependencies(Debian/Ubuntu):
+
+```bash
 apt install -y gobject-introspection libgee-0.8-dev libwebkit2gtk-4.0-dev libgtksourceview-3.0-dev libcln-dev libgranite-dev libcurl4-openssl-dev libmpfr-dev intltool meson valac
+```
+
+Dependencies(Fedora/CentOS):
+
+```bash
+dnf install gobject-introspection libgee-devel webkit2gtk3-devel gtksourceview3-devel cln-devel granite-devel libcurl-devel mpfr-devel intltool meson vala 
 ```
 
 then build with:
  
-```
+```bash
 meson build --prefix=/usr
 ninja -C build install
 ```
