@@ -11,4 +11,4 @@ NaSC is an app where you do maths like a normal person. It lets you type whateve
 ## Installation
 [![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.parnold-x.nasc)﻿
 
-## [Building](https://appcenter.elementary.io/com.github.parnold-x.nasc)
+## [Building](https://github.com/parnold-x/nasc/blob/master/BUILDING.md)
