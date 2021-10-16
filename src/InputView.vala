@@ -121,7 +121,29 @@ public class InputView : Gtk.Box {
                 if (iter.get_offset() < 2) {
                     return false;
                 }
+                Gtk.TextIter iter3 = Gtk.TextIter ();
+                iter3.assign (iter);
                 iter.backward_cursor_position ();
+                var delete_char = source_view.buffer.get_slice (iter3, iter, true);
+                var anchor = iter.get_child_anchor ();
+                if(delete_char == "\n"){
+                    //newline
+                } else if(anchor !=null){
+                    foreach (var w in anchor.get_widgets ()) {
+                        ResultBoxWidget ws = w as ResultBoxWidget;
+                        if (ws != null) {
+                            var replacement = "line%d".printf (ws.result.line + 1);
+                            source_view.buffer.delete (ref iter3, ref iter);
+                            source_view.buffer.get_iter_at_offset (out iter, source_view.buffer.cursor_position);
+                            iter3.assign (iter);
+                            iter.backward_cursor_position ();
+                            source_view.buffer.insert (ref iter3, replacement, -1);
+                            source_view.buffer.get_iter_at_offset (out iter, source_view.buffer.cursor_position);
+                            iter.backward_cursor_position ();
+                            break;
+                        }
+                    }
+                }
                 Gtk.TextIter iter2 = Gtk.TextIter ();
                 iter2.assign (iter);
                 iter.backward_cursor_position ();
