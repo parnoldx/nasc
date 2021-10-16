@@ -234,7 +234,13 @@ internal class CalculatorThread {
         if(return_str.has_prefix("function ")){
             return_str = return_str.replace ("function ", "").chug ();
             string[] function_split = return_str.split(" ",2);
+            if(function_split.length !=2){
+                return return_str;
+            }
             string name = function_split[0];
+            if(name.length == 0){
+                return return_str;
+            }
             string expr = function_split[1].chug().chomp();
             QalculateNasc.add_function (name,expr);
             user_functions.add(new NascFunction.nasc(name,"user","user"));
