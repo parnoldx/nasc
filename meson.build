@@ -83,7 +83,7 @@ executable(
     dependencies: [
         dependency('gee-0.8'),
         dependency('glib-2.0'),
-        dependency('granite'),
+        dependency('granite', version: '>=5.4.0'),
         dependency('gtk+-3.0'),
         dependency('gtksourceview-3.0', version: '>=3.10'),
         dependency('webkit2gtk-4.0'),
