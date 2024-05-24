@@ -1,5 +1,5 @@
 <div align="center">
-  <span align="center"> <img width="80" height="80" class="center" src="https://raw.githubusercontent.com/parnold-x/nasc/master/icons/128/com.github.parnold_x.nasc.svg" alt="Icon"></span>
+  <span align="center"> <img width="80" height="80" class="center" src="https://raw.githubusercontent.com/parnoldx/nasc/master/icons/128/com.github.parnold_x.nasc.svg" alt="Icon"></span>
   <h1 align="center">NaSC</h1>
   <h3 align="center">Do maths like a normal person</h3>
 </div>
@@ -11,4 +11,4 @@ NaSC is an app where you do maths like a normal person. It lets you type whateve
 ## Installation
 [![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.parnold-x.nasc)﻿
 
-## [Building](https://github.com/parnold-x/nasc/blob/master/BUILDING.md)
+## [Building](https://github.com/parnoldx/nasc/blob/master/BUILDING.md)
