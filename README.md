@@ -1,3 +1,6 @@
+<div align="center"><h1 align="center"> Now as NaSC TUI App</h1><h1>https://github.com/parnoldx/nascTUI</h1></div>
+
+
 <div align="center">
   <span align="center"> <img width="80" height="80" class="center" src="https://raw.githubusercontent.com/parnoldx/nasc/master/icons/128/com.github.parnold_x.nasc.svg" alt="Icon"></span>
   <h1 align="center">NaSC</h1>
